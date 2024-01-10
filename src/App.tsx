@@ -1,25 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState, createContext } from 'react'
+
+//Interfaces
+//App Global State to store data from user
+interface IAnswerSaveToData {
+  questionId: number,
+  answerId: string,
+  points: number,
+}
+export interface IUserInteractData {
+  personalInformations: {
+    name: string,
+    mssv: string,
+    isMale: boolean,
+  },
+  answers: IAnswerSaveToData[],
+}
+
+//Context to send Data through app
+export interface IContext {
+  interactedData: IUserInteractData | null,
+  setInteractedData: (newInteractedData: IUserInteractData) => void
+
+  currentStep: number,
+  setCurrentStep: (step: number) => void
+}
+
+export const Data = createContext<IContext | null>(null);
 
 function App() {
+  const [interactedData, setInteractedData] = useState<IUserInteractData | null>(null)
+  const [currentStep, setCurrentStep] = useState<number>(1)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Data.Provider value={{ interactedData, setInteractedData, currentStep, setCurrentStep }}>
+      <div className="App">
+
+        {/* Step 1: Tap start */}
+
+        {/* Step 2: Enter personal Informations */}
+
+        {/* Step 3: Answer questions */}
+
+        {/* Step 4: Receive results */}
+
+      </div>
+    </Data.Provider>
   );
 }
 
