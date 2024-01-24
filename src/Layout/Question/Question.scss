@@ -72,7 +72,7 @@
 
   .answers {
     position: absolute;
-    bottom: 6vh;
+    bottom: calc(6vh + 15px);
     list-style: none;
     width: 100%;
     padding: 0;
@@ -111,10 +111,10 @@
 
   .nextBtn {
     position: absolute;
-    bottom: 4.5vh;
+    bottom: 4.3vh;
     right: 8%;
-    padding: 7px;
-    font-size: 15px;
+    padding: 8px;
+    font-size: 16px;
     outline: none;
     border: 1px solid black;
     border-radius: 8px;

@@ -78,7 +78,7 @@ const Question = (props: Props) => {
                                     initial={defaultAnimate}
                                     animate={animate}
                                     exit={exitAnimate}
-                                    transition={{ delay: i * 0.2 }}
+                                    transition={{ delay: i * 0.05 }}
                                     onClick={() => setCurrentAnswer(ans)}
                                 >
                                     <div className="answer_id">{ans.id.toUpperCase()}</div>
