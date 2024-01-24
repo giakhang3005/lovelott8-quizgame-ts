@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import "./Question.scss"
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { Modal, message } from 'antd'
 import RuleModal from './RuleModal'
 import useQuestion from '../../Services/useQuestion'
@@ -72,18 +72,14 @@ const Question = (props: Props) => {
                     {
                         currentQuestion?.answers.map((ans: IAnswers, i: number) => {
                             return (
-                                <motion.li
-                                    className={`${ans.id === currentAnswer?.id ? 'selected' : ''}`}
+                                <li
+                                    className={`${ans.id === currentAnswer?.id ? 'selected' : ''} option`}
                                     key={`${currentQuestion.id}.${ans.id}`}
-                                    initial={defaultAnimate}
-                                    animate={animate}
-                                    exit={exitAnimate}
-                                    transition={{ delay: i * 0.05 }}
                                     onClick={() => setCurrentAnswer(ans)}
                                 >
                                     <div className="answer_id">{ans.id.toUpperCase()}</div>
                                     <div className="answer_content">{ans.content}</div>
-                                </motion.li>
+                                </li>
                             )
                         })
                     }

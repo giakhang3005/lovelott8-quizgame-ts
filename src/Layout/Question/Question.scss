@@ -77,7 +77,7 @@
     width: 100%;
     padding: 0;
 
-    li {
+    .option {
       display: flex;
       align-items: center;
       padding: 10px;
@@ -87,6 +87,8 @@
       border-radius: 7px;
       cursor: pointer;
       transition: all 0.12s linear;
+      opacity: 0;
+      animation: fadeIn 0.2s linear forwards;
 
       .answer_id {
         font-size: 20px;
@@ -99,14 +101,26 @@
       }
     }
 
-    li:hover {
+    .option:hover {
       background-color: App.$unselected-answer-hover;
+    }
+
+    .option:nth-child(2) {
+        animation-delay: 0.06s;
+    }
+    .option:nth-child(3) {
+        animation-delay: 0.12s;
+    }
+    .option:nth-child(4) {
+        animation-delay: 0.18s;
     }
 
     .selected,
     .selected:hover {
       background-color: App.$light-pink;
     }
+    // Animation purpose
+    
   }
 
   .nextBtn {
@@ -143,4 +157,13 @@
   100% {
     background-color: App.$light-pink;
   }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
