@@ -1,0 +1,146 @@
+@use "../../App.scss";
+
+.rule {
+  .coverBtn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .rule_startBtn {
+      border: none;
+      width: 100%;
+      background-color: App.$light-pink;
+      color: rgb(255, 255, 255);
+      font-size: 18px;
+      text-shadow: 0.5px 0.5px 1px rgb(238, 236, 236);
+      border-radius: 7px;
+      margin: 30px 0 0 0;
+      padding: 10px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .rule_startBtn:hover {
+      background-color: App.$light-blue;
+    }
+  }
+}
+
+.question {
+  height: 100vh;
+  width: 100%;
+
+  .progressBar {
+    position: relative;
+    width: 94%;
+    height: 22px;
+    border-radius: 7px;
+    margin: 1vh 3% 2vh 3%;
+    box-sizing: border-box;
+    background-color: App.$unselected-answer;
+    overflow: hidden;
+    .progress {
+      position: absolute;
+      background-color: App.$light-pink;
+      height: 100%;
+      transition: all 0.12s linear;
+      animation: changeColor 3.2s linear infinite;
+      // width: 30px;
+    }
+  }
+
+  .content {
+    box-sizing: border-box;
+    margin: 12px 5px 5px 5px;
+    text-align: center;
+    // background-color: white;
+    // border-radius: 9px;
+    // border: 1px solid black;
+    // padding: 15px 0 15px 0;
+    .content_QNum {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 0 10px 0;
+    }
+
+    .content_question {
+      line-height: 23px;
+      font-size: 17px;
+    }
+  }
+
+  .answers {
+    position: absolute;
+    bottom: 6vh;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      margin: 2.5vh 8% 2.5vh 8%;
+      width: 80%;
+      background-color: App.$unselected-answer;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 0.12s linear;
+
+      .answer_id {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 12px 0 0;
+      }
+
+      .answer_content {
+        font-size: 15px;
+      }
+    }
+
+    li:hover {
+      background-color: App.$unselected-answer-hover;
+    }
+
+    .selected,
+    .selected:hover {
+      background-color: App.$light-pink;
+    }
+  }
+
+  .nextBtn {
+    position: absolute;
+    bottom: 4.5vh;
+    right: 8%;
+    padding: 7px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: App.$unselected-answer-hover;
+    cursor: pointer;
+    transition: all 0.12s linear;
+  }
+
+  .nextBtn:not(.blockedSelect):hover {
+    background-color: App.$light-blue;
+  }
+
+  .blockedSelect {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: App.$light-pink;
+  }
+  50% {
+    background-color: App.$light-blue;
+  }
+  100% {
+    background-color: App.$light-pink;
+  }
+}

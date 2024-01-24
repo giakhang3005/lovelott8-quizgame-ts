@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;510;600;700;800;900;1000&display=swap");
+
+// Color
+$light-blue: #9cc4fd;
+$light-pink: #e0c3ff;
+$purple: #9376c7;
+$yellow: #f0d48f;
+$light-yellow: #eee4cc;
+$red: #e13f54;
+$unselected-answer: #d1d5db;
+$unselected-answer-hover: #f3f4f6;
+
+html,
+body {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400; // Change the font weight as needed
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.unuseZone {
+  // background-color: rgba(212, 210, 210, 0.081);
+}
+
+.gradient_purple_blue {
+  background: linear-gradient(to right, $light-pink, $light-blue, $light-pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient_green_yellow {
+  background: linear-gradient(to right, #1dc2c2, #febb2e, #1dc2c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

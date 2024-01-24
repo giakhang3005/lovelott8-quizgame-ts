@@ -1,12 +1,12 @@
 // Interface for answers
-interface IAnswers {
+export interface IAnswers {
     id: string,
     content: string,
     point: number,
 }
 
 // Interface for question
-interface IQuestion {
+export interface IQuestion {
     id: number,
     question: string,
     answers: IAnswers[],

@@ -1,0 +1,29 @@
+@use "../../App.scss";
+
+.startScreen {
+  height: 100vh;
+  width: 100%;
+  cursor: pointer;
+
+  .startScreen_CTA {
+    position: absolute;
+    bottom: 20vh;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 4.5px;
+    animation: glowing 3s ease infinite;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

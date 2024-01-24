@@ -1,24 +1,29 @@
 import { useState, createContext } from 'react'
+import { AnimatePresence } from 'framer-motion'
+import StartScreen from './Layout/StartScreen/StartScreen';
+import Information from './Layout/Information/Information';
+import { Col, Row } from 'antd';
+import Question from './Layout/Question/Question';
+import { IAnswers } from './Data/Questions';
 
 //Interfaces
 //App Global State to store data from user
-interface IAnswerSaveToData {
-  questionId: number,
-  answerId: string,
-  points: number,
+export interface ISavedAnswer {
+  qId: number,
+  answer: IAnswers,
 }
+
 export interface IUserInteractData {
-  personalInformations: {
-    name: string,
-    mssv: string,
-    isMale: boolean,
-  },
-  answers: IAnswerSaveToData[],
+  name: string | null,
+  mssv: string | null,
+  isMale: boolean,
+  answers: ISavedAnswer[],
 }
+
 
 //Context to send Data through app
 export interface IContext {
-  interactedData: IUserInteractData | null,
+  interactedData: IUserInteractData,
   setInteractedData: (newInteractedData: IUserInteractData) => void
 
   currentStep: number,
@@ -28,22 +33,61 @@ export interface IContext {
 export const Data = createContext<IContext | null>(null);
 
 function App() {
-  const [interactedData, setInteractedData] = useState<IUserInteractData | null>(null)
+  const [interactedData, setInteractedData] = useState<IUserInteractData>({
+    name: null,
+    mssv: null,
+    isMale: true,
+    answers: [],
+  })
   const [currentStep, setCurrentStep] = useState<number>(1)
 
   return (
     <Data.Provider value={{ interactedData, setInteractedData, currentStep, setCurrentStep }}>
-      <div className="App">
+      <Row>
+        <Col className='unuseZone' xs={0} sm={6}></Col>
+        <Col xs={24} sm={12}>
+          <div className="App">
+            {/* Step 1: Tap start */}
+            <AnimatePresence>
+              {
+                currentStep === 1 && (
+                  <StartScreen />
+                )
+              }
+            </AnimatePresence>
 
-        {/* Step 1: Tap start */}
+            {/* Step 2: Enter personal Informations */}
+            <AnimatePresence>
+              {
+                currentStep === 2 && (
+                  <Information />
+                )
+              }
+            </AnimatePresence>
 
-        {/* Step 2: Enter personal Informations */}
+            {/* Step 3: Answer questions */}
+            <AnimatePresence>
+              {
+                currentStep === 3 && (
+                  <Question />
+                )
+              }
+            </AnimatePresence>
 
-        {/* Step 3: Answer questions */}
+            {/* Step 4: Receive results */}
+            <AnimatePresence>
+              {
+                currentStep === 4 && (
+                  <>Chưa làm =)))))</>
+                )
+              }
+            </AnimatePresence>
 
-        {/* Step 4: Receive results */}
+          </div>
+        </Col>
 
-      </div>
+        <Col className='unuseZone' xs={0} sm={6}></Col>
+      </Row>
     </Data.Provider>
   );
 }

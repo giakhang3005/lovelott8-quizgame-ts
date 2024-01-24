@@ -1,0 +1,114 @@
+@use "../../App.scss";
+
+.information {
+  width: 100%;
+  height: 100vh;
+  //   padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .info_container {
+    width: 90%;
+    text-align: center;
+    .title {
+      font-size: 28px;
+      font-weight: 700;
+    }
+  }
+
+  .inputBox {
+    margin: 35px 0 0 0;
+    height: 70px;
+    text-align: left;
+
+    label {
+      display: block;
+      padding: 0 0 12px 0;
+      font-size: 17px;
+    }
+
+    .note {
+      display: block;
+      font-size: 10px;
+      color: gray;
+      padding: 3px 0 0 0;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      border-radius: 7px;
+      border: 1px solid grey;
+      outline: none;
+      box-sizing: border-box;
+      transition: all 0.12s linear;
+    }
+    input[type="text"]:focus {
+      border: 1px solid App.$light-pink;
+    }
+
+    .genderOptionCover {
+      cursor: pointer;
+
+      input[type="radio"]:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: grey;
+        content: "";
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+        cursor: pointer;
+      }
+
+      input[type="radio"]:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: App.$light-pink;
+        content: "";
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+      }
+
+      .radioLabel {
+        margin: 0 17px 0 5px;
+      }
+    }
+  }
+  .BtnContainer {
+    width: 100%;
+    display: flex;
+    // justify-content: end;
+
+    .continueBtn {
+      border: none;
+      width: 100%;
+      background-color: App.$light-pink;
+      color: rgb(255, 255, 255);
+      font-size: 18px;
+      text-shadow: 0.5px 0.5px 1px rgb(238, 236, 236);
+      border-radius: 7px;
+      margin: 30px 0 0 0;
+      padding: 10px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .continueBtn:hover {
+      background-color: App.$light-blue;
+    }
+  }
+}
