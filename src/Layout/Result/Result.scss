@@ -124,7 +124,7 @@
         height: 20px;
         position: absolute;
         min-width: 280px;
-        transform: translateX(calc(0.92 * -275px)) rotate(-90deg);
+        transform: translateX(calc(0.92 * calc(-35 * var(--vh)))) rotate(-90deg);
         transform-origin: right;
         text-align: center;
       }
@@ -182,7 +182,7 @@
         height: 20px;
         position: absolute;
         min-width: 344px;
-        transform: translateX(calc(0.92 * -345px)) rotate(-90deg);
+        transform: translateX(calc(0.92 * calc(-43 * var(--vh)))) rotate(-90deg);
         transform-origin: right;
         text-align: center;
       }
