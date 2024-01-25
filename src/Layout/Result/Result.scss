@@ -120,11 +120,9 @@
       .attract_title {
         font-weight: 700;
         font-size: 18px;
-        width: auto;
-        height: 20px;
-        position: absolute;
-        min-width: 280px;
-        transform: translate(calc(-0.92 * 98%), calc(-100%)) rotate(-90deg);
+        height: calc(36 * var(--vh));
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
         transform-origin: right;
         text-align: center;
       }
@@ -152,11 +150,9 @@
       .attract_title {
         font-weight: 700;
         font-size: 18px;
-        width: auto;
-        height: 20px;
-        position: absolute;
-        min-width: 344px;
-        transform: translate(calc(-0.92 * 100%), calc(-100%)) rotate(-90deg);
+        height: calc(42 * var(--vh));
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
         transform-origin: right;
         text-align: center;
       }
