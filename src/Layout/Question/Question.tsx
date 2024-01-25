@@ -29,7 +29,6 @@ const Question = (props: Props) => {
     // Set the first question onload
     useEffect(() => {
         setCurrentQuestion(getCurrentQuestionData())
-        window.scrollTo(0, 0)
     }, [])
 
     // Handle user click next question

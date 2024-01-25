@@ -6,7 +6,7 @@ type Props = {
 
 const RuleModal = ({ setModalState }: Props) => {
     const [countDown, setCountDown] = useState<number>(10)
-    
+
     // Timer countdown until user can start
     useEffect(() => {
         let countDownTimeOut = setTimeout(() => {
@@ -21,6 +21,10 @@ const RuleModal = ({ setModalState }: Props) => {
     // Handle when user click start
     const handleStart = () => {
         countDown === 0 && setModalState(false)
+
+        setTimeout(() => {
+            window.scrollTo(0, 0)
+        }, 1000)
     }
 
     return (
