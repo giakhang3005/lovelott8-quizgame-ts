@@ -40,7 +40,7 @@ export const Data = createContext<IContext | null>(null);
 
 function App() {
   const [interactedData, setInteractedData] = useState<IUserInteractData>({
-    name: 'Trương Nguyễn Gia Khang',
+    name: null,
     mssv: null,
     isMale: true,
     answers: [],
