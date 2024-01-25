@@ -108,8 +108,8 @@
   }
 
   .result_body {
-    height: calc(35 * var(--vh));
-    max-height: calc(35 * var(--vh));
+    height: calc(36 * var(--vh));
+    max-height: calc(36 * var(--vh));
     box-sizing: border-box;
 
     .attractTitleContainer {
@@ -124,7 +124,7 @@
         height: 20px;
         position: absolute;
         min-width: 280px;
-        transform: translateX(calc(0.92 * -230px)) rotate(-90deg);
+        transform: translateX(calc(-0.92 * 98%)) rotate(-90deg);
         transform-origin: right;
         text-align: center;
       }
@@ -140,8 +140,8 @@
   }
 
   .result_body2 {
-    height: calc(43 * var(--vh));
-    max-height: calc(43 * var(--vh));
+    height: calc(42 * var(--vh));
+    max-height: calc(42 * var(--vh));
     box-sizing: border-box;
 
     .attractTitleContainer {
@@ -156,7 +156,7 @@
         height: 20px;
         position: absolute;
         min-width: 344px;
-        transform: translateX(calc(0.92 * -280px)) rotate(-90deg);
+        transform: translateX(calc(-0.92 * 100%)) rotate(-90deg);
         transform-origin: right;
         text-align: center;
       }

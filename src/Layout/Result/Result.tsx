@@ -96,7 +96,7 @@ const Result = (props: Props) => {
 
       {/* Footer */}
       <Row className='result_footer'>
-        <div className="copyright">Coc Sai Gon Comminication Club © All rights are reserved </div>
+        <div className="copyright">Coc Sai Gon Comminication Club 2024 © All rights are reserved </div>
       </Row>
     </motion.div>
   )
