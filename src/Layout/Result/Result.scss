@@ -3,6 +3,7 @@
 .result {
   width: 100%;
   max-height: calc(100 * var(--vh));
+  overflow: hidden;
 
   .result_header {
     width: 100%;

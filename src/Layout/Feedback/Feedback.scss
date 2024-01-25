@@ -54,11 +54,7 @@
         height: 48px;
         background-color: white !important;;
         border: 1px solid black;
-        background-image: radial-gradient(
-          circle 14px,
-          #0d161b 100%,
-          white 0,
-        );
+        background-image: radial-gradient(circle 17px, black 90%, white 10%);
         background-repeat: no-repeat;
         border-radius: 50%;
         animation: eyeMove 10s infinite, blink 10s infinite;
