@@ -21,11 +21,10 @@ body {
   font-weight: 400; // Change the font weight as needed
   height: -webkit-fill-available;
   min-height: -webkit-fill-available;
-  overflow: hidden;
+  overflow: scroll;
   margin: 0;
   box-sizing: border-box;
   color: black;
-  height: calc(100vh - env(safe-area-inset-bottom) + env(safe-area-inset-top));
 }
 
 .unuseZone {
