@@ -124,7 +124,7 @@
         height: 20px;
         position: absolute;
         min-width: 280px;
-        transform: translateX(calc(-0.92 * 98%)) rotate(-90deg);
+        transform: translate(calc(-0.92 * 98%), calc(-100%)) rotate(-90deg);
         transform-origin: right;
         text-align: center;
       }
@@ -156,7 +156,7 @@
         height: 20px;
         position: absolute;
         min-width: 344px;
-        transform: translateX(calc(-0.92 * 100%)) rotate(-90deg);
+        transform: translate(calc(-0.92 * 100%), calc(-100%)) rotate(-90deg);
         transform-origin: right;
         text-align: center;
       }
