@@ -19,8 +19,9 @@ html,
 body {
   font-family: "Alexandria", sans-serif;
   font-weight: 400; // Change the font weight as needed
-  height: 100vh;
-  overflow: scroll;
+  height: -webkit-fill-available;
+  min-height: -webkit-fill-available;
+  overflow: hidden;
   margin: 0;
   box-sizing: border-box;
   color: black;
