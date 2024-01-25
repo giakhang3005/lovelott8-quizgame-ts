@@ -44,6 +44,7 @@ const Information = (props: Props) => {
                         placeholder="Nguyễn Văn Cóc"
                         value={getName() || ''}
                         onChange={(e) => setName(e.target.value)}
+                        autoFocus
                     />
                 </div>
 

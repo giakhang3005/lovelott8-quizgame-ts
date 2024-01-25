@@ -3,8 +3,10 @@ import { AnimatePresence } from 'framer-motion'
 import StartScreen from './Layout/StartScreen/StartScreen';
 import Information from './Layout/Information/Information';
 import { Col, Row } from 'antd';
+import Result from './Layout/Result/Result';
 import Question from './Layout/Question/Question';
 import { IAnswers } from './Data/Questions';
+import Feedback from './Layout/Feedback/Feedback';
 
 //Interfaces
 //App Global State to store data from user
@@ -18,6 +20,10 @@ export interface IUserInteractData {
   mssv: string | null,
   isMale: boolean,
   answers: ISavedAnswer[],
+  feedback: {
+    stars: number | null,
+    content: string | null,
+  }
 }
 
 
@@ -34,10 +40,14 @@ export const Data = createContext<IContext | null>(null);
 
 function App() {
   const [interactedData, setInteractedData] = useState<IUserInteractData>({
-    name: null,
+    name: 'Trương Nguyễn Gia Khang',
     mssv: null,
     isMale: true,
     answers: [],
+    feedback: {
+      stars: null,
+      content: null,
+    }
   })
   const [currentStep, setCurrentStep] = useState<number>(1)
 
@@ -74,11 +84,20 @@ function App() {
               }
             </AnimatePresence>
 
-            {/* Step 4: Receive results */}
+            {/* Step 4: Feedback */}
             <AnimatePresence>
               {
                 currentStep === 4 && (
-                  <>Chưa làm =)))))</>
+                  <Feedback />
+                )
+              }
+            </AnimatePresence>
+
+            {/* Step 5: Receive result */}
+            <AnimatePresence>
+              {
+                currentStep === 5 && (
+                  <Result />
                 )
               }
             </AnimatePresence>

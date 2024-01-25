@@ -135,7 +135,7 @@ export const characters: ICharacter[] = [
     },
     {
         id: 'FlynnRider',
-        name: 'Hoàng tử Eugene Fitzherbert - Flynn Rider',
+        name: 'Hoàng tử Flynn Rider',
         img: '',
         isMale: true,
         behavior: 'Hài hước, mạo hiểm và thấu hiểu.',

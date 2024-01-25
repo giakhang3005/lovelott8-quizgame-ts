@@ -1,0 +1,218 @@
+@use "../../App.scss";
+
+.feedback {
+  width: 100%;
+  height: 100vh;
+
+  .displayContainer {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+
+    .loading {
+      display: relative;
+      height: 380px;
+      width: 100%;
+
+      .title {
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        // margin: 0 0 6px 0;
+      }
+
+      .sub {
+        position: absolute;
+        top: 92px;
+        width: 100%;
+        font-size: 11px;
+        color: gray;
+        display: block;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 0 5px 0 5px;
+      }
+
+      .loader {
+        position: absolute;
+        width: 108px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+      }
+      .loader::after,
+      .loader::before {
+        content: "";
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        background-color: #fff;
+        border: 1px solid black;
+        background-image: radial-gradient(
+          circle 14px,
+          #0d161b 100%,
+          transparent 0
+        );
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        animation: eyeMove 10s infinite, blink 10s infinite;
+      }
+
+      .loadingText {
+        position: absolute;
+        bottom: 0;
+      }
+
+      .loader2 {
+        display: block;
+        position: absolute;
+        top: 130px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 20px;
+        width: 80%;
+        background-color: App.$unselected-answer;
+        // border: 1px solid App.$;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .loader2:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0;
+        background: App.$light-pink;
+        animation: 12s prog ease-in forwards;
+      }
+    }
+  }
+
+  .FeedbackFill {
+    .rating {
+      position: absolute;
+      left: 50%;
+      top: 190px;
+      transform: translateX(-50%);
+      font-size: 30px;
+    }
+
+    .reason {
+      position: absolute;
+      left: 50%;
+      top: 230px;
+      width: 80%;
+      max-width: 90%;
+      min-width: 80%;
+      height: 80px;
+      max-height: 100px;
+      min-height: 50px;
+      box-sizing: border-box;
+      padding: 10px;
+      transform: translateX(-50%);
+      font-size: 11px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid black;
+      outline: none;
+    }
+
+    .reason:focus {
+      border: 1px solid App.$purple;
+    }
+
+    .submit {
+      position: absolute;
+      left: 50%;
+      top: 305px;
+      transform: translateX(-50%);
+      border: none;
+      width: 90%;
+      background-color: App.$light-pink;
+      color: rgb(255, 255, 255);
+      font-size: 14px;
+      text-shadow: 0.5px 0.5px 1px rgb(238, 236, 236);
+      border-radius: 7px;
+      margin: 30px 0 0 0;
+      padding: 10px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .submit:hover {
+      background-color: App.$light-blue;
+    }
+  }
+
+  .notAllow {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .notAllow:hover {
+    cursor: not-allowed;
+    background-color: App.$light-pink;
+  }
+}
+@keyframes prog {
+  to {
+    width: 100%;
+  }
+}
+@keyframes eyeMove {
+  0%,
+  10% {
+    background-position: 0px 0px;
+  }
+  13%,
+  40% {
+    background-position: -15px 0px;
+  }
+  43%,
+  70% {
+    background-position: 15px 0px;
+  }
+  73%,
+  90% {
+    background-position: 0px 15px;
+  }
+  93%,
+  100% {
+    background-position: 0px 0px;
+  }
+}
+@keyframes blink {
+  0%,
+  10%,
+  12%,
+  20%,
+  22%,
+  40%,
+  42%,
+  60%,
+  62%,
+  70%,
+  72%,
+  90%,
+  92%,
+  98%,
+  100% {
+    height: 48px;
+  }
+  11%,
+  21%,
+  41%,
+  61%,
+  71%,
+  91%,
+  99% {
+    height: 18px;
+  }
+}
