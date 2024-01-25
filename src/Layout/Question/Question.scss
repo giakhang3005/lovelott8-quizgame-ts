@@ -1,6 +1,8 @@
 @use "../../App.scss";
 
 .rule {
+  box-sizing: border-box;
+
   .coverBtn {
     width: 100%;
     display: flex;
@@ -32,7 +34,7 @@
   width: 100%;
 
   .progressBar {
-    position: relative;
+    position: absolute;
     width: 94%;
     height: 22px;
     border-radius: 7px;
@@ -51,6 +53,8 @@
   }
 
   .content {
+    position: absolute;
+    top: 3.5vh;
     box-sizing: border-box;
     margin: 12px 5px 5px 5px;
     text-align: center;

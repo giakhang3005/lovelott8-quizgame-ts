@@ -21,10 +21,6 @@ const RuleModal = ({ setModalState }: Props) => {
     // Handle when user click start
     const handleStart = () => {
         countDown === 0 && setModalState(false)
-
-        setTimeout(() => {
-            window.scrollTo(0, 0)
-        }, 1000)
     }
 
     return (
