@@ -86,7 +86,7 @@
   .characteristic {
     background-color: App.$lighter-pink;
     box-sizing: border-box;
-    padding: 3px;
+    padding: 1px 3px 3px 1px;
     height: calc(4.5 * var(--vh));
     max-height: calc(4.5 * var(--vh));
     box-sizing: border-box;
@@ -103,7 +103,7 @@
       display: flex;
       align-items: center;
       text-align: center;
-      font-size: 12px;
+      font-size: 11px;
     }
   }
 
