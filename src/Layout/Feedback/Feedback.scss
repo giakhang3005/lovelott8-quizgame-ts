@@ -44,6 +44,7 @@
         transform: translateX(-50%);
         display: flex;
         justify-content: space-between;
+        background-color: transparent !important;
       }
       .loader::after,
       .loader::before {
@@ -51,7 +52,7 @@
         display: inline-block;
         width: 48px;
         height: 48px;
-        background-color: #ffffff;
+        background-color: transparent !important;;
         border: 1px solid black;
         background-image: radial-gradient(
           circle 14px,
@@ -71,7 +72,7 @@
       .loader2 {
         display: block;
         position: absolute;
-        top: 138px;
+        top: 140px;
         left: 50%;
         transform: translateX(-50%);
         height: 20px;
@@ -98,7 +99,7 @@
     .rating {
       position: absolute;
       left: 50%;
-      top: 190px;
+      top: 200px;
       transform: translateX(-50%);
       font-size: 30px;
     }
@@ -106,7 +107,7 @@
     .reason {
       position: absolute;
       left: 50%;
-      top: 230px;
+      top: 240px;
       width: 80%;
       max-width: 90%;
       min-width: 80%;
@@ -130,7 +131,7 @@
     .submit {
       position: absolute;
       left: 50%;
-      top: 305px;
+      top: 315px;
       transform: translateX(-50%);
       border: none;
       width: 90%;
