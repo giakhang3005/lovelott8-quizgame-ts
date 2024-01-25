@@ -52,7 +52,7 @@
         display: inline-block;
         width: 48px;
         height: 48px;
-        background-color: white !important;;
+        background-color: white !important;
         border: 1px solid black;
         background-image: radial-gradient(circle 17px, black 90%, white 10%);
         background-repeat: no-repeat;
@@ -92,27 +92,28 @@
   }
 
   .FeedbackFill {
-    .rating {
+    .starContainer {
       position: absolute;
+      width: 100%;
       left: 50%;
       top: 200px;
       transform: translateX(-50%);
-      font-size: 30px;
-    }
-
-    .starRatingRequire {
-      position: absolute;
-      left: 68.5%;
-      top: 215px;
-      font-size: 10px;
-      font-weight: 500;
-      color: red;
+      text-align: center;
+      .rating {
+        margin-left: 40px;
+        font-size: 30px;
+      }
+      .starRatingRequire {
+        font-size: 10px;
+        font-weight: 500;
+        color: red;
+      }
     }
 
     .reason {
       position: absolute;
       left: 50%;
-      top: 240px;
+      top: 248px;
       width: 80%;
       max-width: 90%;
       min-width: 80%;
@@ -136,7 +137,7 @@
     .submit {
       position: absolute;
       left: 50%;
-      top: 315px;
+      top: 320px;
       transform: translateX(-50%);
       border: none;
       width: 90%;

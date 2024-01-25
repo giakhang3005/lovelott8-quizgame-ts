@@ -67,7 +67,10 @@ const Feedback = (props: Props) => {
         <div className="FeedbackFill">
 
           {/* Star */}
-          <Rate className="rating" value={currStar} onChange={(e) => setCurrStar(e)} /> <i className="starRatingRequire">(Bắt buộc)</i>
+          <div className="starContainer">
+            <Rate className="rating" value={currStar} onChange={(e) => setCurrStar(e)} /> <i className="starRatingRequire">(Bắt buộc)</i>
+          </div>
+
 
           {/* Reason */}
           <textarea className="reason"
