@@ -68,7 +68,7 @@ const Result = (props: Props) => {
       {/* ko Hợp & Image */}
       <Row className='result_body'>
         <Col span={3} className='attractTitleContainer'>
-          <div className='attract_title'>KHÔNG HỢP VỚI</div>
+          <div className='attract_title'>KHÔNG HỢP</div>
         </Col>
         <Col span={11} className='attract_character'>
           {
@@ -84,7 +84,7 @@ const Result = (props: Props) => {
       {/* ko Hợp & Image */}
       <Row className='result_body2'>
         <Col span={3} className='attractTitleContainer'>
-          <div className='attract_title'>HỢP VỚI</div>
+          <div className='attract_title'>HỢP</div>
         </Col>
         <Col span={21} className='attract_character'>
           {

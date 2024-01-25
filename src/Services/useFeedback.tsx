@@ -18,7 +18,7 @@ export const useFeedback = () => {
                 if (feedback.trim().length === 0) {
                     return {
                         status: false,
-                        reason: 'Vì sao bạn lại có trải nghiệm chưa tốt? Hãy chia sẻ với chúng mình nào ^^'
+                        reason: 'Điều gì đã khiến bạn có trải nghiệm chưa tốt? Hãy chia sẻ với chúng mình nào ^^'
                     }
                 }
             }
