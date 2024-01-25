@@ -3,8 +3,15 @@ import "./Feedback.scss"
 import { Rate, message } from "antd"
 import { useFeedback } from "../../Services/useFeedback"
 import { useStep } from '../../Services/useStep'
+import { motion } from 'framer-motion'
 
 type Props = {}
+
+//Animation
+const defaultAnimate = { opacity: 0 }
+const animate = { opacity: 1 }
+const exitAnimate = { opacity: 0 }
+const transition = { duration: 0.4 }
 
 const Feedback = (props: Props) => {
   const [currStar, setCurrStar] = useState<number>(0)
@@ -37,14 +44,19 @@ const Feedback = (props: Props) => {
     }
   }
   return (
-    <div className='feedback'>
+    <motion.div className='feedback'
+      initial={defaultAnimate}
+      animate={animate}
+      exit={exitAnimate}
+      transition={transition}
+    >
 
       <div className="displayContainer">
         {/* Loading */}
         <div className="loading">
           <span className="loader"></span>
 
-          <div className="title gradient_purple_blue">{readyToView ? "ĐÃ CÓ KẾT QUẢ" :"ĐANG TÍNH TOÁN"}</div>
+          <div className="title gradient_purple_blue">{readyToView ? "ĐÃ CÓ KẾT QUẢ" : "ĐANG TÍNH TOÁN"}</div>
           <i className="sub">Trong lúc hệ thống tìm kết quả phù hợp, bạn hãy dành 1 ít thời gian để đánh giá trải
             nghiệm nhằm giúp Cóc Sài Gòn cải thiện web hơn nhé ^^</i>
 
@@ -71,7 +83,7 @@ const Feedback = (props: Props) => {
       </div>
 
 
-    </div>
+    </motion.div>
   )
 }
 

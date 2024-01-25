@@ -5,8 +5,15 @@ import useInteractedData from '../../Services/useInteractedData'
 import CharacterDisplay from './CharacterDisplay'
 import { useEffect, useState } from 'react'
 import useResult from '../../Services/useResult'
+import { motion } from 'framer-motion'
 
 type Props = {}
+
+//Animation
+const defaultAnimate = { opacity: 0 }
+const animate = { opacity: 1 }
+const exitAnimate = { opacity: 0 }
+const transition = { duration: 0.4 }
 
 const Result = (props: Props) => {
   const { getName } = useInteractedData()
@@ -18,7 +25,12 @@ const Result = (props: Props) => {
   }, [])
 
   return (
-    <div className='result'>
+    <motion.div className='result'
+      initial={defaultAnimate}
+      animate={animate}
+      exit={exitAnimate}
+      transition={transition}
+    >
       {/* Header */}
       <Row className='result_header'>
         <Col span={12} className='header_left'>
@@ -51,8 +63,8 @@ const Result = (props: Props) => {
         </Col>
         <Col span={11} className='attract_character'>
           {
-            result?.antiCharacter.map((character: any, i: number) => 
-            <CharacterDisplay key={i} name={character.name} imgUrl="./Assets/Images/elsa.png" />)
+            result?.antiCharacter.map((character: any, i: number) =>
+              <CharacterDisplay key={i} name={character.name} imgUrl="./Assets/Images/elsa.png" animationDelay={i} />)
           }
         </Col>
         <Col span={10} className='character_image_container'>
@@ -66,9 +78,9 @@ const Result = (props: Props) => {
           <div className='attract_title'>HỢP VỚI</div>
         </Col>
         <Col span={21} className='attract_character'>
-        {
-            result?.matchCharacter.map((character: any, i: number) => 
-            <CharacterDisplay key={i} name={character.name} imgUrl="./Assets/Images/elsa.png" />)
+          {
+            result?.matchCharacter.map((character: any, i: number) =>
+              <CharacterDisplay key={i} name={character.name} imgUrl="./Assets/Images/elsa.png" animationDelay={i} />)
           }
         </Col>
       </Row>
@@ -77,7 +89,7 @@ const Result = (props: Props) => {
       <Row className='result_footer'>
         <div className="copyright">Coc Sai Gon Comminication Club © All rights are reserved </div>
       </Row>
-    </div>
+    </motion.div>
   )
 }
 

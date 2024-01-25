@@ -146,19 +146,19 @@
       transition: all 0.15s ease;
     }
 
-    .submit:hover {
+    .submit:not(.nowAllow):hover {
       background-color: App.$light-blue;
     }
   }
 
   .notAllow {
     cursor: not-allowed;
+    background-color: App.$unselected-answer !important;
     opacity: 0.5;
   }
 
   .notAllow:hover {
     cursor: not-allowed;
-    background-color: App.$light-pink;
   }
 }
 @keyframes prog {

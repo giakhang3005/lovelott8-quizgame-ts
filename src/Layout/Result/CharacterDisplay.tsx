@@ -1,18 +1,27 @@
-import React from 'react'
+import { motion } from 'framer-motion'
 
 type Props = {
   name: string,
   imgUrl: string,
+  animationDelay: number,
 }
 
-const CharacterDisplay = ({name, imgUrl}: Props) => {
+//animation
+const defaultAnimate = { opacity: 0 }
+const animate = { opacity: 1 }
+
+const CharacterDisplay = ({ name, imgUrl,  animationDelay}: Props) => {
   return (
-    <div className='characterDisplay'>
-        <div className="imageContainer">
+    <motion.div className='characterDisplay'
+      initial={defaultAnimate}
+      animate={animate}
+      transition={{delay: 0.3 + animationDelay * 0.2}}
+    >
+      <div className="imageContainer">
         <img src={imgUrl} className='characterImage' />
-        </div>
-        <div className="characterName">{name}</div>
-    </div>
+      </div>
+      <div className="characterName">{name}</div>
+    </motion.div>
   )
 }
 
