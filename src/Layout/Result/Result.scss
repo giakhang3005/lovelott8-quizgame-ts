@@ -5,7 +5,8 @@
 
   .result_header {
     width: 100%;
-    height: 13vh;
+    height: 13%;
+    max-height: 13%;
     box-sizing: border-box;
 
     .header_left {
@@ -23,12 +24,12 @@
       }
 
       .title {
-        bottom: 4.65vh;
+        bottom: 4.65%;
         font-size: 12px;
       }
 
       .name {
-        bottom: 2vh;
+        bottom: 2%;
         font-size: 14px;
         font-weight: 600;
       }
@@ -86,8 +87,9 @@
     background-color: App.$lighter-pink;
     box-sizing: border-box;
     padding: 3px;
-    min-height: 35px;
-    height: 4.5vh;
+    height: 4.5%;
+    max-height: 4.5%;
+    box-sizing: border-box;
 
     .characteristic_title {
       display: flex;
@@ -106,7 +108,9 @@
   }
 
   .result_body {
-    height: 35vh;
+    height: 35%;
+    max-height: 35%;
+    box-sizing: border-box;
 
     .attractTitleContainer {
       width: 100%;
@@ -163,7 +167,9 @@
   }
 
   .result_body2 {
-    height: 43vh;
+    height: 43%;
+    max-height: 43%;
+    box-sizing: border-box;
 
     .attractTitleContainer {
       width: 100%;
@@ -234,7 +240,9 @@
   }
 
   .result_footer {
-    height: 4.5vh;
+    height: 4.5%;
+    max-height: 4.5%;
+    box-sizing: border-box;
     min-width: 36px;
     display: flex;
     justify-content: center;
@@ -247,4 +255,4 @@
   }
 }
 
-//4.5 + 13 + 35 + 43vh
+//4.5 + 13 + 35 + 43%

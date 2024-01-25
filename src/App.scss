@@ -25,6 +25,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   color: black;
+  height: calc(100vh - env(safe-area-inset-bottom) + env(safe-area-inset-top));
 }
 
 .unuseZone {
