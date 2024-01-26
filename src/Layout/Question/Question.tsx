@@ -6,6 +6,7 @@ import RuleModal from './RuleModal'
 import useQuestion from '../../Services/useQuestion'
 import { IAnswers, IQuestion } from '../../Data/Questions'
 import { useStep } from '../../Services/useStep'
+import useInteractedData from '../../Services/useInteractedData'
 
 type Props = {}
 
@@ -17,6 +18,7 @@ const transition = { duration: 0.4 }
 
 const Question = (props: Props) => {
     // Custom hooks
+    const { getName, getMSSV } = useInteractedData()
     const { getCurrentQuestionData, saveAnswer, getTotalQuestions, checkFirstQuestion } = useQuestion()
     const { nextStep } = useStep()
 
@@ -94,6 +96,10 @@ const Question = (props: Props) => {
                 >
                     {currentQuestion?.id < getTotalQuestions() ? 'Câu tiếp theo' : 'Hoàn tất'}
                 </button>
+
+                <div className="infoContainer">
+                    {getName()} - {getMSSV()}
+                </div>
 
             </motion.div>
         </>

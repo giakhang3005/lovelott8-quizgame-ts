@@ -44,6 +44,7 @@ const Information = (props: Props) => {
                         placeholder="Nguyễn Văn Cóc"
                         value={getName() || ''}
                         onChange={(e) => setName(e.target.value)}
+                        maxLength={40}
                         autoFocus
                     />
                 </div>
@@ -57,6 +58,7 @@ const Information = (props: Props) => {
                     <input type="text" placeholder="SE190000"
                         value={getMSSV() || ''}
                         onChange={(e) => setMSSV(e.target.value)}
+                        maxLength={20}
                     />
                 </div>
 

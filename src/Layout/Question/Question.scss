@@ -114,13 +114,13 @@
     }
 
     .option:nth-child(2) {
-        animation-delay: 0.06s;
+      animation-delay: 0.06s;
     }
     .option:nth-child(3) {
-        animation-delay: 0.12s;
+      animation-delay: 0.12s;
     }
     .option:nth-child(4) {
-        animation-delay: 0.18s;
+      animation-delay: 0.18s;
     }
 
     .selected,
@@ -128,7 +128,6 @@
       background-color: App.$light-pink;
     }
     // Animation purpose
-    
   }
 
   .nextBtn {
@@ -154,6 +153,16 @@
     cursor: not-allowed;
     opacity: 0.4;
   }
+
+  .infoContainer {
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    color: App.$unselected-answer;
+    font-size: 11px;
+  }
 }
 
 @keyframes changeColor {
@@ -169,10 +178,10 @@
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

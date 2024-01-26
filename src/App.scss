@@ -42,3 +42,11 @@ body, .App {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.restartBtns {
+  position: absolute;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
