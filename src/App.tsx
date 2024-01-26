@@ -1,4 +1,4 @@
-import { useState, createContext } from 'react'
+import { useState, createContext, useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import StartScreen from './Layout/StartScreen/StartScreen';
 import Information from './Layout/Information/Information';
@@ -7,6 +7,7 @@ import Result from './Layout/Result/Result';
 import Question from './Layout/Question/Question';
 import { IAnswers } from './Data/Questions';
 import Feedback from './Layout/Feedback/Feedback';
+import { useStorage } from './Services/useStorage';
 
 //Interfaces
 //App Global State to store data from user
@@ -39,7 +40,10 @@ export interface IContext {
 export const Data = createContext<IContext | null>(null);
 
 function App() {
-  const [interactedData, setInteractedData] = useState<IUserInteractData>({
+  // Local storage interact
+  const { saveData, getData } = useStorage()
+
+  const defaultInteractedData = {
     name: null,
     mssv: null,
     isMale: true,
@@ -48,8 +52,18 @@ function App() {
       stars: null,
       content: null,
     }
-  })
-  const [currentStep, setCurrentStep] = useState<number>(1)
+  }
+  const [interactedData, setInteractedData] = useState<IUserInteractData>(
+    getData() ? getData().interactedData : defaultInteractedData
+  )
+  const [currentStep, setCurrentStep] = useState<number>(
+    getData() ? getData().step : 1
+  )
+
+  // Save Data
+  useEffect(() => {
+    saveData(interactedData, currentStep)
+  }, [interactedData, currentStep])
 
   return (
     <Data.Provider value={{ interactedData, setInteractedData, currentStep, setCurrentStep }}>

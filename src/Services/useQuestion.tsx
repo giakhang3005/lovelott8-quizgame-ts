@@ -33,7 +33,13 @@ const useQuestion = () => {
 
     }
 
-    return { getCurrentQuestionData, saveAnswer, getTotalQuestions }
+    //check if user answer the first question or not
+    const checkFirstQuestion = () => {
+        return interactedData.answers.length > 0
+    }
+
+
+    return { getCurrentQuestionData, saveAnswer, getTotalQuestions, checkFirstQuestion }
 }
 
 export default useQuestion

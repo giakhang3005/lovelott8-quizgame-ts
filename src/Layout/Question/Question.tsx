@@ -16,19 +16,21 @@ const exitAnimate = { opacity: 0 }
 const transition = { duration: 0.4 }
 
 const Question = (props: Props) => {
-    // State control
-    const [modalState, setModalState] = useState<boolean>(true)
+    // Custom hooks
+    const { getCurrentQuestionData, saveAnswer, getTotalQuestions, checkFirstQuestion } = useQuestion()
+    const { nextStep } = useStep()
+
     // Selected question id
     const [currentQuestion, setCurrentQuestion] = useState<any>(null)
     // Current question object
     const [currentAnswer, setCurrentAnswer] = useState<IAnswers | null>(null)
+    // State control
+    const [modalState, setModalState] = useState<boolean>(false)
 
-    const { getCurrentQuestionData, saveAnswer, getTotalQuestions } = useQuestion()
-    const { nextStep } = useStep()
-
-    // Set the first question onload
+    // Set the first question onload & remove instructions when reload
     useEffect(() => {
         setCurrentQuestion(getCurrentQuestionData())
+        !checkFirstQuestion() && setModalState(true)
     }, [])
 
     // Handle user click next question
