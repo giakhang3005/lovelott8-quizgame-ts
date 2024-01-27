@@ -34,6 +34,8 @@
 .question {
   height: 100vh;
   width: 100%;
+  box-sizing: border-box;
+  padding: calc(1vh + 60px) 0 0 0;
 
   .progressBar {
     position: absolute;
@@ -57,7 +59,7 @@
   .content {
     position: absolute;
     width: 100%;
-    top: 3.5vh;
+    top: calc(3.5vh + 1vh + 60px);
     box-sizing: border-box;
     padding: 0 2% 0 0;
     margin: 12px 5px 5px 5px;

@@ -67,6 +67,10 @@ function App() {
 
   return (
     <Data.Provider value={{ interactedData, setInteractedData, currentStep, setCurrentStep }}>
+      <div className='logoContainer'>
+        <img src="./Assets/Logo/logowhite.png" />
+        <img src="./Assets/Logo/L8veLott.png" />
+      </div>
       <Row>
         <Col className='unuseZone' xs={0} sm={6}></Col>
         <Col xs={24} sm={12}>

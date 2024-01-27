@@ -17,7 +17,8 @@ $rose: #fda4af;
 $light-rose: #fbcfe8;
 
 html,
-body, .App {
+body,
+.App {
   font-family: "Alexandria", sans-serif;
   font-weight: 400; // Change the font weight as needed
   height: -webkit-fill-available;
@@ -29,7 +30,7 @@ body, .App {
 }
 
 body {
-  background: url(../public/Assets/Images/background.png) ;
+  background: url(../public/Assets/Images/background.png);
   background-size: cover;
 }
 
@@ -55,4 +56,23 @@ body {
   border: none;
   border-radius: 5px;
   padding: 10px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 1vh;
+  left: 2%;
+
+  img {
+    margin: 0 6px;
+    filter: drop-shadow(1px 1px 1px $purple)
+  }
+  img:nth-child(1) {
+    height: 60px;
+  }
+  img:nth-child(2) {
+    height: 45px;
+  }
 }
