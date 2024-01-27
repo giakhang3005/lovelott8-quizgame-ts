@@ -56,7 +56,7 @@ const Feedback = (props: Props) => {
         <div className="loading">
           <span className="loader"></span>
 
-          <div className="title gradient_purple_blue">{readyToView ? "ĐÃ CÓ KẾT QUẢ" : "ĐANG TÍNH TOÁN"}</div>
+          <div className="title">{readyToView ? "ĐÃ CÓ KẾT QUẢ" : "ĐANG TÍNH TOÁN"}</div>
           <i className="sub">Trong lúc hệ thống tìm kết quả phù hợp, bạn hãy dành 1 ít thời gian để đánh giá trải
             nghiệm nhằm giúp Cóc Sài Gòn cải thiện web hơn nhé ^^</i>
 

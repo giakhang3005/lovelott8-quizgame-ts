@@ -22,6 +22,8 @@
         font-weight: 600;
         font-size: 20px;
         text-align: center;
+        color: App.$lighter-pink;
+        text-shadow: 1px 1px 5px App.$lovely-pink;
         // margin: 0 0 6px 0;
       }
 
@@ -30,7 +32,7 @@
         top: 92px;
         width: 100%;
         font-size: 11px;
-        color: gray;
+        color: white;
         display: block;
         text-align: center;
         box-sizing: border-box;
@@ -85,7 +87,8 @@
         top: 0;
         height: 100%;
         width: 0;
-        background: App.$light-pink;
+        background: App.$lighter-pink;
+        box-shadow: 5px 0 12px App.$purple;
         animation: 12s prog ease-in forwards;
       }
     }
@@ -107,6 +110,7 @@
         font-size: 10px;
         font-weight: 500;
         color: red;
+        text-shadow: 1px 1px 1px rgba(255, 0, 0, 0.209);
       }
     }
 
@@ -140,17 +144,20 @@
       top: 320px;
       transform: translateX(-50%);
       border: none;
+      font-weight: 600;
       width: 90%;
-      background-color: App.$light-pink;
+      background-color: App.$lighter-pink;
       color: rgb(255, 255, 255);
       font-size: 14px;
-      text-shadow: 0.5px 0.5px 1px rgb(238, 236, 236);
+      text-shadow: 0.5px 0.5px 1px rgb(176, 176, 176);
+      box-shadow: 1px 1px 3px App.$purple;
       border-radius: 7px;
       margin: 30px 0 0 0;
       padding: 10px;
       letter-spacing: 1px;
       cursor: pointer;
       transition: all 0.15s ease;
+      
     }
 
     .submit:not(.nowAllow):hover {
@@ -161,7 +168,7 @@
   .notAllow {
     cursor: not-allowed;
     background-color: App.$unselected-answer !important;
-    opacity: 0.5;
+    opacity: 0.6;
   }
 
   .notAllow:hover {

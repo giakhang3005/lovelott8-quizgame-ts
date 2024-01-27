@@ -33,7 +33,7 @@ const Information = (props: Props) => {
             transition={transition}
         >
             <div className="info_container">
-                <div className="title gradient_purple_blue">
+                <div className="title">
                     THÔNG TIN CÁ NHÂN
                 </div>
 
@@ -52,7 +52,7 @@ const Information = (props: Props) => {
                 {/* MSSV */}
                 <div className="inputBox">
                     <label>MSSV
-                        <i className="note">Đối với sinh viên trường ngoài, bạn vui lòng điền tên trường</i>
+                        <i className="note">Nếu bạn không học FPT, bạn vui lòng điền tên trường</i>
                     </label>
 
                     <input type="text" placeholder="SE190000"

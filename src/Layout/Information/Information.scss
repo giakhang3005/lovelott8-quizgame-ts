@@ -15,6 +15,8 @@
     .title {
       font-size: 28px;
       font-weight: 700;
+      color: App.$light-blue;
+      text-shadow: 1px 1px 4px App.$deep-blue;
     }
   }
 
@@ -27,13 +29,18 @@
       display: block;
       padding: 0 0 12px 0;
       font-size: 17px;
+      color: App.$lighter-pink;
+      font-weight: 600;
+      text-shadow: 1.5px 1.5px 8px App.$purple;
     }
 
     .note {
       display: block;
       font-size: 10px;
-      color: gray;
+      color: white;
       padding: 3px 0 0 0;
+      font-weight: 500;
+      text-shadow: 1px 1px 5px rgb(90, 90, 90);
     }
 
     input[type="text"] {
@@ -47,7 +54,7 @@
       transition: all 0.12s linear;
     }
     input[type="text"]:focus {
-      border: 1px solid App.$light-pink;
+      border: 1px solid App.$purple;
     }
 
     .genderOptionCover {
@@ -60,11 +67,11 @@
         top: -2px;
         left: -1px;
         position: relative;
-        background-color: grey;
+        background-color: App.$unselected-answer;
         content: "";
         display: inline-block;
         visibility: visible;
-        border: 2px solid white;
+        border: 2px solid App.$unselected-answer-hover;
         cursor: pointer;
       }
 
@@ -84,6 +91,8 @@
 
       .radioLabel {
         margin: 0 17px 0 5px;
+        color: white;
+        text-shadow: 1px 1px 5px rgb(141, 141, 141);
       }
     }
   }
@@ -105,6 +114,7 @@
       letter-spacing: 1px;
       cursor: pointer;
       transition: all 0.15s ease;
+      box-shadow: 3px 3px 12px App.$purple;
     }
 
     .continueBtn:hover {

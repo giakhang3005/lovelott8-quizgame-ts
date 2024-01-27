@@ -2,6 +2,7 @@
 
 // Color
 $light-blue: #9cc4fd;
+$deep-blue: #3b82f6;
 $light-pink: #e0c3ff;
 $lovely-pink: #f9a8d4;
 $lighter-pink: #f5d0fe;
@@ -25,6 +26,11 @@ body, .App {
   margin: 0;
   box-sizing: border-box;
   color: black;
+}
+
+body {
+  background: url(../public/Assets/Images/background.png) ;
+  background-size: cover;
 }
 
 .unuseZone {

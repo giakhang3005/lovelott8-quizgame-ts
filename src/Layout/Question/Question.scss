@@ -62,19 +62,25 @@
     padding: 0 2% 0 0;
     margin: 12px 5px 5px 5px;
     text-align: center;
+    text-shadow: 0.7px 0.7px 5px rgb(137, 137, 137);
     // background-color: white;
     // border-radius: 9px;
     // border: 1px solid black;
     // padding: 15px 0 15px 0;
     .content_QNum {
       font-size: 20px;
-      font-weight: 600;
+      font-weight: 700;
       margin: 0 0 10px 0;
+      color: white;
+      text-shadow: 1.5px 1.5px 15px App.$purple;
     }
 
     .content_question {
       line-height: 23px;
       font-size: 17px;
+      font-weight: 500;
+      color: white;
+      text-shadow: 1.5px 1.5px 15px App.$purple;
     }
   }
 
@@ -97,6 +103,7 @@
       transition: all 0.12s linear;
       opacity: 0;
       animation: fadeIn 0.2s linear forwards;
+      box-shadow: 1px 1px 1px App.$purple;
 
       .answer_id {
         font-size: 20px;
