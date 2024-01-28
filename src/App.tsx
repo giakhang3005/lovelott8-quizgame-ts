@@ -8,6 +8,7 @@ import Question from './Layout/Question/Question';
 import { IAnswers } from './Data/Questions';
 import Feedback from './Layout/Feedback/Feedback';
 import { useStorage } from './Services/useStorage';
+import BlockedScreen from './Layout/BlockedScreen/BlockedScreen';
 
 //Interfaces
 //App Global State to store data from user
@@ -59,6 +60,19 @@ function App() {
   const [currentStep, setCurrentStep] = useState<number>(
     getData() ? getData().step : 1
   )
+  const [landscapePhone, setLandscapePhone] = useState<boolean>(false)
+
+  useEffect(() => {
+    //Check phone
+    const isPhone = /iPhone|Android|Windows Phone|IPad|IPod/.test(navigator.userAgent);
+
+    isPhone && (window.innerHeight < window.innerWidth) ? setLandscapePhone(true) : setLandscapePhone(false)
+    window.addEventListener("orientationchange", function () {
+      // console.log(window.innerHeight < window.innerWidth);
+
+      isPhone && (window.innerHeight > window.innerWidth) ? setLandscapePhone(true) : setLandscapePhone(false)
+    }, false);
+  }, [])
 
   // Save Data
   useEffect(() => {
@@ -71,60 +85,64 @@ function App() {
         <img src="./Assets/Logo/logowhite.png" />
         <img src="./Assets/Logo/L8veLott.png" />
       </div>
-      <Row>
-        <Col className='unuseZone' xs={0} sm={6}></Col>
-        <Col xs={24} sm={12}>
-          <div className="App">
-            {/* Step 1: Tap start */}
-            <AnimatePresence>
-              {
-                currentStep === 1 && (
-                  <StartScreen />
-                )
-              }
-            </AnimatePresence>
+      {landscapePhone ?
+        <AnimatePresence>
+          <BlockedScreen />
+        </AnimatePresence> :
+        <Row>
+          <Col className='unuseZone' xs={0} sm={6}></Col>
+          <Col xs={24} sm={12}>
+            <div className="App">
+              {/* Step 1: Tap start */}
+              <AnimatePresence>
+                {
+                  currentStep === 1 && (
+                    <StartScreen />
+                  )
+                }
+              </AnimatePresence>
 
-            {/* Step 2: Enter personal Informations */}
-            <AnimatePresence>
-              {
-                currentStep === 2 && (
-                  <Information />
-                )
-              }
-            </AnimatePresence>
+              {/* Step 2: Enter personal Informations */}
+              <AnimatePresence>
+                {
+                  currentStep === 2 && (
+                    <Information />
+                  )
+                }
+              </AnimatePresence>
 
-            {/* Step 3: Answer questions */}
-            <AnimatePresence>
-              {
-                currentStep === 3 && (
-                  <Question />
-                )
-              }
-            </AnimatePresence>
+              {/* Step 3: Answer questions */}
+              <AnimatePresence>
+                {
+                  currentStep === 3 && (
+                    <Question />
+                  )
+                }
+              </AnimatePresence>
 
-            {/* Step 4: Feedback */}
-            <AnimatePresence>
-              {
-                currentStep === 4 && (
-                  <Feedback />
-                )
-              }
-            </AnimatePresence>
+              {/* Step 4: Feedback */}
+              <AnimatePresence>
+                {
+                  currentStep === 4 && (
+                    <Feedback />
+                  )
+                }
+              </AnimatePresence>
 
-            {/* Step 5: Receive result */}
-            <AnimatePresence>
-              {
-                currentStep === 5 && (
-                  <Result />
-                )
-              }
-            </AnimatePresence>
+              {/* Step 5: Receive result */}
+              <AnimatePresence>
+                {
+                  currentStep === 5 && (
+                    <Result />
+                  )
+                }
+              </AnimatePresence>
 
-          </div>
-        </Col>
+            </div>
+          </Col>
 
-        <Col className='unuseZone' xs={0} sm={6}></Col>
-      </Row>
+          <Col className='unuseZone' xs={0} sm={6}></Col>
+        </Row>}
     </Data.Provider>
   );
 }

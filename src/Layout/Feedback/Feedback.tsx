@@ -78,6 +78,7 @@ const Feedback = (props: Props) => {
               "Bạn chưa hài lòng về điều gì? Hãy cho tụi mình biết nhé ^^" :
               "Bạn cảm thấy thế nào? (Không bắt buộc)"}
             onChange={(e) => setFeedbackContent(e.target.value)}
+            autoFocus
           ></textarea>
 
           {/* Submit button */}
