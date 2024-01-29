@@ -67,7 +67,7 @@ const useInteractedData = () => {
                 content: null,
             }
         })
-        setCurrentStep(1)
+        setCurrentStep(2)
     }
 
     return { getName, getMSSV, getGender, setName, setMSSV, setGender, validateInformations, restart }
