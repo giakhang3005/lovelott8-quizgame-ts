@@ -15,8 +15,8 @@
     .title {
       font-size: 28px;
       font-weight: 700;
-      color: App.$light-blue;
-      text-shadow: 1px 1px 4px App.$deep-blue;
+      color: white;
+      text-shadow: 2px 2px 4px App.$perfect-pink;
     }
   }
 
@@ -29,9 +29,9 @@
       display: block;
       padding: 0 0 12px 0;
       font-size: 17px;
-      color: App.$lighter-pink;
+      color: App.$perfect-pink-hover;
       font-weight: 600;
-      text-shadow: 1.5px 1.5px 8px App.$purple;
+      text-shadow: 1.5px 1px 2px App.$perfect-pink;
     }
 
     .note {
@@ -82,7 +82,7 @@
         top: -2px;
         left: -1px;
         position: relative;
-        background-color: App.$light-pink;
+        background-color: App.$perfect-pink-hover;
         content: "";
         display: inline-block;
         visibility: visible;

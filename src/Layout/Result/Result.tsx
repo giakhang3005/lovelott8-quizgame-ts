@@ -1,5 +1,5 @@
-import { Row, Col } from 'antd'
-import { RightOutlined } from '@ant-design/icons'
+import { Row, Col, Popconfirm } from 'antd'
+import { RightOutlined, RedoOutlined } from '@ant-design/icons'
 import "./Result.scss"
 import useInteractedData from '../../Services/useInteractedData'
 import CharacterDisplay from './CharacterDisplay'
@@ -16,7 +16,7 @@ const exitAnimate = { opacity: 0 }
 const transition = { duration: 0.4 }
 
 const Result = (props: Props) => {
-  const { getName } = useInteractedData()
+  const { getName, restart } = useInteractedData()
   const [result, setResult] = useState<any>(null)
 
   window.addEventListener('resize', setHeight);
@@ -27,7 +27,7 @@ const Result = (props: Props) => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   }
   setHeight()
-  
+
   const { getOwnCharacter } = useResult()
   useEffect(() => {
     setResult(getOwnCharacter())
@@ -57,41 +57,66 @@ const Result = (props: Props) => {
         </Col>
       </Row>
 
-      {/* behavior */}
-      <Row className='characteristic'>
-        <Col span={6} className="characteristic_title">Tính cách: </Col>
-        <Col span={18} className="characteristic_content">
-          {result?.ownCharacter.behavior}
-        </Col>
+      {/* logo */}
+      <Row className='logo'>
+
+        <img src="./Assets/Logo/logowhite.png" />
+        <img src="./Assets/Logo/L8veLott.png" />
       </Row>
 
-      {/* ko Hợp & Image */}
+      {/* Behavior */}
       <Row className='result_body'>
-        <Col span={3} className='attractTitleContainer'>
-          <div className='attract_title'>KHÔNG HỢP</div>
+        <Col span={13} className='behaviorContainer'>
+          <Row className='title'>TÍNH CÁCH</Row>
+          <Row className="behaveCont">
+            {
+              result?.ownCharacter.behavior.map((behavior: string, i: number) => (
+                <motion.div
+                  key={i}
+                  className="behavior"
+                  initial={defaultAnimate}
+                  animate={animate}
+                  exit={exitAnimate}
+                  transition={{ delay: i * 0.25 }}
+                >
+                  {behavior}
+                </motion.div>
+              ))
+            }
+          </Row>
         </Col>
-        <Col span={11} className='attract_character'>
-          {
-            result?.antiCharacter.map((character: any, i: number) =>
-              <CharacterDisplay key={i} name={character.name} imgUrl="./Assets/Images/elsa.png" animationDelay={i} />)
-          }
-        </Col>
-        <Col span={10} className='character_image_container'>
+        <Col span={11} className='character_image_container'>
           <img src="Assets/Images/elsa.png" className='ownCharacterImg' />
         </Col>
       </Row>
 
-      {/* ko Hợp & Image */}
+      {/* Match & Anti */}
       <Row className='result_body2'>
-        <Col span={3} className='attractTitleContainer'>
-          <div className='attract_title'>HỢP</div>
+        <Col span={13} className='anti_character'>
+          <Row className='title'>KHÔNG HỢP</Row>
+          <Row className='body'>
+            {
+              result?.antiCharacter.map((character: any, i: number) =>
+                <CharacterDisplay key={i} name={character.name} imgUrl="./Assets/Images/elsa.png" animationDelay={i} />)
+            }
+          </Row>
         </Col>
-        <Col span={21} className='attract_character'>
-          {
-            result?.matchCharacter.map((character: any, i: number) =>
-              <CharacterDisplay key={i} name={character.name} imgUrl="./Assets/Images/elsa.png" animationDelay={i} />)
-          }
+        <Col span={11} className='attract_character'>
+          <Row className='title'>HỢP</Row>
+          <Row className='body'>
+            {
+              result?.matchCharacter.map((character: any, i: number) =>
+                <CharacterDisplay key={i} name={character.name} imgUrl="./Assets/Images/elsa.png" animationDelay={i} />)
+            }
+          </Row>
         </Col>
+      </Row>
+
+      {/* Btns */}
+      <Row className='btnsContainer'>
+        <Popconfirm title="Bạn có chắc chắn muốn chơi lại không?" cancelText="Không" okText="Chắc chắn" onConfirm={restart}>
+          <button className="restart"> <RedoOutlined className="icon" />Chơi lại</button>
+        </Popconfirm>
       </Row>
 
       {/* Footer */}

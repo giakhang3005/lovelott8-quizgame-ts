@@ -26,5 +26,9 @@ export const useStorage = () => {
 
     }
 
-    return { saveData, getData }
+    const clearData = () => {
+        localStorage.removeItem('userData')
+    }
+
+    return { saveData, getData, clearData }
 }

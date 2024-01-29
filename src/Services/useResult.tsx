@@ -40,6 +40,7 @@ const useResult = () => {
 
         // Returned Object
         const returnedObject = {
+            points: totalPoints,
             ownCharacter: ownCharacter,
             matchCharacter: matchCharacter,
             antiCharacter: antiCharacter

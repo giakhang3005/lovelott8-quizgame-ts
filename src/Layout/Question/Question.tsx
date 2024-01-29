@@ -58,7 +58,7 @@ const Question = (props: Props) => {
     }
     return (
         <>
-            <Modal title="CÁCH CHƠI" closeIcon={false} footer={null} open={modalState}>
+            <Modal title="Mirror mirror on the wall, Who Am I?" closeIcon={false} footer={null} open={modalState}>
                 <RuleModal setModalState={setModalState} />
             </Modal>
             <motion.div className="question">

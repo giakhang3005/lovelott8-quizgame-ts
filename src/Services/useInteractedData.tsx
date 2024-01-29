@@ -1,9 +1,11 @@
 import { useContext } from "react"
 import { IContext, Data, IUserInteractData } from '../App'
+import { useStorage } from "./useStorage"
 
 const useInteractedData = () => {
-    const { interactedData, setInteractedData } = useContext(Data) as IContext
-    
+    const { interactedData, setInteractedData, setCurrentStep } = useContext(Data) as IContext
+    const { clearData } = useStorage()
+
     //! Getter
     const getName = () => {
         return interactedData.name
@@ -52,7 +54,23 @@ const useInteractedData = () => {
         return nameErr || mssvErr
     }
 
-    return { getName, getMSSV, getGender, setName, setMSSV, setGender, validateInformations }
+    // Restart
+    const restart = () => {
+        clearData()
+        setInteractedData({
+            name: null,
+            mssv: null,
+            isMale: true,
+            answers: [],
+            feedback: {
+                stars: null,
+                content: null,
+            }
+        })
+        setCurrentStep(1)
+    }
+
+    return { getName, getMSSV, getGender, setName, setMSSV, setGender, validateInformations, restart }
 }
 
 export default useInteractedData

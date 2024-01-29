@@ -17,7 +17,7 @@ interface ICharacter {
     name: string,
     img: string,
     isMale: boolean,
-    behavior: string,
+    behavior: string[],
     match: string[],
     anti: string[],
     // color: {
@@ -31,12 +31,17 @@ interface ICharacter {
 export const characters: ICharacter[] = [
     {
         id: 'Charming',
-        name: 'Hoàng tử Charming',
+        name: 'Charming',
         img: '',
         isMale: true,
-        behavior: 'Lịch lãm, lịch thiệp và lãng mạn',
+        behavior: [
+            'Quý phái, tinh tế, lãng mạn.',
+            'Kiên nhẫn và quyết đoán.',
+            'Trách nhiệm và tình yêu gia đình.',
+            'Hiền hòa, lạc quan.',
+        ],
         match: [
-            'Tiana', 'Cinderella', 'Ariel', 'Jasmine', 'Rapunzel', 'Mulan', 'Elsa', 'Belle', 'Aurora'
+            'Cinderella'
         ],
         anti: [
             'BachTuyet', 'Moana'
@@ -44,12 +49,17 @@ export const characters: ICharacter[] = [
     },
     {
         id: 'Adam',
-        name: 'Hoàng tử Adam - Beast',
+        name: 'Adam - Beast',
         img: '',
         isMale: true,
-        behavior: 'Ban đầu lạnh lùng và tự ti, nhưng sau đó trở nên trọng thùy và nhân từ',
+        behavior: [
+            'Trách nhiệm, kiên nhẫn.',
+            'Sẵn sàng thay đổi, linh hoạt',
+            'Sự lạc quan, kiên nhẫn trong tìm kiếm tình yêu.',
+            'Sự hòa nhã , thấu hiểu đối phương.',
+        ],
         match: [
-            'Merida', 'Belle', 'Cinderella', 'Moana', 'Bạch Tuyết', 'Mulan', 'Elsa', 'Aurora'
+            'Belle'
         ],
         anti: [
             'Jasmine', 'Ariel'
@@ -57,12 +67,17 @@ export const characters: ICharacter[] = [
     },
     {
         id: 'Eric',
-        name: 'Hoàng tử Eric',
+        name: 'Eric',
         img: '',
         isMale: true,
-        behavior: 'Can đảm, tận tâm và lãng mạn',
+        behavior: [
+            'Tự tin trong quyết định, làm chủ tình huống.',
+            'Độc lập trong suy nghĩ và hành động.',
+            'Thân thiện, hòa nhã.',
+            'Quý phái, tinh tế, lãng mạn.',
+        ],
         match: [
-            'Merida', 'Tiana', 'Ariel', 'Jasmine', 'Rapunzel', 'Elsa', 'Belle', 'Aurora'
+            'Ariel'
         ],
         anti: [
             'BachTuyet', 'Moana'
@@ -70,25 +85,36 @@ export const characters: ICharacter[] = [
     },
     {
         id: 'LiShang',
-        name: 'Hoàng tử Li Shang',
+        name: 'Li Shang',
         img: '',
         isMale: true,
-        behavior: 'Nghiêm túc, trách nhiệm và tôn trọng',
+        behavior: [
+            'Nghiêm túc, trách nhiệm và tôn trọng.',
+            'Khí phách trong tư cách lãnh đạo',
+            'Mạnh mẽ về cảm xúc và quyết tâm.',
+            'Quyết đoán, kiên nhẫn, tận tâm.',
+            'Dũng cảm, nhạy bén.',
+        ],
         match: [
-            'Merida', 'Tiana', 'Cinderella', 'Moana', 'BachTuyet', 'Mulan', 'Belle', 'Aurora'
+            'Mulan'
         ],
         anti: [
             'Ariel', 'Jasmine'
         ],
     },
     {
-        id: 'Ali',
-        name: 'Hoàng tử Ali',
+        id: 'Olaf',
+        name: 'Olaf',
         img: '',
         isMale: true,
-        behavior: 'Tự tin, dũng cảm và có tình yêu với sự tự do',
+        behavior: [
+            'Tự tin, dũng cảm, yêu sự tự do.',
+            'Lạc quan, tự tin theo đuổi ước mơ.',
+            'Sự thích nghi, sáng tạo.',
+            'Phóng khoáng, khát khao tự do, phiêu lưu.',
+        ],
         match: [
-            'Merida', 'Tiana', 'Cinderella', 'Ariel', 'Jasmine', 'Rapunzel', 'Elsa', 'Aurora'
+            'Elsa'
         ],
         anti: [
             'Mulan', 'BachTuyet'
@@ -96,12 +122,17 @@ export const characters: ICharacter[] = [
     },
     {
         id: 'Phillip',
-        name: 'Hoàng tử Phillip',
+        name: 'Phillip',
         img: '',
         isMale: true,
-        behavior: 'Can đảm và lãng mạn, sẵn sàng đối mặt với nguy hiểm',
+        behavior: [
+            'Lãng mạn trong tình cảm.',
+            'Quyết đoán trong việc đối mặt với thách thức.',
+            'Chung thủy với mối quan hệ.',
+            'Kiên trì, tận tâm, trách nhiệm.',
+        ],
         match: [
-            'Aurora', 'Merida', 'Tiana', 'Ariel', 'Moana', 'BachTuyet', 'Belle'
+            'Aurora'
         ],
         anti: [
             'Elsa', 'Rapunzel', 'Jasmine'
@@ -109,12 +140,17 @@ export const characters: ICharacter[] = [
     },
     {
         id: 'Kristoff',
-        name: 'Hoàng tử Kristoff',
+        name: 'Kristoff',
         img: '',
         isMale: true,
-        behavior: 'Tự lập, trung thực, tốt bụng ngoài ra còn rất yêu động vật',
+        behavior: [
+            'Chân thành trong tình cảm.',
+            'Tự tin trong tình yêu.',
+            'Sâu sắc, hồn nhiên trong tình yêu.',
+            'Nhạy bén, thấu hiểu tâm trạng đối phương.',
+        ],
         match: [
-            'Tiana', 'Cinderella', 'Ariel', 'Merida', 'Moana', 'Jasmine', 'Rapunzel', 'Elsa', 'Aurora'
+            'Merida'
         ],
         anti: [
             'Belle', 'Mulan'
@@ -122,12 +158,17 @@ export const characters: ICharacter[] = [
     },
     {
         id: 'JohnSmith',
-        name: 'Hoàng tử John Smith',
+        name: 'John Smith',
         img: '',
         isMale: true,
-        behavior: 'Sự tò mò, sẵn sàng đón nhận sự đa dạng và hiểu biết văn hóa.',
+        behavior: [
+            'Dũng cảm ',
+            'Tích cực, tự tin trong mọi quyết định .',
+            'Khả năng đồng thuận và lắng nghe.',
+            'Sẵn sàng chia sẻ tâm tư của mình.',
+        ],
         match: [
-            'Merida', 'Cinderella', 'Moana', 'Jasmine', 'BachTuyet', 'Mulan'
+            'Moana'
         ],
         anti: [
             'Aurora', 'Elsa', 'Ariel'
@@ -135,12 +176,17 @@ export const characters: ICharacter[] = [
     },
     {
         id: 'FlynnRider',
-        name: 'Hoàng tử Flynn Rider',
+        name: 'Flynn Rider',
         img: '',
         isMale: true,
-        behavior: 'Hài hước, mạo hiểm và thấu hiểu.',
+        behavior: [
+            'Lãng mạn, tự tin, duyên dáng.',
+            'Khao khát tự do, sự độc lập',
+            'Hài hước,dễ gần và thân thiện.',
+            'Có trách nhiệm với mối quan hệ.',
+        ],
         match: [
-            'Tiana', 'Ariel', 'Moana', 'Jasmine', 'BachTuyet', 'Rapunzel', 'Elsa', 'Aurora'
+            'Rapunzel'
         ],
         anti: [
             'Merida', 'Belle'
@@ -148,12 +194,17 @@ export const characters: ICharacter[] = [
     },
     {
         id: 'Florian',
-        name: 'Hoàng tử Florian',
+        name: 'Florian',
         img: '',
         isMale: true,
-        behavior: 'Hát hay, tốt bụng và nhân từ',
+        behavior: [
+            'Tự tin, tự chủ trong mọi quyết định.',
+            'Chung thủy, có trách nhiệm .',
+            'Sự chân thật trong tình yêu.',
+            'Sự hài hước, khả năng thấu hiểu, lắng nghe.',
+        ],
         match: [
-            'Merida', 'Cinderella', 'Moana', 'Jasmine', 'BachTuyet', 'Ariel', 'Mulan', 'Belle'
+            'BachTuyet'
         ],
         anti: [
             'Aurora', 'Tiana'
@@ -161,12 +212,17 @@ export const characters: ICharacter[] = [
     },
     {
         id: 'Naveen',
-        name: 'Hoàng tử Naveen',
+        name: 'Naveen',
         img: '',
         isMale: true,
-        behavior: 'Sôi nổi, yêu đời và hòa đồng',
+        behavior: [
+            'Tự tin vào bản thân, quyến rũ.',
+            'Khao khát tự do, đam mê phiêu lưu ',
+            'Yêu đời, tận hưởng cuộc sống.',
+            'Tôn trọng, thấu hiểu cảm xúc đối phương.',
+        ],
         match: [
-            'Tiana', 'Ariel', 'Jasmine', 'BachTuyet', 'Rapunzel', 'Mulan', 'Elsa', 'Aurora'
+            'Tiana'
         ],
         anti: [
             'Merida', 'Cinderella'
@@ -174,12 +230,18 @@ export const characters: ICharacter[] = [
     },
     {
         id: 'Aladdin',
-        name: 'Hoàng tử Aladdin',
+        name: 'Aladdin',
         img: '',
         isMale: true,
-        behavior: 'Năng động, thông minh và có trái tim lương thiện',
+        behavior: [
+            'Quan tâm đến cảm xúc đối phương.',
+            'Giải quyết tình huống thông minh, khéo léo.',
+            'Lạc quan, tích cực. ',
+            'Sự tận tâm với đối phương',
+            'Sẵn sàng hy sinh cho hạnh phúc chung.',
+        ],
         match: [
-            'Merida', 'Cinderella', 'Moana', 'Jasmine', 'BachTuyet', 'Rapunzel', 'Mulan', 'Elsa', 'Belle'
+            'Merida'
         ],
         anti: [
             'Tiana', 'Ariel'
@@ -190,9 +252,14 @@ export const characters: ICharacter[] = [
         name: 'Elsa',
         img: '',
         isMale: false,
-        behavior: 'Chu đáo, sâu sắc và có trách nhiệm.',
+        behavior: [
+            'Độc lập',
+            'Tự chủ',
+            'Tinh tế, thấu hiểu và chia sẻ.',
+            'Tinh thần tự do',
+        ],
         match: [
-            'Ali', 'Phillip', 'Kristoff', 'FlynnRider', 'Naveen', 'Aladdin', 'Charming', 'Adam', 'Eric'
+            'Olaf'
         ],
         anti: [
             'Florian', 'JohnSmith'
@@ -203,8 +270,13 @@ export const characters: ICharacter[] = [
         name: 'Belle',
         img: '',
         isMale: false,
-        behavior: 'Thân thiện và hào phóng, sở hữu cách nói chuyện nhẹ nhàng.',
-        match: ['LiShang', 'Adam', 'Phillip', 'JohnSmith', 'Florian', 'Aladdin', 'Charming', 'Eric'],
+        behavior: [
+            'Tư duy độc lập',
+            'Tri thức',
+            'Nhạy bén, sáng tạo',
+            'Tâm hồn nghệ thuật',
+        ],
+        match: ['Adam'],
         anti: ['FlynnRider', 'Kristoff']
     },
     {
@@ -212,8 +284,13 @@ export const characters: ICharacter[] = [
         name: 'Aurora',
         img: '',
         isMale: false,
-        behavior: 'Có phẩm chất thanh tao, cách sống tình cảm, đáng yêu.',
-        match: ['LiShang', 'Ali', 'Phillip', 'Kristoff', 'Naveen', 'Charming', 'Adam', 'Eric'],
+        behavior: [
+            'Thanh tao, hiền hòa, dịu dàng',
+            'Sống tình cảm, đáng yêu',
+            'Tinh thần phiêu lưu',
+            'Lãng mạn',
+        ],
+        match: ['Phillip'],
         anti: ['Florian', 'JohnSmith']
     },
     {
@@ -221,8 +298,13 @@ export const characters: ICharacter[] = [
         name: 'Merida',
         img: '',
         isMale: false,
-        behavior: 'Mạnh dạn, không biết sợ hãi, dũng cảm và thẳng thắn.',
-        match: ['LiShang', 'Ali', 'Phillip', 'JohnSmith', 'Aladdin', 'Adam', 'Eric', 'Florian'],
+        behavior: [
+            'Mạnh dạn, dũng cảm và thẳng thắn.',
+            'Kiêu hãnh',
+            'Năng động',
+            'Tự do và độc lập',
+        ],
+        match: ['Phillip'],
         anti: ['Kristoff', 'FlynnRider'],
     },
     {
@@ -230,8 +312,13 @@ export const characters: ICharacter[] = [
         name: 'Tiana',
         img: '',
         isMale: false,
-        behavior: 'Vô cùng kiên quyết và cứng đầu, có tầm nhìn rõ ràng về tương lai của mình.',
-        match: ['LiShang', 'Ali', 'Phillip', 'Kristoff', 'FlynnRider', 'Naveen', 'Charming', 'Eric'],
+        behavior: [
+            'Chăm chỉ, nỗ lực',
+            'Nhìn xa trông rộng',
+            'Tích cực, lạc quan',
+            'Thông minh, kiên định',
+        ],
+        match: ['Naveen'],
         anti: ['Aladdin', 'Florian'],
     },
     {
@@ -239,8 +326,13 @@ export const characters: ICharacter[] = [
         name: 'Cinderella',
         img: '',
         isMale: false,
-        behavior: 'Đầy nghị lực, bất chấp mọi tình huống tìm ra cách để làm cho mọi thứ trở nên tốt đẹp hơn.',
-        match: ['Eric', 'LiShang', 'Ali', 'Kristoff', 'JohnSmith', 'Florian', 'Adam', 'Charming'],
+        behavior: [
+            'Nghị lực, quyết tâm, kiên trì',
+            'Tốt bụng, nhân ái',
+            'Quý phái',
+            'Thấu hiểu',
+        ],
+        match: ['Charming'],
         anti: ['Naveen', 'FlynnRider'],
     },
     {
@@ -248,8 +340,14 @@ export const characters: ICharacter[] = [
         name: 'Nàng tiên cá',
         img: '',
         isMale: false,
-        behavior: 'Luôn tỏ ra một vẻ ngoài cứng rắn, nhưng sâu bên trong họ lại là một con người tốt bụng và rất đáng yêu.',
-        match: ['Ali', 'Phillip', 'Kristoff', 'LiShang', 'JohnSmith', 'FlynnRider', 'Naveen', 'Charming', 'Eric'],
+        behavior: [
+            'Mạnh mẽ',
+            'Tốt bụng, đáng yêu',
+            'Tò mò, đam mê khám phá, sáng tạo',
+            'Hoài bão',
+            'Tinh thần nghệ thuật',
+        ],
+        match: ['Eric'],
         anti: ['Adam', 'Aladdin']
     },
     {
@@ -257,8 +355,13 @@ export const characters: ICharacter[] = [
         name: 'Moana',
         img: '',
         isMale: false,
-        behavior: 'Chịu trách nhiệm về cuộc sống của mình, rất mạnh mẽ, sẵn sàng bảo vệ người khác.',
-        match: ['LiShang', 'Phillip', 'JohnSmith', 'FlynnRider', 'Florian', 'Aladdin'],
+        behavior: [
+            'Trách nhiệm',
+            'Mạnh mẽ',
+            'Nghĩa hiệp, tinh thần phiêu lưu',
+            'Kiên nhẫn, sẵn sàng học hỏi',
+        ],
+        match: ['JohnSmith'],
         anti: ['Eric', 'Charming', 'Kristoff']
     },
     {
@@ -266,8 +369,13 @@ export const characters: ICharacter[] = [
         name: 'Jasmine',
         img: '',
         isMale: false,
-        behavior: 'Chăm chỉ nhất, luôn đặt ra những mục tiêu cao cho bản thân và không ngừng nỗ lực để đạt được chúng một cách hoàn hảo',
-        match: ['Ali', 'Kristoff', 'JohnSmith', 'FlynnRider', 'Florian', 'Naveen', 'Charming', 'Eric', 'Aladdin'],
+        behavior: [
+            'Chăm chỉ',
+            'Nghị lực, kiên nhẫn',
+            'Có tầm nhìn',
+            'Lãng mạn, khao khát tình yêu đich thực',
+        ],
+        match: ['Eric'],
         anti: ['LiShang', 'Adam']
     },
     {
@@ -275,17 +383,28 @@ export const characters: ICharacter[] = [
         name: 'Bạch Tuyết',
         img: '',
         isMale: false,
-        behavior: 'Dễ thương và dễ dàng kết bạn có một nét quyến rũ thu hút mọi ánh nhìn từ người khác.',
-        match: ['LiShang', 'Phillip', 'JohnSmith', 'FlynnRider', 'Florian', 'Kristoff', 'Aladdin', 'Adam'],
-        anti: ['Eric', 'Ali']
+        behavior: [
+            'Dễ thương, hiền hậu',
+            'Hòa đồng',
+            'Quyến rũ, tinh tế',
+            'Tôn trọng',
+        ],
+        match: ['Florian'],
+        anti: ['Eric', 'Olaf']
     },
     {
         id: 'Rapunzel',
         name: 'Công chúa tóc mây',
         img: '',
         isMale: false,
-        behavior: 'Quan tâm đến lợi ích của mình làm bất cứ điều gì để đạt được những gì mình muốn.',
-        match: ['Ali', 'Kristoff', 'FlynnRider', 'Florian', 'Naveen', 'Aladdin', 'Charming', 'Eric'],
+        behavior: [
+            'Kiên định',
+            'Quyết tâm',
+            'Mạnh mẽ',
+            'Lạc quan',
+            'Tính nghệ sĩ trong tâm hồn',
+        ],
+        match: ['FlynnRider'],
         anti: ['LiShang', 'Phillip']
     },
     {
@@ -293,9 +412,15 @@ export const characters: ICharacter[] = [
         name: 'Hoa Mộc Lan',
         img: '',
         isMale: false,
-        behavior: 'Yêu thích mạo hiểm, táo bạo và biết hi sinh.',
-        match: ['LiShang', 'Phillip', 'JohnSmith', 'FlynnRider', 'Florian', 'Naveen', 'Aladdin', 'Charming', 'Adam'],
-        anti: ['Ali', 'Kristoff']
+        behavior: [
+            'Yêu thích mạo hiểm',
+            'Táo bạo',
+            'Biết hi sinh',
+            'Kiên nhẫn, nỗ lực',
+            'Tinh thần phiêu lưu, sẵn sàng khám phá',
+        ],
+        match: ['LiShang'],
+        anti: ['Olaf', 'Kristoff']
     }
 ];
 
@@ -307,8 +432,8 @@ export const charactersRuleSet: ICharacterRuleSet[] = [
         male: 'Charming',
         female: 'Elsa',
         point: {
-            min: 97,
-            max: 103,
+            min: 16,
+            max: 19,
         }
     },
     {
@@ -316,8 +441,8 @@ export const charactersRuleSet: ICharacterRuleSet[] = [
         male: 'Adam',
         female: 'Belle',
         point: {
-            min: 104,
-            max: 108,
+            min: 20,
+            max: 23,
         }
     },
     {
@@ -325,8 +450,8 @@ export const charactersRuleSet: ICharacterRuleSet[] = [
         male: 'Eric',
         female: 'Aurora',
         point: {
-            min: 48,
-            max: 54,
+            min: 24,
+            max: 27,
         }
     },
     {
@@ -334,17 +459,17 @@ export const charactersRuleSet: ICharacterRuleSet[] = [
         male: 'LiShang',
         female: 'Merida',
         point: {
-            min: 62,
-            max: 68,
+            min: 28,
+            max: 31,
         }
     },
     {
         id: 5,
-        male: 'Ali',
+        male: 'Olaf',
         female: 'Tiana',
         point: {
-            min: 41,
-            max: 47,
+            min: 32,
+            max: 35,
         }
     },
     {
@@ -352,8 +477,8 @@ export const charactersRuleSet: ICharacterRuleSet[] = [
         male: 'Phillip',
         female: 'Cinderella',
         point: {
-            min: 69,
-            max: 75,
+            min: 36,
+            max: 39,
         }
     },
     {
@@ -361,8 +486,8 @@ export const charactersRuleSet: ICharacterRuleSet[] = [
         male: 'Kristoff',
         female: 'Ariel',
         point: {
-            min: 76,
-            max: 82,
+            min: 40,
+            max: 43,
         }
     },
     {
@@ -370,8 +495,8 @@ export const charactersRuleSet: ICharacterRuleSet[] = [
         male: 'JohnSmith',
         female: 'Moana',
         point: {
-            min: 55,
-            max: 61,
+            min: 44,
+            max: 47,
         }
     },
     {
@@ -379,8 +504,8 @@ export const charactersRuleSet: ICharacterRuleSet[] = [
         male: 'FlynnRider',
         female: 'Jasmine',
         point: {
-            min: 27,
-            max: 33,
+            min: 48,
+            max: 51,
         }
     },
     {
@@ -388,8 +513,8 @@ export const charactersRuleSet: ICharacterRuleSet[] = [
         male: 'Florian',
         female: 'BachTuyet',
         point: {
-            min: 83,
-            max: 89,
+            min: 52,
+            max: 56,
         }
     },
     {
@@ -397,8 +522,8 @@ export const charactersRuleSet: ICharacterRuleSet[] = [
         male: 'Naveen',
         female: 'Rapunzel',
         point: {
-            min: 34,
-            max: 40,
+            min: 57,
+            max: 60,
         }
     },
     {
@@ -406,8 +531,8 @@ export const charactersRuleSet: ICharacterRuleSet[] = [
         male: 'Aladdin',
         female: 'Mulan',
         point: {
-            min: 90,
-            max: 96,
+            min: 61,
+            max: 64,
         }
     },
 ];

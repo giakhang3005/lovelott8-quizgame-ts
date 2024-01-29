@@ -311,33 +311,6 @@ export const QuestionsDatas: IQuestion[] = [
 
     {
         id: 12,
-        question: 'Trong mối quan hệ nào đó, bạn cảm thấy quan trọng nhất là:',
-        answers: [
-            {
-                id: 'a',
-                content: 'Sự chắc chắn và ổn định',
-                point: 3,
-            },
-            {
-                id: 'b',
-                content: 'Sự đổi mới và thú vị',
-                point: 1,
-            },
-            {
-                id: 'c',
-                content: 'Sự tự do và độc lập',
-                point: 2,
-            },
-            {
-                id: 'd',
-                content: 'Sự hiểu biết và tương tác với nhau',
-                point: 4,
-            },
-        ],
-    },
-
-    {
-        id: 13,
         question: 'Khi bạn muốn giải tỏa stress, bạn thích:',
         answers: [
             {
@@ -364,115 +337,7 @@ export const QuestionsDatas: IQuestion[] = [
     },
 
     {
-        id: 14,
-        question: 'Khi đối mặt với một vấn đề khó khăn, bạn thường:',
-        answers: [
-            {
-                id: 'a',
-                content: 'Tìm kiếm giải pháp ngay',
-                point: 4,
-            },
-            {
-                id: 'b',
-                content: 'Suy nghĩ cách giải quyết vấn đề theo hướng sáng tạo',
-                point: 3,
-            },
-            {
-                id: 'c',
-                content: 'Cần thời gian để suy nghĩ và đưa ra quyết định',
-                point: 2,
-            },
-            {
-                id: 'd',
-                content: 'Hỏi ý kiến và tìm sự hỗ trợ từ người thân, bạn bè',
-                point: 1,
-            },
-        ],
-    },
-
-    {
-        id: 15,
-        question: 'Nếu bạn có một ngày tự do, bạn muốn:',
-        answers: [
-            {
-                id: 'a',
-                content: 'Dành thời gian với gia đình',
-                point: 1,
-            },
-            {
-                id: 'b',
-                content: 'Khám phá những địa điểm mới và thú vị',
-                point: 3,
-            },
-            {
-                id: 'c',
-                content: 'Tự do sáng tạo, ca hát và thư giãn',
-                point: 4,
-            },
-            {
-                id: 'd',
-                content: 'Dành thời gian nghỉ ngơi',
-                point: 2,
-            },
-        ],
-    },
-
-    {
-        id: 16,
-        question: 'Trong mối quan hệ nào đó, bạn đặt trọng tâm vào:',
-        answers: [
-            {
-                id: 'a',
-                content: 'Sự bền vững và ổn định',
-                point: 3,
-            },
-            {
-                id: 'b',
-                content: 'Sự đổi mới và thách thức',
-                point: 1,
-            },
-            {
-                id: 'c',
-                content: 'Sự tự do và độc lập',
-                point: 4,
-            },
-            {
-                id: 'd',
-                content: 'Sự hiểu biết và tương tác lẫn nhau',
-                point: 2,
-            },
-        ],
-    },
-
-    {
-        id: 17,
-        question: 'Bạn thích đọc những tác phẩm nghệ thuật nào nhất?',
-        answers: [
-            {
-                id: 'a',
-                content: 'Tác phẩm cổ điển và tác phẩm nghệ thuật truyền thống',
-                point: 4,
-            },
-            {
-                id: 'b',
-                content: 'Tác phẩm hiện đại và phá cách',
-                point: 3,
-            },
-            {
-                id: 'c',
-                content: 'Tác phẩm tư duy và trinh thám',
-                point: 1,
-            },
-            {
-                id: 'd',
-                content: 'Tác phẩm thể hiện tình cảm và tâm lý',
-                point: 2,
-            },
-        ],
-    },
-
-    {
-        id: 18,
+        id: 13,
         question: 'Khi bạn đối diện với quyết định quan trọng, bạn thường:',
         answers: [
             {
@@ -499,34 +364,7 @@ export const QuestionsDatas: IQuestion[] = [
     },
 
     {
-        id: 19,
-        question: 'Trong công việc nhóm, bạn thích đảm nhận vai trò nào?',
-        answers: [
-            {
-                id: 'a',
-                content: 'Lãnh đạo và tổ chức',
-                point: 1,
-            },
-            {
-                id: 'b',
-                content: 'Đóng góp ý tưởng mới và sáng tạo',
-                point: 4,
-            },
-            {
-                id: 'c',
-                content: 'Hoạch định chiến lược và kế hoạch',
-                point: 3,
-            },
-            {
-                id: 'd',
-                content: 'Hỗ trợ và thúc đẩy sự đồng thuận',
-                point: 2,
-            },
-        ],
-    },
-
-    {
-        id: 20,
+        id: 14,
         question: 'Đối với bạn thì các mối quan hệ hay sự nghiệp quan trọng hơn?',
         answers: [
             {
@@ -553,34 +391,7 @@ export const QuestionsDatas: IQuestion[] = [
     },
 
     {
-        id: 21,
-        question: 'Bạn mong muốn gì trên con đường sự nghiệp của mình?',
-        answers: [
-            {
-                id: 'a',
-                content: 'Sự ổn định và độ chắc chắn',
-                point: 4,
-            },
-            {
-                id: 'b',
-                content: 'Sự đổi mới và thách thức',
-                point: 3,
-            },
-            {
-                id: 'c',
-                content: 'Tự do và linh hoạt',
-                point: 2,
-            },
-            {
-                id: 'd',
-                content: 'Môi trường làm việc thân thiện',
-                point: 1,
-            },
-        ],
-    },
-
-    {
-        id: 22,
+        id: 15,
         question: 'Bạn thích thể loại âm nhạc nào nhất?',
         answers: [
             {
@@ -607,34 +418,7 @@ export const QuestionsDatas: IQuestion[] = [
     },
 
     {
-        id: 23,
-        question: 'Khi gặp khó khăn, bạn muốn nhận sự giúp đỡ từ:',
-        answers: [
-            {
-                id: 'a',
-                content: 'Gia đình và người thân',
-                point: 2,
-            },
-            {
-                id: 'b',
-                content: 'Đồng nghiệp và bạn bè',
-                point: 4,
-            },
-            {
-                id: 'c',
-                content: 'Tự giải quyết khó khăn',
-                point: 3,
-            },
-            {
-                id: 'd',
-                content: 'Chuyên gia và người có kinh nghiệm',
-                point: 1,
-            },
-        ],
-    },
-
-    {
-        id: 24,
+        id: 16,
         question: 'Bạn làm thế nào để thể hiện tình cảm của mình?',
         answers: [
             {
@@ -656,87 +440,6 @@ export const QuestionsDatas: IQuestion[] = [
                 id: 'd',
                 content: 'Chia sẻ thời gian và có những hoạt động chung',
                 point: 2,
-            },
-        ],
-    },
-
-    {
-        id: 25,
-        question: 'Bạn thích ghé thăm khu giải trí nào nhất?',
-        answers: [
-            {
-                id: 'a',
-                content: 'Khu vui chơi dành cho gia đình, nhẹ nhàng',
-                point: 4,
-            },
-            {
-                id: 'b',
-                content: 'Công viên giải trí hiện đại',
-                point: 3,
-            },
-            {
-                id: 'c',
-                content: 'Khu vực thiên về thiên nhiên hay những nơi có không khí trong lành',
-                point: 2,
-            },
-            {
-                id: 'd',
-                content: 'Khu vui chơi có những trò chơi cảm giác mạnh hay có độ thử thách cao',
-                point: 1,
-            },
-        ],
-    },
-
-    {
-        id: 26,
-        question: 'Bạn làm thế nào để giữ sự cân bằng giữa công việc và cuộc sống cá nhân?',
-        answers: [
-            {
-                id: 'a',
-                content: 'Đặt ưu tiên cho gia đình và thời gian tự do',
-                point: 2,
-            },
-            {
-                id: 'b',
-                content: 'Chấp nhận thách thức công việc và sự đổi mới',
-                point: 4,
-            },
-            {
-                id: 'c',
-                content: 'Tìm kiếm sự tự do và linh hoạt trong công việc',
-                point: 1,
-            },
-            {
-                id: 'd',
-                content: 'Điều chỉnh theo yêu cầu của từng tình huống',
-                point: 3,
-            },
-        ],
-    },
-
-    {
-        id: 27,
-        question: 'Đứng trước quyết định lớn, bạn thường lựa chọn:',
-        answers: [
-            {
-                id: 'a',
-                content: 'Sự ổn định và an toàn',
-                point: 3,
-            },
-            {
-                id: 'b',
-                content: 'Sự sáng tạo và đột phá',
-                point: 1,
-            },
-            {
-                id: 'c',
-                content: 'Theo cảm nhận, trực giác bản thân',
-                point: 2,
-            },
-            {
-                id: 'd',
-                content: 'Sự hài lòng và đồng thuận từ mọi người',
-                point: 4,
             },
         ],
     },

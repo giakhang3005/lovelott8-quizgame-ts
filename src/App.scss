@@ -15,6 +15,20 @@ $unselected-answer: #d1d5db;
 $unselected-answer-hover: #f3f4f6;
 $rose: #fda4af;
 $light-rose: #fbcfe8;
+$perfect-pink: #f472b6;
+$perfect-pink-hover: #fbcfe8;
+
+.ant-btn-primary {
+  background-color: $perfect-pink;
+}
+.ant-btn-primary:hover {
+  background-color: $perfect-pink-hover !important;
+}
+
+.ant-btn-default:hover {
+  border: 1px solid $perfect-pink !important;
+  color: $perfect-pink !important;
+}
 
 html,
 body,

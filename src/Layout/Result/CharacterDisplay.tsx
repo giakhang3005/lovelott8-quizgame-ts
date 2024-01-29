@@ -15,7 +15,7 @@ const CharacterDisplay = ({ name, imgUrl,  animationDelay}: Props) => {
     <motion.div className='characterDisplay'
       initial={defaultAnimate}
       animate={animate}
-      transition={{delay: 0.3 + animationDelay * 0.2}}
+      transition={{delay: 0.3 + animationDelay * 0.25}}
     >
       <div className="imageContainer">
         <img src={imgUrl} className='characterImage' />

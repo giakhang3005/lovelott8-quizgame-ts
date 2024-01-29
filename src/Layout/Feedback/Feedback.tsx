@@ -18,7 +18,7 @@ const Feedback = (props: Props) => {
   const [feedbackContent, setFeedbackContent] = useState<string>('')
   const [readyToView, setReadyToView] = useState<boolean>(false)
 
-  const { feedbackChecker, saveFeedback } = useFeedback()
+  const { feedbackChecker, saveFeedback, saveData } = useFeedback()
   const { nextStep } = useStep()
 
   // Countdown for calculate
@@ -37,6 +37,7 @@ const Feedback = (props: Props) => {
       if (returnedStatus?.status) {
         // Feedback is ok
         saveFeedback(currStar, feedbackContent)
+        saveData(currStar, feedbackContent)
         nextStep()
       } else {
         message.error(returnedStatus?.reason)
