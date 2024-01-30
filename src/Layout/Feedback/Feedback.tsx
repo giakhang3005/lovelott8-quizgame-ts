@@ -26,7 +26,7 @@ const Feedback = (props: Props) => {
     let countTimeout = setTimeout(() => {
       setReadyToView(true)
       clearTimeout(countTimeout)
-    }, 1000 * 12)
+    }, 1000 * 10)
   }, [])
 
   // Handle submt action

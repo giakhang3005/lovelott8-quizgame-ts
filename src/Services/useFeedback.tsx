@@ -46,7 +46,10 @@ export const useFeedback = () => {
     // Save All Data
     const saveData = (currStar: number, feedbackContent: string) => {
         const character = getOwnCharacter()
+        const time = new Date;
+        const timeString = `${time.getHours()}:${time.getMinutes()}:${time.getSeconds()} ${time.getDate()}/${time.getMonth() + 1}/${time.getFullYear()}`
         const savedData = {
+            timeStamp: timeString,
             name: interactedData.name,
             mssv: interactedData.mssv,
             isMale: interactedData.isMale,
