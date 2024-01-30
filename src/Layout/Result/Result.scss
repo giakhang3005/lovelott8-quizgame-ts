@@ -357,4 +357,14 @@ $light-pink: #fbcfe8;
   }
 }
 
+.setting {
+  margin: 0 0 0 8px;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.setting:hover {
+  color: rgb(218, 217, 217);
+}
+
 //4.5 + 13 + 35 + 43%
