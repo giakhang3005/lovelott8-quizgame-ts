@@ -59,6 +59,7 @@
 
     .genderOptionCover {
       cursor: pointer;
+      height: 30px;
 
       input[type="radio"]:after {
         width: 15px;
@@ -91,6 +92,7 @@
 
       .radioLabel {
         margin: 0 17px 0 5px;
+        height: 100%;
         color: white;
         text-shadow: 1px 1px 5px rgb(141, 141, 141);
       }
