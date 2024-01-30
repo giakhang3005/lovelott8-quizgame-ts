@@ -44,16 +44,20 @@ const Result = (props: Props) => {
     pink: '#af5a84',
     lightPink: '#efc7db',
     heart: '#f472b6',
+    font1: 'black',
+    font2: 'white',
   }
   const [colorTest, setColorTest] = useState(getColor() ? getColor() : defaultColor)
   const [modalState, setModalState] = useState<boolean>(false)
 
+  // Change color
   const changeColor = (changedColorProp: string, newColor: string) => {
     let newColorSet = { ...colorTest, [changedColorProp]: newColor }
     setColorTest(newColorSet)
     saveColor(newColorSet)
   }
 
+  // Reset color
   const resetColor = () => {
     setColorTest(defaultColor)
     saveColor(defaultColor)
@@ -67,7 +71,9 @@ const Result = (props: Props) => {
       transition={transition}
     >
 
+      {/* Color Modal */}
       <Modal title="Yêu theo màu sắc của bạn" open={modalState} footer={null} onCancel={() => setModalState(false)}>
+        {/* Background */}
         <div style={Object.assign({ fontWeight: 600 }, { fontSize: "17px" }, { margin: '0 0 5px 0' })}>Màu nền</div>
         <ColorPicker value={colorTest.purple} onChange={(e) => changeColor('purple', e.toHexString())} showText style={{ margin: '0 8px 5px 0' }} />
         <ColorPicker value={colorTest.lightPurple} onChange={(e) => changeColor('lightPurple', e.toHexString())} showText style={{ margin: '0 8px 5px 0' }} />
@@ -75,15 +81,22 @@ const Result = (props: Props) => {
         <ColorPicker value={colorTest.pink} onChange={(e) => changeColor('pink', e.toHexString())} showText style={{ margin: '0 8px 5px 0' }} />
         <ColorPicker value={colorTest.lightPink} onChange={(e) => changeColor('lightPink', e.toHexString())} showText style={{ margin: '0 8px 5px 0' }} />
 
+        {/* Heart */}
         <div style={Object.assign({ fontWeight: 600 }, { fontSize: "17px" }, { margin: '12px 0 5px 0' })}>Màu trái tim</div>
         <ColorPicker value={colorTest.heart} onChange={(e) => changeColor('heart', e.toHexString())} showText style={{ margin: '0 8px 5px 0' }} />
 
-        <div className="resetColor" onClick={(setColorTest) => resetColor()}>Reset màu</div>
+        {/* Text */}
+        <div style={Object.assign({ fontWeight: 600 }, { fontSize: "17px" }, { margin: '12px 0 5px 0' })}>Màu chữ</div>
+        <ColorPicker value={colorTest.font1} onChange={(e) => changeColor('font1', e.toHexString())} showText style={{ margin: '0 8px 5px 0' }} />
+        <ColorPicker value={colorTest.font2} onChange={(e) => changeColor('font2', e.toHexString())} showText style={{ margin: '0 8px 5px 0' }} />
+
+        {/* Reset */}
+        <div className="resetColor" onClick={() => resetColor()}>Reset màu</div>
       </Modal>
 
       {/* Header */}
       <Row className='result_header'>
-        <Col span={12} className='header_left' style={{ backgroundColor: colorTest.lightPurple }} >
+        <Col span={12} className='header_left' style={Object.assign({ backgroundColor: colorTest.lightPurple }, { color: colorTest.font1 })} >
 
           <div className="title">Kết quả của:</div>
           <div className="name">{getName()}</div>
@@ -92,9 +105,9 @@ const Result = (props: Props) => {
           <RightOutlined className="decorArrow pos2" />
           <RightOutlined className="decorArrow pos3" /> */}
         </Col>
-        <Col span={12} className='header_right' style={{ backgroundColor: colorTest.lightPink }}>
+        <Col span={12} className='header_right' style={Object.assign({ backgroundColor: colorTest.lightPink })}>
           <img src="Assets/favicon.png" className='favIcon' />
-          <div className="character">{result?.ownCharacter.name}</div>
+          <div className="character" style={{ color: colorTest.font1 }}>{result?.ownCharacter.name}</div>
         </Col>
       </Row>
 
@@ -130,7 +143,7 @@ const Result = (props: Props) => {
 
       {/* Match & Anti */}
       <Row className='result_body2'>
-        <Row className='title' style={{ backgroundColor: colorTest.purple }}>TÍNH CÁCH</Row>
+        <Row className='title' style={Object.assign({ backgroundColor: colorTest.purple }, { color: colorTest.font2 })}>TÍNH CÁCH</Row>
         <Row className="behaveCont" style={{ backgroundColor: colorTest.white }}>
           {
             result?.ownCharacter.behavior.map((behavior: string, i: number) => (
@@ -142,7 +155,7 @@ const Result = (props: Props) => {
                   animate={animate}
                   exit={exitAnimate}
                   transition={{ delay: i * 0.25 }}
-                  style={{ backgroundColor: colorTest.purple }}
+                  style={Object.assign({ backgroundColor: colorTest.purple }, { color: colorTest.font2 })}
                 >
                   {behav.replace('.', '')}
                 </motion.div>
@@ -155,20 +168,20 @@ const Result = (props: Props) => {
 
       <Row className='matchesCharacter'>
         <Col className='attract' span={12}>
-          <Row className='title' style={{ backgroundColor: colorTest.pink }}>HỢP</Row>
+          <Row className='title' style={Object.assign({ backgroundColor: colorTest.pink }, { color: colorTest.font2 })}>HỢP</Row>
           <Row className='characters' style={{ backgroundColor: colorTest.lightPink }}>
             {
               result?.matchCharacter.map((character: any, i: number) =>
-                <CharacterDisplay key={i} name={character.name} imgUrl="./Assets/Images/elsa.png" animationDelay={i} />)
+                <CharacterDisplay key={i} textColor={colorTest.font1} name={character.name} imgUrl="./Assets/Images/elsa.png" animationDelay={i} />)
             }
           </Row>
         </Col>
         <Col className='anti' span={12}>
-          <Row className='title' style={{ backgroundColor: colorTest.purple }}>KHÔNG HỢP</Row>
+          <Row className='title' style={Object.assign({ backgroundColor: colorTest.purple }, { color: colorTest.font2 })}>KHÔNG HỢP</Row>
           <Row className='characters' style={{ backgroundColor: colorTest.lightPurple }}>
             {
               result?.antiCharacter.map((character: any, i: number) =>
-                <CharacterDisplay key={i} name={character.name} imgUrl="./Assets/Images/elsa.png" animationDelay={i} />)
+                <CharacterDisplay key={i} textColor={colorTest.font1} name={character.name} imgUrl="./Assets/Images/elsa.png" animationDelay={i} />)
             }
           </Row>
         </Col>

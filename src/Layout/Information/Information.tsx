@@ -20,7 +20,7 @@ const Information = (props: Props) => {
     const onConfirm = () => {
         const confirmStatus = validateInformations()
 
-        confirmStatus ? message.error('Họ tên & MSSV phải có ít nhất 8 kí tự') : nextStep()
+        confirmStatus ? message.error('Họ tên & MSSV phải có ít nhất 7 kí tự') : nextStep()
     }
 
 
