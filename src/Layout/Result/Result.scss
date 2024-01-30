@@ -357,14 +357,40 @@ $light-pink: #fbcfe8;
   }
 }
 
-.setting {
+.customBtn {
   margin: 0 0 0 8px;
-  color: white;
+  padding: 4.5px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(84, 84, 84);
+  font-size: 13px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-.setting:hover {
-  color: rgb(218, 217, 217);
+.customBtn:hover {
+  color: App.$lovely-pink;
+  border: 1px solid App.$lovely-pink;
+}
+
+.resetColor {
+  background-color: App.$lovely-pink;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  // position: absolute;
+  text-align: center;
+  font-weight: 600;
+  margin: 30px 0 0 0;
+  width: 90px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.resetColor:hover {
+  background-color: App.$lighter-pink;
+  color: black;
 }
 
 //4.5 + 13 + 35 + 43%

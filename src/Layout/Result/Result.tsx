@@ -1,5 +1,5 @@
 import { Row, Col, Popconfirm, Modal, ColorPicker } from 'antd'
-import { SettingFilled, RedoOutlined, HeartFilled } from '@ant-design/icons'
+import { RedoOutlined, HeartFilled } from '@ant-design/icons'
 import "./Result.scss"
 import useInteractedData from '../../Services/useInteractedData'
 import CharacterDisplay from './CharacterDisplay'
@@ -43,13 +43,20 @@ const Result = (props: Props) => {
     white: '#ffeff9',
     pink: '#e7a4c7',
     lightPink: '#f2cde2',
+    heart: '#f472b6',
   }
   const [colorTest, setColorTest] = useState(getColor() ? getColor() : defaultColor)
   const [modalState, setModalState] = useState<boolean>(false)
+
   const changeColor = (changedColorProp: string, newColor: string) => {
     let newColorSet = { ...colorTest, [changedColorProp]: newColor }
     setColorTest(newColorSet)
     saveColor(newColorSet)
+  }
+
+  const resetColor = () => {
+    setColorTest(defaultColor)
+    saveColor(defaultColor)
   }
 
   return (
@@ -61,11 +68,17 @@ const Result = (props: Props) => {
     >
 
       <Modal title="Yêu theo màu sắc của bạn" open={modalState} footer={null} onCancel={() => setModalState(false)}>
-        <ColorPicker value={colorTest.purple} onChange={(e) => changeColor('purple', e.toHexString())} showText style={{margin: '0 8px 5px 0'}} />
-        <ColorPicker value={colorTest.lightPurple} onChange={(e) => changeColor('lightPurple', e.toHexString())} showText style={{margin: '0 8px 5px 0'}} />
-        <ColorPicker value={colorTest.white} onChange={(e) => changeColor('white', e.toHexString())} showText style={{margin: '0 8px 5px 0'}} />
-        <ColorPicker value={colorTest.pink} onChange={(e) => changeColor('pink', e.toHexString())} showText style={{margin: '0 8px 5px 0'}} />
-        <ColorPicker value={colorTest.lightPink} onChange={(e) => changeColor('lightPink', e.toHexString())} showText style={{margin: '0 8px 5px 0'}} />
+        <div style={Object.assign({ fontWeight: 600 }, { fontSize: "17px" }, { margin: '0 0 5px 0' })}>Màu nền</div>
+        <ColorPicker value={colorTest.purple} onChange={(e) => changeColor('purple', e.toHexString())} showText style={{ margin: '0 8px 5px 0' }} />
+        <ColorPicker value={colorTest.lightPurple} onChange={(e) => changeColor('lightPurple', e.toHexString())} showText style={{ margin: '0 8px 5px 0' }} />
+        <ColorPicker value={colorTest.white} onChange={(e) => changeColor('white', e.toHexString())} showText style={{ margin: '0 8px 5px 0' }} />
+        <ColorPicker value={colorTest.pink} onChange={(e) => changeColor('pink', e.toHexString())} showText style={{ margin: '0 8px 5px 0' }} />
+        <ColorPicker value={colorTest.lightPink} onChange={(e) => changeColor('lightPink', e.toHexString())} showText style={{ margin: '0 8px 5px 0' }} />
+
+        <div style={Object.assign({ fontWeight: 600 }, { fontSize: "17px" }, { margin: '12px 0 5px 0' })}>Màu trái tim</div>
+        <ColorPicker value={colorTest.heart} onChange={(e) => changeColor('heart', e.toHexString())} showText style={{ margin: '0 8px 5px 0' }} />
+
+        <div className="resetColor" onClick={(setColorTest) => resetColor()}>Reset màu</div>
       </Modal>
 
       {/* Header */}
@@ -96,7 +109,7 @@ const Result = (props: Props) => {
         <Col span={6} sm={7} className='heartContainer'>
           {
             heart.map((i) => (
-              <HeartFilled key={i} className="heart" style={Object.assign({ top: `90%` }, { left: `${Math.random() * 90}%` }, { animationDelay: `${Math.random() * 5}s` })} />
+              <HeartFilled key={i} className="heart" style={Object.assign({ color: colorTest.heart }, { top: `90%` }, { left: `${Math.random() * 90}%` }, { animationDelay: `${Math.random() * 5}s` })} />
             ))
           }
 
@@ -109,7 +122,7 @@ const Result = (props: Props) => {
         <Col span={6} sm={7} className='heartContainer'>
           {
             heart.map(i => (
-              <HeartFilled key={i} className="heart" style={Object.assign({ top: `90%` }, { left: `${Math.random() * 90}%` }, { animationDelay: `${Math.random() * 5}s` })} />
+              <HeartFilled key={i} className="heart" style={Object.assign({ color: colorTest.heart }, { top: `90%` }, { left: `${Math.random() * 90}%` }, { animationDelay: `${Math.random() * 5}s` })} />
             ))
           }
         </Col>
@@ -166,7 +179,7 @@ const Result = (props: Props) => {
         <Popconfirm title="Bạn có chắc chắn muốn chơi lại không?" cancelText="Không" okText="Chắc chắn" onConfirm={restart}>
           <button className="restart"> <RedoOutlined className="icon" />Chơi lại</button>
         </Popconfirm>
-        <SettingFilled className='setting' onClick={() => setModalState(true)} />
+        <div className="customBtn" onClick={() => setModalState(true)}>Custom màu</div>
       </Row>
 
       {/* Footer */}
