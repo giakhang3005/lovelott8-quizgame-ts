@@ -1,5 +1,5 @@
 import { Row, Col, Popconfirm } from 'antd'
-import { RightOutlined, RedoOutlined } from '@ant-design/icons'
+import { RightOutlined, RedoOutlined, LeftOutlined, HeartFilled } from '@ant-design/icons'
 import "./Result.scss"
 import useInteractedData from '../../Services/useInteractedData'
 import CharacterDisplay from './CharacterDisplay'
@@ -18,6 +18,7 @@ const transition = { duration: 0.4 }
 const Result = (props: Props) => {
   const { getName, restart } = useInteractedData()
   const [result, setResult] = useState<any>(null)
+  const heart = [1, 2, 3, 4, 5, 6, 7]
 
   window.addEventListener('resize', setHeight);
   window.addEventListener('load', setHeight);
@@ -66,46 +67,64 @@ const Result = (props: Props) => {
 
       {/* Behavior */}
       <Row className='result_body'>
-        <Col span={13} className='behaviorContainer'>
-          <Row className='title'>TÍNH CÁCH</Row>
-          <Row className="behaveCont">
-            {
-              result?.ownCharacter.behavior.map((behavior: string, i: number) => (
-                <motion.div
-                  key={i}
-                  className="behavior"
-                  initial={defaultAnimate}
-                  animate={animate}
-                  exit={exitAnimate}
-                  transition={{ delay: i * 0.25 }}
-                >
-                  {behavior}
-                </motion.div>
-              ))
-            }
-          </Row>
+        <Col span={6} sm={7} className='heartContainer'>
+          {
+            heart.map(i => (
+              <HeartFilled key={i} className="heart" style={Object.assign({ top: `90%` }, { left: `${Math.random() * 90}%`}, {animationDelay: `${Math.random() * 5}s`})} />
+            ))
+          }
+
         </Col>
-        <Col span={11} className='character_image_container'>
-          <img src="Assets/Images/elsa.png" className='ownCharacterImg' />
+        <Col span={12} sm={10} className='character_image_container'>
+          <div className="border">
+            <img src="Assets/Images/elsa.png" className='ownCharacterImg' />
+          </div>
+        </Col>
+        <Col span={6} sm={7} className='heartContainer'>
+          {
+            heart.map(i => (
+              <HeartFilled key={i} className="heart" style={Object.assign({ top: `90%` }, { left: `${Math.random() * 90}%` }, {animationDelay: `${Math.random() * 5}s`})} />
+            ))
+          }
         </Col>
       </Row>
 
       {/* Match & Anti */}
       <Row className='result_body2'>
-        <Col span={13} className='anti_character'>
-          <Row className='title'>KHÔNG HỢP</Row>
-          <Row className='body'>
+        <Row className='title'>TÍNH CÁCH</Row>
+        <Row className="behaveCont">
+          {
+            result?.ownCharacter.behavior.map((behavior: string, i: number) => (
+              <motion.div
+                key={i}
+                className="behavior"
+                initial={defaultAnimate}
+                animate={animate}
+                exit={exitAnimate}
+                transition={{ delay: i * 0.25 }}
+              >
+                {behavior}
+              </motion.div>
+            ))
+          }
+        </Row>
+      </Row>
+
+      <Row className='matchesCharacter'>
+        <Col className='attract' span={12}>
+          <Row className='title'>HỢP</Row>
+          <Row className='characters'>
             {
-              result?.antiCharacter.map((character: any, i: number) =>
+              result?.matchCharacter.map((character: any, i: number) =>
                 <CharacterDisplay key={i} name={character.name} imgUrl="./Assets/Images/elsa.png" animationDelay={i} />)
             }
           </Row>
         </Col>
-        <Col span={11} className='attract_character'>
-          <Row className='title'>HỢP</Row>
-          <Row className='body'>
+        <Col className='anti' span={12}>
+          <Row className='title'>KHÔNG HỢP</Row>
+          <Row className='characters'>
             {
-              result?.matchCharacter.map((character: any, i: number) =>
+              result?.antiCharacter.map((character: any, i: number) =>
                 <CharacterDisplay key={i} name={character.name} imgUrl="./Assets/Images/elsa.png" animationDelay={i} />)
             }
           </Row>

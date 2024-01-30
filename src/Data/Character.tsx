@@ -135,7 +135,7 @@ export const characters: ICharacter[] = [
             'Aurora'
         ],
         anti: [
-            'Elsa', 'Rapunzel', 'Jasmine'
+            'Elsa', 'Rapunzel'
         ],
     },
     {
@@ -171,7 +171,7 @@ export const characters: ICharacter[] = [
             'Moana'
         ],
         anti: [
-            'Aurora', 'Elsa', 'Ariel'
+            'Aurora', 'Elsa'
         ],
     },
     {
@@ -362,7 +362,7 @@ export const characters: ICharacter[] = [
             'Kiên nhẫn, sẵn sàng học hỏi',
         ],
         match: ['JohnSmith'],
-        anti: ['Eric', 'Charming', 'Kristoff']
+        anti: ['Eric', 'Charming']
     },
     {
         id: 'Jasmine',

@@ -106,13 +106,13 @@
       padding: 10px;
       margin: 2.5vh 8% 2.5vh 8%;
       width: 80%;
-      background-color: App.$unselected-answer;
+      background-color: white;
       border-radius: 7px;
       cursor: pointer;
       transition: all 0.12s linear;
       opacity: 0;
       animation: fadeIn 0.2s linear forwards;
-      box-shadow: 1px 1px 1px App.$purple;
+      box-shadow: 1px 1.7px 1px App.$purple;
 
       .answer_id {
         font-size: 20px;

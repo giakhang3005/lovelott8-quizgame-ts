@@ -74,9 +74,9 @@ body {
 
 .logoContainer {
   display: flex;
-  align-items: center;
   position: absolute;
-  top: 1vh;
+  align-items: center;
+  top: 1.5vh;
   left: 2%;
 
   img {
@@ -84,10 +84,10 @@ body {
     filter: drop-shadow(1px 1px 1px $purple)
   }
   img:nth-child(1) {
-    height: 60px;
+    height: 52px;
   }
   img:nth-child(2) {
-    height: 45px;
+    height: 37px;
   }
 }
 
@@ -137,3 +137,4 @@ body {
 .star.pulse{
   -webkit-animation: STAR 2s infinite; /* Safari 4+ */
 }
+

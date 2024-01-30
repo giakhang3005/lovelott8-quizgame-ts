@@ -25,11 +25,12 @@ const RuleModal = ({ setModalState }: Props) => {
 
     return (
         <div className='rule'>
-            <div className="rule">Chào mừng đến với thế giới thần tiên, tại đây các bạn sẽ trải qua một cuộc phiêu lưu thú vị để khám phá chính bản thân mình là ai trong thế giới đầy mộng ảo của cổ tich.
+            <div className="rule">
+                Chào mừng bạn đến với vùng đất “Mùa Yêu”, đây là nơi sẽ giúp bạn khám phá ra chính bản thân của mình là ai trong thế giới cổ tích mộng mơ này.
                 <br /><br />
-                Hãy để những câu trả lời của bạn dẫn dắt bạn đến phần cuối của hành trình và giải đáp câu hỏi: "Mirror Mirror on the Wall, Who Am I?"
+                Nhiệm vụ của bạn là phải trả lời những câu hỏi đã được chuẩn bị sẵn để tìm ra chính mình.
                 <br /><br />
-                Không có gì quá khó khăn nếu bạn tin tưởng vào bản thân và tìm kiếm câu trả lời từ trái tim. Hãy để phép thuật của Mirror giúp bạn khám phá ra chính mình trong mùa yêu này!
+                Không quá khó để tìm ra bản thân, hãy lựa chọn những câu trả lời mà bạn cảm thấy phù hợp nhất. Và Mirror sẽ cho bạn biết, bạn là ai!
             </div>
             <div className="coverBtn">
                 <button className='rule_startBtn' onClick={handleStart}>{countDown > 0 ? countDown : `BẮT ĐẦU`}</button>

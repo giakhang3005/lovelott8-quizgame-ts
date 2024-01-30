@@ -107,124 +107,174 @@
   }
 
   .result_body {
-    height: calc(36 * var(--vh));
-    max-height: calc(36 * var(--vh));
+    height: calc(24 * var(--vh));
+    max-height: calc(24 * var(--vh));
     box-sizing: border-box;
+    background-color: #a19fd7;
 
-    .behaviorContainer {
-      width: 100%;
-      height: 100%;
-      background-color: App.$light-red;
-
-      .title {
-        background-color: App.$rose;
-        padding: 8px;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: 600;
+    .heartContainer {
+      .heart {
+        position: absolute;
+        color: App.$perfect-pink;
+        font-size: 17px;
+        opacity: 0;
+        animation: heartAnimate 4s linear infinite;
+        transition: all 0.12s;
+        overflow: hidden;
       }
 
-      .behaveCont {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 90%;
-        box-sizing: border-box;
-
-        .behavior {
-          background-color: App.$unselected-answer-hover;
-          margin: 0 5px 0 5px;
-          padding: 6px;
-          text-align: center;
-          border-radius: 8px;
-          font-size: 13px;
-          box-shadow: 1.5px 1.5px 5px App.$rose;
+      @keyframes heartAnimate {
+        0% {
+          opacity: 0;
+        }
+        10% {
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          top: 0;
         }
       }
     }
+    .character_image_container {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      padding: 1px 1px 1px 1.5px;
+      box-sizing: border-box;
+      clip-path: polygon(
+        20% 0%,
+        80% 0%,
+        100% 20%,
+        100% 80%,
+        80% 100%,
+        20% 100%,
+        0% 80%,
+        0% 20%
+      );
+      filter: drop-shadow(0 0 5px App.$light-pink);
+
+      .border {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin: 0;
+        background-color: App.$unselected-answer-hover;
+        clip-path: polygon(
+          20% 0%,
+          80% 0%,
+          100% 20%,
+          100% 80%,
+          80% 100%,
+          20% 100%,
+          0% 80%,
+          0% 20%
+        );
+
+        .ownCharacterImg {
+          width: 70%;
+          filter: drop-shadow(0 0 5px App.$light-pink);
+        }
+      }
+    }
+
   }
 
   .result_body2 {
-    height: calc(42 * var(--vh));
-    max-height: calc(42 * var(--vh));
+    height: calc(28 * var(--vh));
+    max-height: calc(28 * var(--vh));
     box-sizing: border-box;
 
-    .attractTitleContainer {
+    .title {
+      background-color: App.$rose;
+      // background-color: App.$unselected-answer-hover;
       width: 100%;
-      height: 100%;
-      background-color: App.$lovely-pink;
-
-      .attract_title {
-        font-weight: 700;
-        font-size: 18px;
-        height: calc(42 * var(--vh));
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
-        transform-origin: right;
-        text-align: center;
-      }
-    }
-    .attract_character {
-      .title {
-        background-color: App.$lovely-pink;
-      }
-
-      .body {
-        background-color: App.$lighter-pink;
-      }
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      text-shadow: 1px 1.2px 2px grey;
     }
 
-    .anti_character {
-      .title {
-        background-color: App.$purple;
-      }
+    .behaveCont {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 85%;
+      box-sizing: border-box;
+      padding: 2vh;
+      background-color: App.$unselected-answer-hover;
+      // background-color: App.$light-red;
 
-      .body {
-        background-color: App.$light-pink;
+
+      .behavior {
+        margin: 8px;
+        // background-color: App.$unselected-answer-hover;
+        box-shadow: 2px 2px 7px App.$rose;
+        background-color: App.$light-red;
+        padding: 5px;
+        border-radius: 10px;
       }
     }
-    .attract_character,
-    .anti_character {
-      flex-wrap: wrap;
+  }
 
+  .matchesCharacter {
+    height: calc(26 * var(--vh));
+    max-height: calc(26 * var(--vh));
+    overflow: hidden;
+
+    .attract,
+    .anti {
       .title {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        text-align: center;
-        box-sizing: border-box;
-        padding: 6px;
+        font-size: 15px;
         font-weight: 600;
-        font-size: 14px;
       }
 
-      .body {
+      .characters {
         width: 100%;
-        height: 92.2%;
-        padding: 10px;
-        box-sizing: border-box;
         display: flex;
         justify-content: center;
         align-items: center;
       }
     }
 
-  }
+    .anti {
+      .title {
+        background-color: App.$purple;
+        color: white;
+        padding: 3px;
+      }
 
-  .character_image_container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: App.$unselected-answer-hover;
+      .characters {
+        height: 90%;
+        background-color: App.$light-pink;
+      }
+    }
 
-    .ownCharacterImg {
-      width: 90%;
-      filter: drop-shadow(0 0 5px App.$light-pink);
+    .attract {
+      .title {
+        background-color: App.$lovely-pink;
+        color: white;
+        padding: 3px;
+      }
+
+      .characters {
+        height: 90%;
+        background-color: App.$lighter-pink;
+      }
     }
   }
 
@@ -275,13 +325,14 @@
 }
 
 .characterDisplay {
-  margin: 0 20px 0 0;
-  width: 100px;
+  margin: 5px 20px 5px 0;
+  width: 120px;
 
   .imageContainer {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     .characterImage {
       width: 60px;
@@ -292,11 +343,8 @@
   .characterName {
     width: 100%;
     text-align: center;
-    font-size: 10.5px;
+    font-size: 12px;
     font-weight: 600;
-    background-color: App.$unselected-answer-hover;
-    padding: 4px;
-    border-radius: 5px;
   }
 }
 
