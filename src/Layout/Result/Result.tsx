@@ -6,6 +6,7 @@ import CharacterDisplay from './CharacterDisplay'
 import { useEffect, useState } from 'react'
 import useResult from '../../Services/useResult'
 import { motion } from 'framer-motion'
+import { useStorage } from '../../Services/useStorage'
 
 type Props = {}
 
@@ -34,16 +35,21 @@ const Result = (props: Props) => {
     setResult(getOwnCharacter())
   }, [])
 
-  const [colorTest, setColorTest] = useState({
-    purple: '#a19fd7',
-    lightPurple: '#e0c3ff',
-    white: '#fdf2f8',
-    pink: '#f9a8d4',
-    lightPink: '#fbcfe8',
-  })
+  // Color Hanlder
+  const { saveColor, getColor } = useStorage()
+  let defaultColor = {
+    purple: '#565587',
+    lightPurple: '#d5c0ec',
+    white: '#ffeff9',
+    pink: '#e7a4c7',
+    lightPink: '#f2cde2',
+  }
+  const [colorTest, setColorTest] = useState(getColor() ? getColor() : defaultColor)
   const [modalState, setModalState] = useState<boolean>(false)
   const changeColor = (changedColorProp: string, newColor: string) => {
-    setColorTest({ ...colorTest, [changedColorProp]: newColor })
+    let newColorSet = { ...colorTest, [changedColorProp]: newColor }
+    setColorTest(newColorSet)
+    saveColor(newColorSet)
   }
 
   return (
@@ -54,12 +60,12 @@ const Result = (props: Props) => {
       transition={transition}
     >
 
-      <Modal title="Xanh đỏ tím vàng cà na xí mụi" open={modalState} footer={null} onCancel={() => setModalState(false)}>
-        <ColorPicker value={colorTest.purple} onChange={(e) => changeColor('purple', e.toHexString())} showText />
-        <ColorPicker value={colorTest.lightPurple} onChange={(e) => changeColor('lightPurple', e.toHexString())} showText />
-        <ColorPicker value={colorTest.white} onChange={(e) => changeColor('white', e.toHexString())} showText />
-        <ColorPicker value={colorTest.pink} onChange={(e) => changeColor('pink', e.toHexString())} showText />
-        <ColorPicker value={colorTest.lightPink} onChange={(e) => changeColor('lightPink', e.toHexString())} showText />
+      <Modal title="Yêu theo màu sắc của bạn" open={modalState} footer={null} onCancel={() => setModalState(false)}>
+        <ColorPicker value={colorTest.purple} onChange={(e) => changeColor('purple', e.toHexString())} showText style={{margin: '0 8px 5px 0'}} />
+        <ColorPicker value={colorTest.lightPurple} onChange={(e) => changeColor('lightPurple', e.toHexString())} showText style={{margin: '0 8px 5px 0'}} />
+        <ColorPicker value={colorTest.white} onChange={(e) => changeColor('white', e.toHexString())} showText style={{margin: '0 8px 5px 0'}} />
+        <ColorPicker value={colorTest.pink} onChange={(e) => changeColor('pink', e.toHexString())} showText style={{margin: '0 8px 5px 0'}} />
+        <ColorPicker value={colorTest.lightPink} onChange={(e) => changeColor('lightPink', e.toHexString())} showText style={{margin: '0 8px 5px 0'}} />
       </Modal>
 
       {/* Header */}
@@ -81,7 +87,6 @@ const Result = (props: Props) => {
 
       {/* logo */}
       <Row className='logo' style={{ backgroundColor: colorTest.purple }}>
-
         <img src="./Assets/Logo/logowhite.png" />
         <img src="./Assets/Logo/L8veLott.png" />
       </Row>

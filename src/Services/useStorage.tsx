@@ -2,6 +2,19 @@ import { IUserInteractData } from '../App'
 
 export const useStorage = () => {
 
+    const saveColor = (color: any) => {
+        localStorage.setItem('colorSet', JSON.stringify(color));
+    }
+
+    const getColor = () => {
+        let parsedColor = localStorage.getItem('colorSet')
+        if (parsedColor) {
+            return JSON.parse(parsedColor)
+        } else {
+            return null
+        }
+    }
+
     const saveData = (data: IUserInteractData, step: number) => {
         let fullData = {
             interactedData: data,
@@ -22,13 +35,11 @@ export const useStorage = () => {
         } else {
             return null
         }
-
-
     }
 
     const clearData = () => {
         localStorage.removeItem('userData')
     }
 
-    return { saveData, getData, clearData }
+    return { saveData, getData, clearData, saveColor, getColor }
 }
