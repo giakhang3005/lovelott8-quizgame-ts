@@ -3,11 +3,11 @@ import { IUserInteractData } from '../App'
 export const useStorage = () => {
 
     const saveColor = (color: any) => {
-        localStorage.setItem('colorSet', JSON.stringify(color));
+        localStorage.setItem('colorSet2', JSON.stringify(color));
     }
 
     const getColor = () => {
-        let parsedColor = localStorage.getItem('colorSet')
+        let parsedColor = localStorage.getItem('colorSet2')
         if (parsedColor) {
             return JSON.parse(parsedColor)
         } else {

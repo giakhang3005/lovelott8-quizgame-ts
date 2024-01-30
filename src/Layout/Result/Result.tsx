@@ -38,11 +38,11 @@ const Result = (props: Props) => {
   // Color Hanlder
   const { saveColor, getColor } = useStorage()
   let defaultColor = {
-    purple: '#565587',
-    lightPurple: '#d5c0ec',
-    white: '#ffeff9',
-    pink: '#e7a4c7',
-    lightPink: '#f2cde2',
+    purple: '#6e2b4c',
+    lightPurple: '#e197bf',
+    white: '#ffeaf8',
+    pink: '#af5a84',
+    lightPink: '#efc7db',
     heart: '#f472b6',
   }
   const [colorTest, setColorTest] = useState(getColor() ? getColor() : defaultColor)
