@@ -329,6 +329,7 @@ $light-pink: #fbcfe8;
 
     .copyright {
       font-size: 11px;
+      color: black;
     }
   }
 }
@@ -391,6 +392,34 @@ $light-pink: #fbcfe8;
 .resetColor:hover {
   background-color: App.$lighter-pink;
   color: black;
+}
+
+@media screen and (max-height: 650px){
+  .characterDisplay {
+  
+    .imageContainer {
+  
+      .characterImage {
+        width: 40px;
+      }
+    }
+  
+    .characterName {
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+}
+@media screen and (max-width: 350px){
+  .behavior {
+    margin: 53px;
+    font-size: 11px;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+  }
 }
 
 //4.5 + 13 + 35 + 43%

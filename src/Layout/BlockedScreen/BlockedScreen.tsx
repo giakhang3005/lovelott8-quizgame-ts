@@ -17,7 +17,7 @@ const BlockedScreen = () => {
             transition={transition}
         >
             <div className="title">THÔNG BÁO</div>
-            <div className="description">Lovelott không hỗ trợ Landscape Mode, bạn vui lòng xoay dọc điện thoại để sử dụng</div>
+            <div className="description">Lovelott không hỗ trợ Landscape Mode, bạn vui lòng xoay dọc thiết bị để sử dụng</div>
         </motion.div>
     )
 }

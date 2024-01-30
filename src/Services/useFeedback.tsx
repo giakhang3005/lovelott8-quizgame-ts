@@ -9,6 +9,7 @@ export const useFeedback = () => {
 
     // Validate feedback
     const feedbackChecker = (star: number, feedback: string) => {
+        console.log(star, feedback)
         if (star <= 3) {
             // Not rate
             if (star === 0) {
@@ -18,12 +19,16 @@ export const useFeedback = () => {
                     data: interactedData,
                 }
             } else {
-                // Star <= 3 but no reason
                 if (feedback.trim().length === 0) {
                     return {
                         status: false,
                         reason: 'Điều gì đã khiến bạn có trải nghiệm chưa tốt? Hãy chia sẻ với chúng mình nào ^^',
                         data: interactedData,
+                    }
+                } else {
+                    return {
+                        status: true,
+                        reason: ''
                     }
                 }
             }

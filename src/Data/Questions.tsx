@@ -338,26 +338,26 @@ export const QuestionsDatas: IQuestion[] = [
 
     {
         id: 13,
-        question: 'Khi bạn đối diện với quyết định quan trọng, bạn thường:',
+        question: 'Bạn thích ghé thăm khu giải trí nào nhất?',
         answers: [
             {
                 id: 'a',
-                content: 'Tuân theo kế hoạch đã đặt ra trước',
+                content: 'Khu vực thiên về thiên nhiên hay những nơi có không khí trong lành',
                 point: 2,
             },
             {
                 id: 'b',
-                content: 'Tìm kiếm lời giải độc đáo và sáng tạo',
+                content: 'Khu vui chơi dành cho gia đình, nhẹ nhàng',
                 point: 4,
             },
             {
                 id: 'c',
-                content: 'Dựa vào trực giác và cảm nhận cá nhân',
+                content: 'Công viên giải trí hiện đại',
                 point: 3,
             },
             {
                 id: 'd',
-                content: 'Thảo luận và hỏi ý kiến người khác',
+                content: 'Khu vui chơi có những trò chơi cảm giác mạnh hay có độ thử thách cao',
                 point: 1,
             },
         ],

@@ -65,12 +65,13 @@ function App() {
   useEffect(() => {
     //Check phone
     const isPhone = /iPhone|Android|Windows Phone|IPad|IPod/.test(navigator.userAgent);
+    const isTablet = /Tablet|iPad/i.test(navigator.userAgent);
 
     isPhone && (window.innerHeight < window.innerWidth) ? setLandscapePhone(true) : setLandscapePhone(false)
     window.addEventListener("orientationchange", function () {
       // console.log(window.innerHeight < window.innerWidth);
 
-      isPhone && (window.innerHeight > window.innerWidth) ? setLandscapePhone(true) : setLandscapePhone(false)
+      (isPhone || isTablet) && (window.innerHeight > window.innerWidth) ? setLandscapePhone(true) : setLandscapePhone(false)
     }, false);
   }, [])
 
@@ -90,7 +91,7 @@ function App() {
           <BlockedScreen />
         </AnimatePresence> :
         <Row>
-          <Col className='unuseZone' xs={0} sm={6}></Col>
+          <Col className='unuseZone' xs={0} md={6}></Col>
           <Col xs={24} sm={12}>
             <div className="App">
               {/* Step 1: Tap start */}
@@ -141,7 +142,7 @@ function App() {
             </div>
           </Col>
 
-          <Col className='unuseZone' xs={0} sm={6}></Col>
+          <Col className='unuseZone' xs={0} md={6}></Col>
         </Row>}
     </Data.Provider>
   );
