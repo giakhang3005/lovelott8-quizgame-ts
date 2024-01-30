@@ -1,5 +1,11 @@
 @use "../../App.scss";
 
+$purple: #a19fd7;
+$light-purple: #e0c3ff;
+$white: #fdf2f8;
+$pink: #f9a8d4;
+$light-pink: #fbcfe8;
+
 .result {
   width: 100%;
   max-height: calc(100 * var(--vh));
@@ -12,7 +18,7 @@
     box-sizing: border-box;
 
     .header_left {
-      background-color: App.$lovely-pink;
+      background-color: $light-purple;
 
       .title,
       .name {
@@ -59,7 +65,7 @@
     .header_right {
       height: 100%;
       overflow: hidden;
-      background-color: white;
+      background-color: $light-pink;
 
       .favIcon {
         position: absolute;
@@ -85,7 +91,7 @@
     }
   }
   .logo {
-    background-color: App.$lighter-pink;
+    background-color: $purple;
     box-sizing: border-box;
     height: calc(4.5 * var(--vh));
     max-height: calc(4.5 * var(--vh));
@@ -110,7 +116,7 @@
     height: calc(24 * var(--vh));
     max-height: calc(24 * var(--vh));
     box-sizing: border-box;
-    background-color: #a19fd7;
+    background-color: $pink;
 
     .heartContainer {
       .heart {
@@ -164,7 +170,7 @@
         align-items: center;
         overflow: hidden;
         margin: 0;
-        background-color: App.$unselected-answer-hover;
+        background-color: $white;
         clip-path: polygon(
           20% 0%,
           80% 0%,
@@ -191,7 +197,7 @@
     box-sizing: border-box;
 
     .title {
-      background-color: App.$rose;
+      background-color: $purple;
       // background-color: App.$unselected-answer-hover;
       width: 100%;
       height: 35px;
@@ -209,20 +215,24 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 85%;
+      height: calc(100% - 35px);
+      width: 100%;
       box-sizing: border-box;
-      padding: 2vh;
-      background-color: App.$unselected-answer-hover;
+      padding: 5px;
+      background-color: $white;
       // background-color: App.$light-red;
 
 
       .behavior {
-        margin: 8px;
+        margin: 7px;
         // background-color: App.$unselected-answer-hover;
-        box-shadow: 2px 2px 7px App.$rose;
-        background-color: App.$light-red;
+        box-shadow: 1.5px 1.5px 3px $purple;
+        background-color: $purple;
+        font-weight: 500;
+        font-size: 13px;
+        color: white;
         padding: 5px;
-        border-radius: 10px;
+        border-radius: 8px;
       }
     }
   }
@@ -245,6 +255,7 @@
 
       .characters {
         width: 100%;
+        height: calc(100% - 23px);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -253,27 +264,25 @@
 
     .anti {
       .title {
-        background-color: App.$purple;
+        background-color: $purple;
         color: white;
         padding: 3px;
       }
 
       .characters {
-        height: 90%;
-        background-color: App.$light-pink;
+        background-color: $light-purple;
       }
     }
 
     .attract {
       .title {
-        background-color: App.$lovely-pink;
+        background-color: $pink;
         color: white;
         padding: 3px;
       }
 
       .characters {
-        height: 90%;
-        background-color: App.$lighter-pink;
+        background-color: $light-pink;
       }
     }
   }
@@ -285,7 +294,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: App.$perfect-pink-hover;
+    background-color: $purple;
 
     .icon {
       margin: 0 5px 0 0;
@@ -295,7 +304,7 @@
       color: white;
       background-color: App.$perfect-pink;
       font-weight: 600;
-      padding: 8px 12px 8px 12px;
+      padding: 5px 8px 5px 8px;
       border: none;
       outline: none;
       border-radius: 5px;
@@ -325,7 +334,7 @@
 }
 
 .characterDisplay {
-  margin: 5px 20px 5px 0;
+  margin: 0 0 0 0;
   width: 120px;
 
   .imageContainer {
@@ -335,7 +344,7 @@
     align-items: center;
 
     .characterImage {
-      width: 60px;
+      width: 45px;
       margin: 0 0 5px 0;
     }
   }

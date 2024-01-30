@@ -5,18 +5,18 @@ type Props = {
 }
 
 const RuleModal = ({ setModalState }: Props) => {
-    const [countDown, setCountDown] = useState<number>(10)
+    const [countDown, setCountDown] = useState<number>(0)
 
     // Timer countdown until user can start
-    useEffect(() => {
-        let countDownTimeOut = setTimeout(() => {
-            if (countDown === 0) {
-                clearTimeout(countDownTimeOut)
-            } else {
-                setCountDown(countDown - 1)
-            }
-        }, 1000)
-    }, [countDown])
+    // useEffect(() => {
+    //     let countDownTimeOut = setTimeout(() => {
+    //         if (countDown === 0) {
+    //             clearTimeout(countDownTimeOut)
+    //         } else {
+    //             setCountDown(countDown - 1)
+    //         }
+    //     }, 1000)
+    // }, [countDown])
 
     // Handle when user click start
     const handleStart = () => {
@@ -33,7 +33,7 @@ const RuleModal = ({ setModalState }: Props) => {
                 Không quá khó để tìm ra bản thân, hãy lựa chọn những câu trả lời mà bạn cảm thấy phù hợp nhất. Và Mirror sẽ cho bạn biết, bạn là ai!
             </div>
             <div className="coverBtn">
-                <button className='rule_startBtn' onClick={handleStart}>{countDown > 0 ? countDown : `BẮT ĐẦU`}</button>
+                <button className='rule_startBtn' onClick={handleStart}>{countDown > 0 ? countDown : `BÍK GÒI`}</button>
             </div>
 
         </div>

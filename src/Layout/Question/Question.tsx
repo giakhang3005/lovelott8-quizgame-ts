@@ -10,12 +10,6 @@ import useInteractedData from '../../Services/useInteractedData'
 
 type Props = {}
 
-//Animation
-const defaultAnimate = { opacity: 0 }
-const animate = { opacity: 1 }
-const exitAnimate = { opacity: 0 }
-const transition = { duration: 0.4 }
-
 const Question = (props: Props) => {
     // Custom hooks
     const { getName, getMSSV } = useInteractedData()

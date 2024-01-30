@@ -34,6 +34,8 @@ const Result = (props: Props) => {
     setResult(getOwnCharacter())
   }, [])
 
+
+
   return (
     <motion.div className='result'
       initial={defaultAnimate}
@@ -43,14 +45,14 @@ const Result = (props: Props) => {
     >
       {/* Header */}
       <Row className='result_header'>
-        <Col span={12} className='header_left'>
+        <Col span={12} className='header_left' >
 
           <div className="title">Kết quả của:</div>
           <div className="name">{getName()}</div>
 
-          <RightOutlined className="decorArrow pos1" />
+          {/* <RightOutlined className="decorArrow pos1" />
           <RightOutlined className="decorArrow pos2" />
-          <RightOutlined className="decorArrow pos3" />
+          <RightOutlined className="decorArrow pos3" /> */}
         </Col>
         <Col span={12} className='header_right'>
           <img src="Assets/favicon.png" className='favIcon' />
@@ -70,7 +72,7 @@ const Result = (props: Props) => {
         <Col span={6} sm={7} className='heartContainer'>
           {
             heart.map(i => (
-              <HeartFilled key={i} className="heart" style={Object.assign({ top: `90%` }, { left: `${Math.random() * 90}%`}, {animationDelay: `${Math.random() * 5}s`})} />
+              <HeartFilled key={i} className="heart" style={Object.assign({ top: `90%` }, { left: `${Math.random() * 90}%` }, { animationDelay: `${Math.random() * 5}s` })} />
             ))
           }
 
@@ -83,7 +85,7 @@ const Result = (props: Props) => {
         <Col span={6} sm={7} className='heartContainer'>
           {
             heart.map(i => (
-              <HeartFilled key={i} className="heart" style={Object.assign({ top: `90%` }, { left: `${Math.random() * 90}%` }, {animationDelay: `${Math.random() * 5}s`})} />
+              <HeartFilled key={i} className="heart" style={Object.assign({ top: `90%` }, { left: `${Math.random() * 90}%` }, { animationDelay: `${Math.random() * 5}s` })} />
             ))
           }
         </Col>
@@ -95,16 +97,19 @@ const Result = (props: Props) => {
         <Row className="behaveCont">
           {
             result?.ownCharacter.behavior.map((behavior: string, i: number) => (
-              <motion.div
-                key={i}
-                className="behavior"
-                initial={defaultAnimate}
-                animate={animate}
-                exit={exitAnimate}
-                transition={{ delay: i * 0.25 }}
-              >
-                {behavior}
-              </motion.div>
+              behavior.split(',').map((behav: string, j: number) => (
+                <motion.div
+                  key={i}
+                  className="behavior"
+                  initial={defaultAnimate}
+                  animate={animate}
+                  exit={exitAnimate}
+                  transition={{ delay: i * 0.25 }}
+                >
+                  {behav.replace('.', '')}
+                </motion.div>
+              ))
+
             ))
           }
         </Row>
