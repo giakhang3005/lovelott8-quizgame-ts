@@ -16,6 +16,77 @@
     color: white;
     text-shadow: 1px 2px 1px App.$purple;
   }
+
+  .boxContainer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 200px;
+    animation: boxDisapear 3s forwards ease-out;
+
+    img:nth-child(1) {
+      position: absolute;
+      width: 100px;
+      top: 0px;
+      z-index: 2;
+      transform: rotate(35deg);
+    }
+
+    img:nth-child(2) {
+      position: absolute;
+      width: 100px;
+      top: 20px;
+      left: 2px;
+      z-index: 1;
+      transform: rotate(15deg);
+    }
+
+    .headAnimate {
+      animation: openBox 1.6s ease-in-out forwards;
+    }
+  }
+
+  .heartContainer {
+    img {
+      // top: 39%;
+      // left: 50%;
+      position: absolute;
+      width: 35px;
+    }
+  }
+
+  .blink {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    z-index: 2;
+    animation: glowing 3s ease-in-out infinite;
+  }
+}
+
+@keyframes openBox {
+  0% {
+    transform: rotate(35deg);
+  }
+  100% {
+    transform: rotate(0) translate(-20px, -30px);
+  }
+}
+
+@keyframes boxDisapear {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes glowing {

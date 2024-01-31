@@ -35,10 +35,10 @@ export const characters: ICharacter[] = [
         img: '',
         isMale: true,
         behavior: [
-            'Quý phái, tinh tế, lãng mạn.',
+            'Quý phái, Tinh tế, Lãng mạn.',
             'Kiên nhẫn và quyết đoán.',
             'Trách nhiệm và tình yêu gia đình.',
-            'Hiền hòa, lạc quan.',
+            'Hiền hòa, Lạc quan.',
         ],
         match: [
             'Cinderella'
@@ -53,10 +53,10 @@ export const characters: ICharacter[] = [
         img: '',
         isMale: true,
         behavior: [
-            'Trách nhiệm, kiên nhẫn.',
-            'Sẵn sàng thay đổi, linh hoạt',
-            'Sự lạc quan, kiên nhẫn trong tìm kiếm tình yêu.',
-            'Sự hòa nhã , thấu hiểu đối phương.',
+            'Trách nhiệm, Kiên nhẫn.',
+            'Sẵn sàng thay đổi, Linh hoạt',
+            'Sự lạc quan, Kiên nhẫn trong tìm kiếm tình yêu.',
+            'Sự hòa nhã , Thấu hiểu đối phương.',
         ],
         match: [
             'Belle'
@@ -71,10 +71,10 @@ export const characters: ICharacter[] = [
         img: '',
         isMale: true,
         behavior: [
-            'Tự tin trong quyết định, làm chủ tình huống.',
+            'Tự tin trong quyết định, Làm chủ tình huống.',
             'Độc lập trong suy nghĩ và hành động.',
-            'Thân thiện, hòa nhã.',
-            'Quý phái, tinh tế, lãng mạn.',
+            'Thân thiện, Hòa nhã.',
+            'Quý phái, Tinh tế, Lãng mạn.',
         ],
         match: [
             'Ariel'
@@ -89,11 +89,11 @@ export const characters: ICharacter[] = [
         img: '',
         isMale: true,
         behavior: [
-            'Nghiêm túc, trách nhiệm và tôn trọng.',
+            'Nghiêm túc, Trách nhiệm và tôn trọng.',
             'Khí phách trong tư cách lãnh đạo',
             'Mạnh mẽ về cảm xúc và quyết tâm.',
-            'Quyết đoán, kiên nhẫn, tận tâm.',
-            'Dũng cảm, nhạy bén.',
+            'Quyết đoán, Kiên nhẫn, Tận tâm.',
+            'Dũng cảm, Nhạy bén.',
         ],
         match: [
             'Mulan'
@@ -108,10 +108,10 @@ export const characters: ICharacter[] = [
         img: '',
         isMale: true,
         behavior: [
-            'Tự tin, dũng cảm, yêu sự tự do.',
-            'Lạc quan, tự tin theo đuổi ước mơ.',
-            'Sự thích nghi, sáng tạo.',
-            'Phóng khoáng, khát khao tự do, phiêu lưu.',
+            'Tự tin, Dũng cảm, Yêu sự tự do.',
+            'Lạc quan, Tự tin theo đuổi ước mơ.',
+            'Sự thích nghi, Sáng tạo.',
+            'Phóng khoáng, Khát khao tự do, Phiêu lưu.',
         ],
         match: [
             'Elsa'
@@ -129,7 +129,7 @@ export const characters: ICharacter[] = [
             'Lãng mạn trong tình cảm.',
             'Quyết đoán trong việc đối mặt với thách thức.',
             'Chung thủy với mối quan hệ.',
-            'Kiên trì, tận tâm, trách nhiệm.',
+            'Kiên trì, Tận tâm, Trách nhiệm.',
         ],
         match: [
             'Aurora'
@@ -146,8 +146,8 @@ export const characters: ICharacter[] = [
         behavior: [
             'Chân thành trong tình cảm.',
             'Tự tin trong tình yêu.',
-            'Sâu sắc, hồn nhiên trong tình yêu.',
-            'Nhạy bén, thấu hiểu tâm trạng đối phương.',
+            'Sâu sắc, Hồn nhiên trong tình yêu.',
+            'Nhạy bén, Thấu hiểu tâm trạng đối phương.',
         ],
         match: [
             'Merida'
@@ -163,7 +163,7 @@ export const characters: ICharacter[] = [
         isMale: true,
         behavior: [
             'Dũng cảm ',
-            'Tích cực, tự tin trong mọi quyết định .',
+            'Tích cực, Tự tin trong mọi quyết định .',
             'Khả năng đồng thuận và lắng nghe.',
             'Sẵn sàng chia sẻ tâm tư của mình.',
         ],
@@ -180,9 +180,9 @@ export const characters: ICharacter[] = [
         img: '',
         isMale: true,
         behavior: [
-            'Lãng mạn, tự tin, duyên dáng.',
-            'Khao khát tự do, sự độc lập',
-            'Hài hước,dễ gần và thân thiện.',
+            'Lãng mạn, Tự tin, Duyên dáng.',
+            'Khao khát tự do, Sự độc lập',
+            'Hài hước, Dễ gần và thân thiện.',
             'Có trách nhiệm với mối quan hệ.',
         ],
         match: [
@@ -198,10 +198,10 @@ export const characters: ICharacter[] = [
         img: '',
         isMale: true,
         behavior: [
-            'Tự tin, tự chủ trong mọi quyết định.',
-            'Chung thủy, có trách nhiệm .',
+            'Tự tin, Tự chủ trong mọi quyết định.',
+            'Chung thủy, Có trách nhiệm .',
             'Sự chân thật trong tình yêu.',
-            'Sự hài hước, khả năng thấu hiểu, lắng nghe.',
+            'Sự hài hước, Khả năng thấu hiểu, Lắng nghe.',
         ],
         match: [
             'BachTuyet'
@@ -216,10 +216,10 @@ export const characters: ICharacter[] = [
         img: '',
         isMale: true,
         behavior: [
-            'Tự tin vào bản thân, quyến rũ.',
-            'Khao khát tự do, đam mê phiêu lưu ',
-            'Yêu đời, tận hưởng cuộc sống.',
-            'Tôn trọng, thấu hiểu cảm xúc đối phương.',
+            'Tự tin vào bản thân, Quyến rũ.',
+            'Khao khát tự do, Đam mê phiêu lưu ',
+            'Yêu đời, Tận hưởng cuộc sống.',
+            'Tôn trọng, Thấu hiểu cảm xúc đối phương.',
         ],
         match: [
             'Tiana'
@@ -235,8 +235,8 @@ export const characters: ICharacter[] = [
         isMale: true,
         behavior: [
             'Quan tâm đến cảm xúc đối phương.',
-            'Giải quyết tình huống thông minh, khéo léo.',
-            'Lạc quan, tích cực. ',
+            'Giải quyết tình huống thông minh, Khéo léo.',
+            'Lạc quan, Tích cực.',
             'Sự tận tâm với đối phương',
             'Sẵn sàng hy sinh cho hạnh phúc chung.',
         ],
@@ -255,7 +255,7 @@ export const characters: ICharacter[] = [
         behavior: [
             'Độc lập',
             'Tự chủ',
-            'Tinh tế, thấu hiểu và chia sẻ.',
+            'Tinh tế, Thấu hiểu và chia sẻ.',
             'Tinh thần tự do',
         ],
         match: [
@@ -273,7 +273,7 @@ export const characters: ICharacter[] = [
         behavior: [
             'Tư duy độc lập',
             'Tri thức',
-            'Nhạy bén, sáng tạo',
+            'Nhạy bén, Sáng tạo',
             'Tâm hồn nghệ thuật',
         ],
         match: ['Adam'],
@@ -285,8 +285,8 @@ export const characters: ICharacter[] = [
         img: '',
         isMale: false,
         behavior: [
-            'Thanh tao, hiền hòa, dịu dàng',
-            'Sống tình cảm, đáng yêu',
+            'Thanh tao, Hiền hòa, Dịu dàng',
+            'Sống tình cảm, Đáng yêu',
             'Tinh thần phiêu lưu',
             'Lãng mạn',
         ],
@@ -299,7 +299,7 @@ export const characters: ICharacter[] = [
         img: '',
         isMale: false,
         behavior: [
-            'Mạnh dạn, dũng cảm và thẳng thắn.',
+            'Mạnh dạn, Dũng cảm và thẳng thắn.',
             'Kiêu hãnh',
             'Năng động',
             'Tự do và độc lập',
@@ -315,7 +315,7 @@ export const characters: ICharacter[] = [
         behavior: [
             'Chăm chỉ, nỗ lực',
             'Nhìn xa trông rộng',
-            'Tích cực, lạc quan',
+            'Tích cực, Lạc quan',
             'Thông minh, kiên định',
         ],
         match: ['Naveen'],
@@ -342,8 +342,8 @@ export const characters: ICharacter[] = [
         isMale: false,
         behavior: [
             'Mạnh mẽ',
-            'Tốt bụng, đáng yêu',
-            'Tò mò, đam mê khám phá, sáng tạo',
+            'Tốt bụng, Đáng yêu',
+            'Tò mò, Đam mê khám phá, Sáng tạo',
             'Hoài bão',
             'Tinh thần nghệ thuật',
         ],
@@ -358,8 +358,8 @@ export const characters: ICharacter[] = [
         behavior: [
             'Trách nhiệm',
             'Mạnh mẽ',
-            'Nghĩa hiệp, tinh thần phiêu lưu',
-            'Kiên nhẫn, sẵn sàng học hỏi',
+            'Nghĩa hiệp, Tinh thần phiêu lưu',
+            'Kiên nhẫn, Sẵn sàng học hỏi',
         ],
         match: ['JohnSmith'],
         anti: ['Eric', 'Charming']
@@ -371,9 +371,9 @@ export const characters: ICharacter[] = [
         isMale: false,
         behavior: [
             'Chăm chỉ',
-            'Nghị lực, kiên nhẫn',
+            'Nghị lực, Kiên nhẫn',
             'Có tầm nhìn',
-            'Lãng mạn, khao khát tình yêu đich thực',
+            'Lãng mạn, Khao khát tình yêu đich thực',
         ],
         match: ['Eric'],
         anti: ['LiShang', 'Adam']
@@ -384,10 +384,10 @@ export const characters: ICharacter[] = [
         img: '',
         isMale: false,
         behavior: [
-            'Dễ thương, hiền hậu',
+            'Dễ thương, Hiền hậu',
             'Hòa đồng',
-            'Quyến rũ, tinh tế',
-            'Tôn trọng',
+            'Quyến rũ, Tinh tế',
+            'Tôn Trọng',
         ],
         match: ['Florian'],
         anti: ['Eric', 'Olaf']
@@ -416,8 +416,8 @@ export const characters: ICharacter[] = [
             'Yêu thích mạo hiểm',
             'Táo bạo',
             'Biết hi sinh',
-            'Kiên nhẫn, nỗ lực',
-            'Tinh thần phiêu lưu, sẵn sàng khám phá',
+            'Kiên nhẫn, Nỗ lực',
+            'Tinh thần phiêu lưu, Sẵn sàng khám phá',
         ],
         match: ['LiShang'],
         anti: ['Olaf', 'Kristoff']
