@@ -48,8 +48,8 @@ const useInteractedData = () => {
 
     //!Validate
     const validateInformations = () => {
-        let nameErr = !interactedData.name || interactedData.name.trim().length < 7
-        let mssvErr = !interactedData.mssv || interactedData.mssv.trim().length < 7
+        let nameErr = !interactedData.name || interactedData.name.trim().length < 7 || /[!@#$%^&*(),.?":{}|<>]/.test(interactedData.name)
+        let mssvErr = !interactedData.name || interactedData.name.trim().length < 7 || /[!@#$%^&*(),.?":{}|<>]/.test(interactedData.name)
 
         return nameErr || mssvErr
     }
