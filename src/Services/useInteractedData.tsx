@@ -51,7 +51,7 @@ const useInteractedData = () => {
         let nameErr = !interactedData.name || interactedData.name.trim().length < 7 || /[!@#$%^&*(),.?":{}|<>]/.test(interactedData.name)
         let mssvErr = !interactedData.name || interactedData.name.trim().length < 7 || /[!@#$%^&*(),.?":{}|<>]/.test(interactedData.name)
 
-        return nameErr || mssvErr
+        return nameErr || mssvErr 
     }
 
     // Restart

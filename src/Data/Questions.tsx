@@ -19,22 +19,22 @@ export const QuestionsDatas: IQuestion[] = [
         answers: [
             {
                 id: 'a',
-                content: 'Thể dục hoặc nấu ăn',
+                content: 'Nấu ăn',
                 point: 3,
             },
             {
                 id: 'b',
-                content: 'Ngắm sao và tìm hiểu về thiên văn',
+                content: 'Thể thao',
                 point: 2,
             },
             {
                 id: 'c',
-                content: 'Thư giãn và đọc sách',
+                content: 'Nghe nhạc',
                 point: 4,
             },
             {
                 id: 'd',
-                content: 'Gặp gỡ bạn bè và gia đình',
+                content: 'Đi chơi với bạn bè hoặc người thân',
                 point: 1,
             },
         ],
@@ -46,22 +46,22 @@ export const QuestionsDatas: IQuestion[] = [
         answers: [
             {
                 id: 'a',
-                content: 'Sự bền vững và ổn định',
+                content: 'Sự tôn trọng',
                 point: 1,
             },
             {
                 id: 'b',
-                content: 'Sự đổi mới',
+                content: 'Đồng điệu về cách nói chuyện',
                 point: 4,
             },
             {
                 id: 'c',
-                content: 'Tự do và độc lập',
+                content: 'Sự cảm thông',
                 point: 3,
             },
             {
                 id: 'd',
-                content: 'Sự cảm thông và tương tác trong gia đình',
+                content: 'Sự tương đồng',
                 point: 2,
             },
         ],
@@ -73,22 +73,22 @@ export const QuestionsDatas: IQuestion[] = [
         answers: [
             {
                 id: 'a',
-                content: 'Hành động ngay và tìm giải pháp',
+                content: 'Bình tĩnh giải quyết vấn đề',
                 point: 2,
             },
             {
                 id: 'b',
-                content: 'Tìm kiếm giải pháp sáng tạo',
+                content: 'Sáng tạo một cách giải quyết độc lạ',
                 point: 3,
             },
             {
                 id: 'c',
-                content: 'Giải quyết một cách thoải mái, không gò bó',
+                content: 'Nhờ sự giúp đỡ từ người thân',
                 point: 4,
             },
             {
                 id: 'd',
-                content: 'Dựa vào sự hỗ trợ từ người thân',
+                content: 'Giải quyết vấn đề theo hướng tích cực',
                 point: 1,
             },
         ],
@@ -100,22 +100,22 @@ export const QuestionsDatas: IQuestion[] = [
         answers: [
             {
                 id: 'a',
-                content: 'Sách ngôn tình và lãng mạn',
+                content: 'Sách ngôn tình',
                 point: 4,
             },
             {
                 id: 'b',
-                content: 'Sách khoa học viễn tưởng và phiêu lưu, truyện tranh',
+                content: 'Sách trinh thám',
                 point: 3,
             },
             {
                 id: 'c',
-                content: 'Sách phát triển cá nhân và tự truyện',
+                content: 'Truyện tranh',
                 point: 2,
             },
             {
                 id: 'd',
-                content: 'Sách về gia đình, truyền thống, văn hoá',
+                content: 'Sách khoa học viễn tưởng',
                 point: 1,
             },
         ],
@@ -127,22 +127,22 @@ export const QuestionsDatas: IQuestion[] = [
         answers: [
             {
                 id: 'a',
-                content: 'Lên kế hoạch cho một vài hoạt động với người thân',
+                content: 'Đi chơi với bạn bè và người thân',
                 point: 1,
             },
             {
                 id: 'b',
-                content: 'Khám phá điều mới và thú vị',
+                content: 'Lên một chuyến du lịch 1 ngày 1 đêm',
                 point: 3,
             },
             {
                 id: 'c',
-                content: 'Tự do sáng tạo và thư giãn',
+                content: 'Xem phim hoặc chơi game',
                 point: 4,
             },
             {
                 id: 'd',
-                content: 'Dành thời gian ở một mình và nghỉ ngơi',
+                content: 'Tổ chức một bữa tiệc nhỏ ',
                 point: 2,
             },
         ],
@@ -154,22 +154,22 @@ export const QuestionsDatas: IQuestion[] = [
         answers: [
             {
                 id: 'a',
-                content: 'Công việc mang tính ổn định',
+                content: 'Công việc có thu nhập ổn',
                 point: 3,
             },
             {
                 id: 'b',
-                content: 'Công việc đầy sáng tạo và thách thức',
+                content: 'Công việc có thể đi được nhiều nơi',
                 point: 2,
             },
             {
                 id: 'c',
-                content: 'Công việc linh hoạt và tự do',
+                content: 'Công việc tự do, thoải mái',
                 point: 1,
             },
             {
                 id: 'd',
-                content: 'Công việc gắn liền với giá trị gia đình',
+                content: 'Công việc có nhiều mối quan hệ',
                 point: 4,
             },
         ],
@@ -181,22 +181,22 @@ export const QuestionsDatas: IQuestion[] = [
         answers: [
             {
                 id: 'a',
-                content: 'Quan trọng và định hình cuộc sống',
+                content: 'Là nơi mang đến cho mình cảm giác an toàn',
                 point: 4,
             },
             {
                 id: 'b',
-                content: 'Cơ hội để thay đổi và phát triển',
+                content: 'Là chỗ dựa vững chắc ',
                 point: 3,
             },
             {
                 id: 'c',
-                content: 'Gìn giữ sự tự do và độc lập',
+                content: 'Là nơi có thể chia sẻ những cảm xúc',
                 point: 2,
             },
             {
                 id: 'd',
-                content: 'Là nguồn động viên và hỗ trợ quan trọng',
+                content: 'Là nơi giúp mình hoàn thiện về tất cả mọi mặt',
                 point: 1,
             },
         ],
@@ -208,22 +208,22 @@ export const QuestionsDatas: IQuestion[] = [
         answers: [
             {
                 id: 'a',
-                content: 'Nói chuyện và giải quyết vấn đề ngay',
+                content: 'Giải quyết theo hướng hòa giải',
                 point: 3,
             },
             {
                 id: 'b',
-                content: 'Tìm kiếm ý tưởng mới để làm mới mối quan hệ',
+                content: 'Nói chuyện trực tiếp ',
                 point: 2,
             },
             {
                 id: 'c',
-                content: 'Cần thời gian một mình để suy nghĩ',
+                content: 'Nhờ sự tư vấn từ bạn bè và người thân',
                 point: 1,
             },
             {
                 id: 'd',
-                content: 'Hỏi ý kiến và tìm sự hỗ trợ từ người thân',
+                content: 'Nhìn nhận lại kỹ vấn đề',
                 point: 4,
             },
         ],
@@ -234,22 +234,22 @@ export const QuestionsDatas: IQuestion[] = [
         answers: [
             {
                 id: 'a',
-                content: 'Sự bền vững và đáng tin cậy',
+                content: 'Sự tin cậy',
                 point: 4,
             },
             {
                 id: 'b',
-                content: 'Sự sáng tạo và những chuyến phiêu lưu cùng nhau',
+                content: 'Sự hợp nhau về sở thích và cách nói chuyện',
                 point: 3,
             },
             {
                 id: 'c',
-                content: 'Tự do và sự độc lập',
+                content: 'Sự tôn trọng',
                 point: 2,
             },
             {
                 id: 'd',
-                content: 'Sự cảm thông và giúp đỡ nhau',
+                content: 'Sự thấu hiểu',
                 point: 1,
             },
         ],
@@ -261,22 +261,22 @@ export const QuestionsDatas: IQuestion[] = [
         answers: [
             {
                 id: 'a',
-                content: 'Sự ổn định tài chính và thành công trong công việc',
+                content: 'Sự ổn định tài chính',
                 point: 2,
             },
             {
                 id: 'b',
-                content: 'Đổi mới và vượt qua thách thức đối với bản thân',
+                content: 'Sự đổi mới',
                 point: 4,
             },
             {
                 id: 'c',
-                content: 'Tự do và đạt được sự hài lòng của bản thân',
+                content: 'Sự tự do',
                 point: 3,
             },
             {
                 id: 'd',
-                content: 'Hạnh phúc và sự hòa thuận trong mối các mối quan hệ',
+                content: 'Nhiều mối quan hệ tốt',
                 point: 1,
             },
         ],
@@ -288,22 +288,22 @@ export const QuestionsDatas: IQuestion[] = [
         answers: [
             {
                 id: 'a',
-                content: 'Chấp nhận và thích nghi',
+                content: 'Xem xét sự thay đổi ấy mang tính tích cực hay tiêu cực',
                 point: 1,
             },
             {
                 id: 'b',
-                content: 'Tìm kiếm cơ hội mới',
+                content: 'Chấp nhận và tìm cách thích nghi',
                 point: 4,
             },
             {
                 id: 'c',
-                content: 'Giữ vững lập trường của mình',
+                content: 'Cân nhắc xem có nên giữ lập trường cũ hay đổi mới',
                 point: 2,
             },
             {
                 id: 'd',
-                content: 'Cảm thấy thoải mái với sự đổi mới',
+                content: 'Lắng nghe bản thân và bình tĩnh trước sự thay đổi nếu nó đến quá nhanh',
                 point: 3,
             },
         ],
@@ -315,22 +315,22 @@ export const QuestionsDatas: IQuestion[] = [
         answers: [
             {
                 id: 'a',
-                content: 'Chơi thể thao, vận động,...',
+                content: 'Chơi thể thao',
                 point: 2,
             },
             {
                 id: 'b',
-                content: 'Khám phá những điều mới mẻ, phượt,...',
+                content: 'Khám phá những nơi mới mẻ',
                 point: 3,
             },
             {
                 id: 'c',
-                content: 'Đọc sách hoặc xem phim',
+                content: 'Xem phim hoặc đọc sách',
                 point: 4,
             },
             {
                 id: 'd',
-                content: 'Gặp bạn bè và chia sẻ cảm xúc',
+                content: 'Đi chơi với bạn bè',
                 point: 1,
             },
         ],
@@ -338,26 +338,26 @@ export const QuestionsDatas: IQuestion[] = [
 
     {
         id: 13,
-        question: 'Bạn thích ghé thăm khu giải trí nào nhất?',
+        question: 'Khi bạn đối diện với quyết định quan trọng, bạn thường:',
         answers: [
             {
                 id: 'a',
-                content: 'Khu vực thiên về thiên nhiên hay những nơi có không khí trong lành',
+                content: 'Suy nghĩ thật kỹ ',
                 point: 2,
             },
             {
                 id: 'b',
-                content: 'Khu vui chơi dành cho gia đình, nhẹ nhàng',
+                content: 'Tìm kiếm hướng giải quyết mới lạ',
                 point: 4,
             },
             {
                 id: 'c',
-                content: 'Công viên giải trí hiện đại',
+                content: 'Tìm hiểu đánh giá kỹ vấn đề đó',
                 point: 3,
             },
             {
                 id: 'd',
-                content: 'Khu vui chơi có những trò chơi cảm giác mạnh hay có độ thử thách cao',
+                content: 'Tâm sự với gia đình',
                 point: 1,
             },
         ],
@@ -369,22 +369,22 @@ export const QuestionsDatas: IQuestion[] = [
         answers: [
             {
                 id: 'a',
-                content: 'Mối quan hệ quan trọng hơn',
+                content: 'Cân bằng cả 2',
                 point: 3,
             },
             {
                 id: 'b',
-                content: 'Sự cân bằng giữa cả hai',
+                content: 'Sự nghiệp',
                 point: 2,
             },
             {
                 id: 'c',
-                content: 'Sự nghiệp quan trọng hơn',
+                content: 'Tùy vào tình huống mà đưa ra quyết định',
                 point: 4,
             },
             {
                 id: 'd',
-                content: 'Phải điều chỉnh tùy tình huống',
+                content: 'Mối quan hệ',
                 point: 1,
             },
         ],
@@ -396,17 +396,17 @@ export const QuestionsDatas: IQuestion[] = [
         answers: [
             {
                 id: 'a',
-                content: 'Ballad buồn và nhạc lãng mạn',
+                content: 'K-pop',
                 point: 1,
             },
             {
                 id: 'b',
-                content: 'Nhạc điện tử và pop',
+                content: 'Nhạc trẻ',
                 point: 3,
             },
             {
                 id: 'c',
-                content: 'Âm nhạc nhẹ và nhạc jazz',
+                content: 'Ballad',
                 point: 4,
             },
             {
@@ -423,22 +423,22 @@ export const QuestionsDatas: IQuestion[] = [
         answers: [
             {
                 id: 'a',
-                content: 'Bày tỏ bằng lời nói và hành động',
+                content: 'Dành thời gian cho người mình yêu quý',
                 point: 3,
             },
             {
                 id: 'b',
-                content: 'Tạo ra những trải nghiệm độc đáo',
+                content: 'Bằng lời nói',
                 point: 1,
             },
             {
                 id: 'c',
-                content: 'Cho đi và không cần nhận lại',
+                content: 'Cử chỉ hành động',
                 point: 4,
             },
             {
                 id: 'd',
-                content: 'Chia sẻ thời gian và có những hoạt động chung',
+                content: 'Bằng những món quà',
                 point: 2,
             },
         ],
