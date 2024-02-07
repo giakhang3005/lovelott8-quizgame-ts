@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import './StartScreen.scss'
-import { useStep } from '../../Services/useStep'
+import { useStep } from '../../Services/CustomHooks/useStep'
 
 //Animation
 const defaultAnimate = { opacity: 0 }

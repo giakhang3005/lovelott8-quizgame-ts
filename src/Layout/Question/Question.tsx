@@ -3,10 +3,10 @@ import "./Question.scss"
 import { AnimatePresence, motion } from 'framer-motion'
 import { Modal, message } from 'antd'
 import RuleModal from './RuleModal'
-import useQuestion from '../../Services/useQuestion'
-import { IAnswers, IQuestion } from '../../Data/Questions'
-import { useStep } from '../../Services/useStep'
-import useInteractedData from '../../Services/useInteractedData'
+import useQuestion from '../../Services/CustomHooks/useQuestion'
+import { IAnswers, IQuestion } from '../../Services/Interfaces'
+import { useStep } from '../../Services/CustomHooks/useStep'
+import useInteractedData from '../../Services/CustomHooks/useInteractedData'
 
 type Props = {}
 

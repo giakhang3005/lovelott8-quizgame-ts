@@ -1,16 +1,4 @@
-// Interface for answers
-export interface IAnswers {
-    id: string,
-    content: string,
-    point: number,
-}
-
-// Interface for question
-export interface IQuestion {
-    id: number,
-    question: string,
-    answers: IAnswers[],
-}
+import { IQuestion } from "../Services/Interfaces"
 
 export const QuestionsDatas: IQuestion[] = [
     {

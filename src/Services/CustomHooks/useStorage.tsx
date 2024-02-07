@@ -1,4 +1,4 @@
-import { IUserInteractData } from '../App'
+import { IUserInteractData } from '../Interfaces'
 
 export const useStorage = () => {
 

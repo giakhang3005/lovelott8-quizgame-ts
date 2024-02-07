@@ -1,7 +1,7 @@
 import { useContext } from "react"
-import { IContext, Data } from '../App'
-import { characters } from "../Data/Character"
-import { charactersRuleSet } from "../Data/Character"
+import { IContext, Data } from '../../Layout/MainLayout'
+import { characters } from "../../Data/Character"
+import { charactersRuleSet } from "../../Data/Character"
 
 const useResult = () => {
     const { interactedData, setInteractedData } = useContext(Data) as IContext

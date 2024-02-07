@@ -1,12 +1,12 @@
 import { Row, Col, Popconfirm, Modal, ColorPicker } from 'antd'
 import { RedoOutlined, HeartFilled } from '@ant-design/icons'
 import "./Result.scss"
-import useInteractedData from '../../Services/useInteractedData'
+import useInteractedData from '../../Services/CustomHooks/useInteractedData'
 import CharacterDisplay from './CharacterDisplay'
 import { useEffect, useState } from 'react'
-import useResult from '../../Services/useResult'
+import useResult from '../../Services/CustomHooks/useResult'
 import { motion } from 'framer-motion'
-import { useStorage } from '../../Services/useStorage'
+import { useStorage } from '../../Services/CustomHooks/useStorage'
 
 type Props = {}
 

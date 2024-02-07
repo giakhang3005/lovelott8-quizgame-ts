@@ -1,7 +1,7 @@
 import { useContext } from "react"
-import { IContext, Data } from '../App'
+import { IContext, Data } from '../../Layout/MainLayout'
 import useResult from "./useResult"
-import { saveDataToSheet } from "./APIs"
+import { saveDataToSheet } from "../APIs"
 
 export const useFeedback = () => {
     const { interactedData, setInteractedData } = useContext(Data) as IContext

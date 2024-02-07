@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import "./Feedback.scss"
 import { Rate, message } from "antd"
-import { useFeedback } from "../../Services/useFeedback"
-import { useStep } from '../../Services/useStep'
+import { useFeedback } from "../../Services/CustomHooks/useFeedback"
+import { useStep } from '../../Services/CustomHooks/useStep'
 import { motion } from 'framer-motion'
 
 type Props = {}
@@ -72,9 +72,9 @@ const Feedback = (props: Props) => {
             <Rate className="rating" value={currStar} onChange={(e) => setCurrStar(e)} /> <i className="starRatingRequire">(Bắt buộc)</i>
           </div>
 
-
           {/* Reason */}
           <textarea className="reason"
+          
             placeholder={(currStar <= 3 && currStar > 0) ?
               "Bạn chưa hài lòng về điều gì? Hãy cho tụi mình biết nhé ^^" :
               "Bạn cảm thấy thế nào? (Không bắt buộc)"}

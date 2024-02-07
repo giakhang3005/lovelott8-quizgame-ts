@@ -1,6 +1,7 @@
 import { useContext } from "react"
-import { IContext, Data, IUserInteractData } from '../App'
+import { IContext, Data } from '../../Layout/MainLayout'
 import { useStorage } from "./useStorage"
+import { IUserInteractData } from "../Interfaces"
 
 const useInteractedData = () => {
     const { interactedData, setInteractedData, setCurrentStep } = useContext(Data) as IContext

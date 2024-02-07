@@ -1,8 +1,8 @@
 import React from 'react'
 import "./Information.scss"
 import { motion } from 'framer-motion'
-import { useStep } from '../../Services/useStep'
-import useInteractedData from '../../Services/useInteractedData'
+import { useStep } from '../../Services/CustomHooks/useStep'
+import useInteractedData from '../../Services/CustomHooks/useInteractedData'
 import { message } from 'antd'
 
 type Props = {}

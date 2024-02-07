@@ -132,6 +132,8 @@
       overflow: hidden;
       border: 1px solid black;
       outline: none;
+      resize: none;
+      overflow: scroll;
     }
 
     .reason:focus {

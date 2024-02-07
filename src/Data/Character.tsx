@@ -1,31 +1,4 @@
-interface ICharacterRuleSet {
-    id: number,
-
-    //ID of character
-    male: string,
-    female: string,
-
-    // Point range
-    point: {
-        min: number,  // >=
-        max: number, // <=
-    }
-}
-
-interface ICharacter {
-    id: string,
-    name: string,
-    img: string,
-    isMale: boolean,
-    behavior: string[],
-    match: string[],
-    anti: string[],
-    // color: {
-    //     text: string,
-    //     background: string,
-    //     sub: string,
-    // }
-}
+import { ICharacter, ICharacterRuleSet } from "../Services/Interfaces"
 
 // All characters data
 export const characters: ICharacter[] = [

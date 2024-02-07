@@ -1,6 +1,7 @@
 import { useContext } from 'react'
-import { IContext, Data, ISavedAnswer } from '../App'
-import { IAnswers, IQuestion, QuestionsDatas } from '../Data/Questions'
+import { IContext, Data } from '../../Layout/MainLayout'
+import { QuestionsDatas } from '../../Data/Questions'
+import { ISavedAnswer } from '../Interfaces'
 
 const useQuestion = () => {
     const { interactedData, setInteractedData } = useContext(Data) as IContext
