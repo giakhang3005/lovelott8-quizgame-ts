@@ -78,8 +78,8 @@ const MainLayout = () => {
       <div className='logoContainer'>
         <img src="./Assets/Logo/logowhite.png" />
         {currentStep > 1 && <motion.img 
-        initial={{transform: 'translate(18vw, 15vh)', opacity: 1}}
-        animate={{transform: 'translate(0, 0)', opacity: 1}}
+        initial={{transform: 'translate(18vw, 15vh)', opacity: 1, height: '50px'}}
+        animate={{transform: 'translate(0, 0)', opacity: 1, height: '37px'}}
         transition={{duration: 1}}
         src="./Assets/Logo/L8veLott.png" />}
       </div>
