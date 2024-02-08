@@ -17,7 +17,7 @@ const initAnimate = { top: '38.5%', left: '50%', opacity: 0 }
 const initAnimateForContent = { opacity: 0, transform: 'translateY(20px)' }
 const showAnimateForContent = { opacity: 1, transform: 'translateY(0)' }
 const defaultContentDelay = 2.5
-const addDelay = 0.25
+const addDelay = 0.27
 const heartArr = [
     {
         heartImg: 1,
