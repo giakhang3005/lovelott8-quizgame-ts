@@ -76,7 +76,7 @@ const MainLayout = () => {
       {/* Club & Event logo */}
       <div className='logoContainer'>
         <img src="./Assets/Logo/logowhite.png" />
-        <img src="./Assets/Logo/L8veLott.png" />
+        {currentStep > 1 && <img src="./Assets/Logo/L8veLott.png" />}
       </div>
       {
         // Block user interact when using mobile device in landscape mode

@@ -189,7 +189,7 @@ const StartScreen = (props: Props) => {
                     transition={{ delay: defaultContentDelay + addDelay * 2 +  (contentArr.length) * addDelay }}
                 >
                     <div>13 - 19/02/2024</div>
-                    <div>ĐẠI HỌC FPT TP. HCM</div>
+                    <div>ĐẠI HỌC FPT TP.HCM</div>
                 </motion.div>
             </div>
 
