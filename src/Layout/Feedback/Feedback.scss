@@ -15,6 +15,14 @@
       height: 380px;
       width: 100%;
 
+      .ccfImg {
+        height: 52px;
+        top: 131px;
+        left: 10%;
+        transform: translateX(-50%);
+        animation: movingRight 10s ease-in forwards;
+      }
+
       .title {
         position: absolute;
         top: 60px;
@@ -70,7 +78,7 @@
       .loader2 {
         display: block;
         position: absolute;
-        top: 140px;
+        top: 150px;
         left: 50%;
         transform: translateX(-50%);
         height: 20px;
@@ -95,11 +103,17 @@
   }
 
   .FeedbackFill {
+    .ccfDecorFB {
+      height: 70px;
+      position: absolute;
+      top: 215px;
+      left: 9%;
+    }
     .starContainer {
       position: absolute;
       width: 100%;
       left: 50%;
-      top: 200px;
+      top: 220px;
       transform: translateX(-50%);
       text-align: center;
       .rating {
@@ -117,7 +131,7 @@
     .reason {
       position: absolute;
       left: 50%;
-      top: 248px;
+      top: 268px;
       width: 80%;
       max-width: 90%;
       min-width: 80%;
@@ -143,7 +157,7 @@
     .submit {
       position: absolute;
       left: 50%;
-      top: 320px;
+      top: 340px;
       transform: translateX(-50%);
       border: none;
       font-weight: 600;
@@ -230,5 +244,13 @@
   91%,
   99% {
     height: 18px;
+  }
+}
+@keyframes movingRight {
+  from {
+    left: 10%;
+  }
+  to {
+    left: 90%;
   }
 }

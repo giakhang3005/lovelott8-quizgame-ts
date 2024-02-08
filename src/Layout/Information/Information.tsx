@@ -89,7 +89,11 @@ const Information = (props: Props) => {
 
                 {/* Next Btn */}
                 <div className="BtnContainer">
-                    <button className='continueBtn' onClick={onConfirm}>XÁC NHẬN</button>
+                    <button className='continueBtn' onClick={onConfirm}>
+                        <img src="./Assets/Images/CCF/8.png" />
+                        <img src="./Assets/Images/CCF/2.png" />
+                        XÁC NHẬN
+                    </button>
                 </div>
             </div>
 

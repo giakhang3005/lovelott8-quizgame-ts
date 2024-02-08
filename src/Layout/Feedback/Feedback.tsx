@@ -61,7 +61,10 @@ const Feedback = (props: Props) => {
           <i className="sub">Trong lúc hệ thống tìm kết quả phù hợp, bạn hãy dành 1 ít thời gian để đánh giá trải
             nghiệm nhằm giúp Cóc Sài Gòn cải thiện web hơn nhé ^^</i>
 
-          <span className="loader2"></span>
+          <span className="loader2">
+          </span>
+          <img src="./Assets/Images/CCF/6.png" className="ccfImg" />
+
         </div>
 
         {/* Feedback */}
@@ -73,8 +76,9 @@ const Feedback = (props: Props) => {
           </div>
 
           {/* Reason */}
+          <img src={`./Assets/Images/CCF/${currStar > 3 ? '2' : '3'}.png`} className="ccfDecorFB" />
           <textarea className="reason"
-          
+
             placeholder={(currStar <= 3 && currStar > 0) ?
               "Bạn chưa hài lòng về điều gì? Hãy cho tụi mình biết nhé ^^" :
               "Bạn cảm thấy thế nào? (Không bắt buộc)"}

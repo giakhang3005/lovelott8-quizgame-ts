@@ -1,3 +1,5 @@
+/** @format */
+
 @use "../../App.scss";
 
 .information {
@@ -101,6 +103,7 @@
   .BtnContainer {
     width: 100%;
     display: flex;
+    position: relative;
     // justify-content: end;
 
     .continueBtn {
@@ -121,6 +124,19 @@
 
     .continueBtn:hover {
       background-color: App.$light-blue;
+    }
+
+    img {
+      height: 75px;
+      position: absolute;
+      right: -10px;
+      top: -25px;
+      z-index: -1;
+    }
+    img:nth-child(2) {
+      left: -5px;
+      top: -17px;
+      height: 70px;
     }
   }
 }
