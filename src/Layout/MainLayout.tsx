@@ -10,6 +10,7 @@ import Feedback from './Feedback/Feedback';
 import { useStorage } from '../Services/CustomHooks/useStorage';
 import BlockedScreen from './BlockedScreen/BlockedScreen';
 import { useCheck } from '../Services/CustomHooks/useCheck';
+import { motion } from 'framer-motion'
 
 //Context to send Data through app
 export interface IContext {
@@ -76,7 +77,11 @@ const MainLayout = () => {
       {/* Club & Event logo */}
       <div className='logoContainer'>
         <img src="./Assets/Logo/logowhite.png" />
-        {currentStep > 1 && <img src="./Assets/Logo/L8veLott.png" />}
+        {currentStep > 1 && <motion.img 
+        initial={{transform: 'translate(18vw, 14vh)'}}
+        animate={{transform: 'translate(0, 0)'}}
+        transition={{duration: 1}}
+        src="./Assets/Logo/L8veLott.png" />}
       </div>
       {
         // Block user interact when using mobile device in landscape mode
