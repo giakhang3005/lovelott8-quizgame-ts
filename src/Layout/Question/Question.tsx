@@ -34,11 +34,7 @@ const Question = (props: Props) => {
     // Handle user click next question
     const handleNextQuestion = () => {
         // Random Background
-        let randomNum = Math.round(Math.random() * 8)
-        while (randomNum === 0) {
-            randomNum = Math.round(Math.random() * 8)
-        }
-        setRandomNumber(randomNum)
+        setRandomNumber(Math.round(Math.random() * 7) + 1) 
 
         // Handle next question
         if (currentAnswer) {
