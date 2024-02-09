@@ -28,7 +28,7 @@ const MainLayout = () => {
   const { saveData, getData } = useStorage()
 
   // Check device mobile/tablet/desktop
-  const { checkDevice } = useCheck()
+  const { checkDevice, checkDevTool } = useCheck()
 
   // Default Data if user first visit
   const defaultInteractedData = {
@@ -55,6 +55,7 @@ const MainLayout = () => {
   // Detect if user is using landscape mobile device
   const [landscapePhone, setLandscapePhone] = useState<boolean>(false)
 
+  // Check devices & dev tool
   useEffect(() => {
     // Update result to sate
     setLandscapePhone(checkDevice())
@@ -63,6 +64,9 @@ const MainLayout = () => {
     window.addEventListener("orientationchange", function () {
       setLandscapePhone(!checkDevice())
     }, false);
+
+    // Prevent Dev Tools
+    checkDevTool()
   }, [])
 
   // Save Data everytime data or step change
@@ -77,11 +81,11 @@ const MainLayout = () => {
       {/* Club & Event logo */}
       <div className='logoContainer'>
         <img src="./Assets/Logo/logowhite.png" />
-        {currentStep > 1 && <motion.img 
-        initial={{transform: 'translate(18vw, 15vh)', opacity: 1, height: '50px'}}
-        animate={{transform: 'translate(0, 0)', opacity: 1, height: '37px'}}
-        transition={{duration: 1}}
-        src="./Assets/Logo/L8veLott.png" />}
+        {currentStep > 1 && <motion.img
+          initial={{ transform: 'translate(18vw, 13vh)', opacity: 1, height: '50px' }}
+          animate={{ transform: 'translate(0, 0)', opacity: 1, height: '37px' }}
+          transition={{ duration: 0.5 }}
+          src="./Assets/Logo/L8veLott.png" />}
       </div>
       {
         // Block user interact when using mobile device in landscape mode

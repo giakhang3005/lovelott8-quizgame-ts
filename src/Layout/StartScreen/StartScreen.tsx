@@ -135,6 +135,7 @@ const StartScreen = (props: Props) => {
                         heartArr.map((heart, i) => (
                             <motion.img
                                 initial={initAnimate}
+                                key={i}
                                 animate={{ opacity: 1, top: `${heart.top}%`, left: `${heart.left}%`, scale: 1.1 }}
                                 transition={{ delay: 1.1, duration: 0.7, ease: 'easeOut' }}
                                 src={`./Assets/Images/Elements/Heart${heart.heartImg}.png`} />
