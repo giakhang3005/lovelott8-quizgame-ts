@@ -48,6 +48,10 @@ body {
   background-size: cover;
 }
 
+img {
+  pointer-events: none;
+}
+
 .unuseZone {
   // background-color: rgba(212, 210, 210, 0.081);
 }
