@@ -129,7 +129,7 @@ const Result = (props: Props) => {
         </Col>
         <Col span={12} sm={10} className='character_image_container'>
           <div className="border" style={{ backgroundColor: colorTest.white }}>
-            <img src="Assets/Images/elsa.png" className='ownCharacterImg' />
+            <img src={result.ownCharacter.img} className='ownCharacterImg' />
           </div>
         </Col>
         <Col span={6} sm={7} className='heartContainer'>
@@ -172,7 +172,7 @@ const Result = (props: Props) => {
           <Row className='characters' style={{ backgroundColor: colorTest.lightPink }}>
             {
               result?.matchCharacter.map((character: any, i: number) =>
-                <CharacterDisplay key={i} textColor={colorTest.font1} name={character.name} imgUrl="./Assets/Images/elsa.png" animationDelay={i} />)
+                <CharacterDisplay key={i} textColor={colorTest.font1} name={character.name} imgUrl={character.img} animationDelay={i} />)
             }
           </Row>
         </Col>
@@ -181,7 +181,7 @@ const Result = (props: Props) => {
           <Row className='characters' style={{ backgroundColor: colorTest.lightPurple }}>
             {
               result?.antiCharacter.map((character: any, i: number) =>
-                <CharacterDisplay key={i} textColor={colorTest.font1} name={character.name} imgUrl="./Assets/Images/elsa.png" animationDelay={i} />)
+                <CharacterDisplay key={i} textColor={colorTest.font1} name={character.name} imgUrl={character.img} animationDelay={i} />)
             }
           </Row>
         </Col>

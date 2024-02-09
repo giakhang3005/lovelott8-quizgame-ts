@@ -1,11 +1,12 @@
 import { ICharacter, ICharacterRuleSet } from "../Services/Interfaces"
+const url = './Assets/Images/Characters'
 
 // All characters data
 export const characters: ICharacter[] = [
     {
         id: 'Charming',
         name: 'Charming',
-        img: '',
+        img: `${url}/charming.png`,
         isMale: true,
         behavior: [
             'Quý phái, Tinh tế, Lãng mạn.',
@@ -23,7 +24,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Adam',
         name: 'Adam - Beast',
-        img: '',
+        img: `${url}/adam.png`,
         isMale: true,
         behavior: [
             'Trách nhiệm, Kiên nhẫn.',
@@ -41,7 +42,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Eric',
         name: 'Eric',
-        img: '',
+        img: `${url}/eric.png`,
         isMale: true,
         behavior: [
             'Tự tin trong quyết định, Làm chủ tình huống.',
@@ -59,7 +60,7 @@ export const characters: ICharacter[] = [
     {
         id: 'LiShang',
         name: 'Li Shang',
-        img: '',
+        img: `${url}/lishang.png`,
         isMale: true,
         behavior: [
             'Nghiêm túc, Trách nhiệm và tôn trọng.',
@@ -78,7 +79,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Olaf',
         name: 'Olaf',
-        img: '',
+        img: `${url}/olaf.png`,
         isMale: true,
         behavior: [
             'Tự tin, Dũng cảm, Yêu sự tự do.',
@@ -96,7 +97,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Phillip',
         name: 'Phillip',
-        img: '',
+        img: `${url}/philip.png`,
         isMale: true,
         behavior: [
             'Lãng mạn trong tình cảm.',
@@ -114,7 +115,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Kristoff',
         name: 'Kristoff',
-        img: '',
+        img: `${url}/kristoff.png`,
         isMale: true,
         behavior: [
             'Chân thành trong tình cảm.',
@@ -132,7 +133,7 @@ export const characters: ICharacter[] = [
     {
         id: 'JohnSmith',
         name: 'John Smith',
-        img: '',
+        img: `${url}/johnsmith.png`,
         isMale: true,
         behavior: [
             'Dũng cảm ',
@@ -150,7 +151,7 @@ export const characters: ICharacter[] = [
     {
         id: 'FlynnRider',
         name: 'Flynn Rider',
-        img: '',
+        img: `${url}/flynrider.png`,
         isMale: true,
         behavior: [
             'Lãng mạn, Tự tin, Duyên dáng.',
@@ -168,7 +169,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Florian',
         name: 'Florian',
-        img: '',
+        img: `${url}/florian.png`,
         isMale: true,
         behavior: [
             'Tự tin, Tự chủ trong mọi quyết định.',
@@ -186,7 +187,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Naveen',
         name: 'Naveen',
-        img: '',
+        img: `${url}/naveen.png`,
         isMale: true,
         behavior: [
             'Tự tin vào bản thân, Quyến rũ.',
@@ -204,7 +205,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Aladdin',
         name: 'Aladdin',
-        img: '',
+        img: `${url}/aladin.png`,
         isMale: true,
         behavior: [
             'Quan tâm đến cảm xúc đối phương.',
@@ -223,7 +224,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Elsa',
         name: 'Elsa',
-        img: '',
+        img: `${url}/Elsa.png`,
         isMale: false,
         behavior: [
             'Độc lập',
@@ -241,7 +242,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Belle',
         name: 'Belle',
-        img: '',
+        img: `${url}/Belle.png`,
         isMale: false,
         behavior: [
             'Tư duy độc lập',
@@ -255,7 +256,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Aurora',
         name: 'Aurora',
-        img: '',
+        img: `${url}/Aurora.png`,
         isMale: false,
         behavior: [
             'Thanh tao, Hiền hòa, Dịu dàng',
@@ -269,7 +270,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Merida',
         name: 'Merida',
-        img: '',
+        img: `${url}/Merida.png`,
         isMale: false,
         behavior: [
             'Mạnh dạn, Dũng cảm và thẳng thắn.',
@@ -283,7 +284,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Tiana',
         name: 'Tiana',
-        img: '',
+        img: `${url}/Tiana.png`,
         isMale: false,
         behavior: [
             'Chăm chỉ, nỗ lực',
@@ -297,7 +298,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Cinderella',
         name: 'Cinderella',
-        img: '',
+        img: `${url}/Cinderela.png`,
         isMale: false,
         behavior: [
             'Nghị lực, quyết tâm, kiên trì',
@@ -311,7 +312,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Ariel',
         name: 'Nàng tiên cá',
-        img: '',
+        img: `${url}/Ariel.png`,
         isMale: false,
         behavior: [
             'Mạnh mẽ',
@@ -326,7 +327,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Moana',
         name: 'Moana',
-        img: '',
+        img: `${url}/Moana.png`,
         isMale: false,
         behavior: [
             'Trách nhiệm',
@@ -340,7 +341,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Jasmine',
         name: 'Jasmine',
-        img: '',
+        img: `${url}/jasmine.png`,
         isMale: false,
         behavior: [
             'Chăm chỉ',
@@ -354,7 +355,7 @@ export const characters: ICharacter[] = [
     {
         id: 'BachTuyet',
         name: 'Bạch Tuyết',
-        img: '',
+        img: `${url}/bachtuyet.png`,
         isMale: false,
         behavior: [
             'Dễ thương, Hiền hậu',
@@ -368,7 +369,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Rapunzel',
         name: 'Công chúa tóc mây',
-        img: '',
+        img: `${url}/rapunzel.png`,
         isMale: false,
         behavior: [
             'Kiên định',
@@ -383,7 +384,7 @@ export const characters: ICharacter[] = [
     {
         id: 'Mulan',
         name: 'Hoa Mộc Lan',
-        img: '',
+        img: `${url}/mulan.png`,
         isMale: false,
         behavior: [
             'Yêu thích mạo hiểm',
