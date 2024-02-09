@@ -299,7 +299,7 @@ export const QuestionsDatas: IQuestion[] = [
 
     {
         id: 12,
-        question: 'Khi bạn muốn giải tỏa stress, bạn thích:',
+        question: 'Khi buồn bạn thường làm gì?',
         answers: [
             {
                 id: 'a',
