@@ -129,7 +129,7 @@ const Result = (props: Props) => {
         </Col>
         <Col span={12} sm={10} className='character_image_container'>
           <div className="border" style={{ backgroundColor: colorTest.white }}>
-            <img src={result.ownCharacter.img} className='ownCharacterImg' />
+            <img src={result?.ownCharacter.img} className='ownCharacterImg' />
           </div>
         </Col>
         <Col span={6} sm={7} className='heartContainer'>
