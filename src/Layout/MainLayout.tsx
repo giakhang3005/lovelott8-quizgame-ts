@@ -28,7 +28,7 @@ const MainLayout = () => {
   const { saveData, getData } = useStorage()
 
   // Check device mobile/tablet/desktop
-  const { checkDevice, checkDevTool } = useCheck()
+  const { checkDevice, checkDevTool, preventCopy } = useCheck()
 
   // Default Data if user first visit
   const defaultInteractedData = {
@@ -67,6 +67,9 @@ const MainLayout = () => {
 
     // Prevent Dev Tools
     checkDevTool()
+
+    // Prevent Copy
+    preventCopy()
   }, [])
 
   // Save Data everytime data or step change

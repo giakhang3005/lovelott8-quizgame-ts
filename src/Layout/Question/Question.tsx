@@ -33,11 +33,16 @@ const Question = (props: Props) => {
 
     // Handle user click next question
     const handleNextQuestion = () => {
-        // Random Background
-        setRandomNumber(Math.round(Math.random() * 7) + 1) 
 
         // Handle next question
+        if (!navigator.onLine) {
+            message.error('Vui lòng kiểm tra kết nối mạng')
+            return
+        }
         if (currentAnswer) {
+            // Random Background
+            setRandomNumber(Math.round(Math.random() * 7) + 1)
+
             const savedUserAnswer = {
                 qId: currentQuestion?.id,
                 answer: currentAnswer,

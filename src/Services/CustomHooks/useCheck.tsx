@@ -47,7 +47,7 @@ export const useCheck = () => {
 
 
             //User are holding Cmd on Mac or Ctrl on Window + Shift/Opt/Return
-            if (e.metaKey && (e.altKey || e.shiftKey || e.returnValue)) {
+            if (e.metaKey && (e.altKey || e.shiftKey)) {
                 // Check if the key pressed is 'i' or 'c'
                 if (e.key === 'i' || e.code === 'KeyI' || e.key === 'c' || e.code === 'KeyC' || e.key === 'j' || e.code === 'KeyJ') {
                     preventDevTool(e)
@@ -57,5 +57,12 @@ export const useCheck = () => {
 
     }
 
-    return { checkDevice, checkDevTool }
+    const preventCopy = () => {
+        document.addEventListener('copy', (e) => {
+            e?.clipboardData?.setData('text/plain', 'Coc Sai Gon Communication Club - https://www.facebook.com/cocsaigonfuhcm');
+            e.preventDefault(); 
+        });
+    }
+
+    return { checkDevice, checkDevTool, preventCopy }
 }
