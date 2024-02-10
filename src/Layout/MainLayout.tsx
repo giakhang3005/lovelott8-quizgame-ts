@@ -74,10 +74,11 @@ const MainLayout = () => {
     // Prevent Copy
     preventCopy()
 
-    // Checking for version every 30 seconds
+    // Checking for version every 1 minute
+    checkingVersion(setCorrectVersion)
     setInterval(() => {
       checkingVersion(setCorrectVersion)
-    }, 1000 * 30)
+    }, 1000 * 60)
   }, [])
 
   // Save Data everytime data or step change
