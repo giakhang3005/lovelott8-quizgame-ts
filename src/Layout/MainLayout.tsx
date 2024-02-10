@@ -74,7 +74,7 @@ const MainLayout = () => {
     // Prevent Copy
     preventCopy()
 
-    // Checking for version
+    // Checking for version every 1 minute
     setInterval(() => {
       checkingVersion(setCorrectVersion)
     }, 1000 * 60)
