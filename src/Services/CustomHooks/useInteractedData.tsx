@@ -49,10 +49,24 @@ const useInteractedData = () => {
 
     //!Validate
     const validateInformations = () => {
-        let nameErr = !interactedData.name || interactedData.name.trim().length < 7 || /[!@#$%^&*(),.?":{}|<>]/.test(interactedData.name)
-        let mssvErr = !interactedData.name || interactedData.name.trim().length < 7 || /[!@#$%^&*(),.?":{}|<>]/.test(interactedData.name)
+        var firstLetter="[A-EGHIK-VXYÂĐỔÔÚỨa-eghik-vxyàáâãèéêìíòóôõùúýỳỹỷỵựửữừứưụủũợởỡờớơộổỗồốọỏịỉĩệểễềếẹẻẽặẳẵằắăậẩẫầấạảđ₫]".normalize("NFC"),
+        otherLetters="[a-eghik-vxyàáâãèéêìíòóôõùúýỳỹỷỵựửữừứưụủũợởỡờớơộổỗồốọỏịỉĩệểễềếẹẻẽặẳẵằắăậẩẫầấạảđ₫]".normalize("NFC"),
+        regexString="^"
+                   +firstLetter+otherLetters+"+\\s"
+                   +"("+firstLetter+otherLetters+"+\\s)*"
+                   +firstLetter+otherLetters+"+$",
+        regexPattern=RegExp(regexString);
 
-        return nameErr || mssvErr 
+
+        let nameMatchesPattern = interactedData.name && regexPattern.test(interactedData.name)
+        
+        let nameErr = !interactedData.name || interactedData.name.trim().length < 7 || /[!@#$%^&*(),.?":{}|<>]/.test(interactedData.name) || !nameMatchesPattern
+        let mssvErr = !interactedData.mssv || interactedData.mssv.trim().length < 7 || /[!@#$%^&*(),.?":{}|<>]/.test(interactedData.mssv) || !/\d{5}/.test(interactedData.mssv);
+
+        return {
+            nameErr: nameErr,
+            mssvErr: mssvErr,
+        }
     }
 
     // Restart

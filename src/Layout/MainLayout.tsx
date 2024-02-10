@@ -2,7 +2,7 @@ import { useState, createContext, useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import StartScreen from './StartScreen/StartScreen';
 import Information from './Information/Information';
-import { Col, Row } from 'antd';
+import { Col, Modal, Row } from 'antd';
 import Result from './Result/Result';
 import Question from './Question/Question';
 import { IUserInteractData } from '../Services/Interfaces';
@@ -11,6 +11,8 @@ import { useStorage } from '../Services/CustomHooks/useStorage';
 import BlockedScreen from './BlockedScreen/BlockedScreen';
 import { useCheck } from '../Services/CustomHooks/useCheck';
 import { motion } from 'framer-motion'
+import { checkingVersion } from '../Services/APIs';
+import UpdateRequire from './UpdateRequire/UpdateRequire';
 
 //Context to send Data through app
 export interface IContext {
@@ -54,10 +56,11 @@ const MainLayout = () => {
 
   // Detect if user is using landscape mobile device
   const [landscapePhone, setLandscapePhone] = useState<boolean>(false)
+  // Version
+  const [correctVersion, setCorrectVersion] = useState<boolean>(true)
 
-  // Check devices & dev tool
   useEffect(() => {
-    // Update result to sate
+    // Update result to state
     setLandscapePhone(checkDevice())
 
     // Listen to change view
@@ -70,6 +73,11 @@ const MainLayout = () => {
 
     // Prevent Copy
     preventCopy()
+
+    // Checking for version
+    setInterval(() => {
+      checkingVersion(setCorrectVersion)
+    }, 1000 * 60)
   }, [])
 
   // Save Data everytime data or step change
@@ -77,10 +85,8 @@ const MainLayout = () => {
 
   // Array of Quiz Screens
   const quizScreenArr = [<StartScreen />, <Information />, <Question />, <Feedback />, <Result />]
-
   return (
     <Data.Provider value={{ interactedData, setInteractedData, currentStep, setCurrentStep }}>
-
       {/* Club & Event logo */}
       <div className='logoContainer'>
         <img src="./Assets/Logo/logowhite.png" />
@@ -90,6 +96,11 @@ const MainLayout = () => {
           transition={{ duration: 0.5 }}
           src="./Assets/Logo/L8veLott.png" />}
       </div>
+
+      {/* Wrong Version Noti -> Call user to reload page */}
+      <Modal title="Yêu cầu cập nhật phiên bản" open={!correctVersion} footer={null} closable={false}>
+        <UpdateRequire />
+      </Modal>
       {
         // Block user interact when using mobile device in landscape mode
         landscapePhone ?

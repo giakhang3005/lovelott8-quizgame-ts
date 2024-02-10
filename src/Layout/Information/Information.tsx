@@ -20,7 +20,17 @@ const Information = (props: Props) => {
     const onConfirm = () => {
         const confirmStatus = validateInformations()
 
-        confirmStatus ? message.error('Họ tên & MSSV phải có ít nhất 7 kí tự và không được chứa kí tự đặc biệt') : nextStep()
+        if (confirmStatus.nameErr || confirmStatus.mssvErr) {
+            if (confirmStatus.nameErr && confirmStatus.mssvErr) {
+                message.error('Họ tên và MSSV không hợp lệ, vui lòng kiểm tra lại')
+            } else if (confirmStatus.nameErr) {
+                message.error('Họ tên không hợp lệ, vui lòng kiểm tra lại')
+            } else {
+                message.error('MSSV không hợp lệ, vui lòng kiểm tra lại')
+            }
+        } else {
+            nextStep()
+        }
     }
 
 
@@ -58,7 +68,7 @@ const Information = (props: Props) => {
                     <input type="text" placeholder="SE190000"
                         value={getMSSV() || ''}
                         onChange={(e) => setMSSV(e.target.value)}
-                        maxLength={20}
+                        maxLength={40}
                     />
                 </div>
 

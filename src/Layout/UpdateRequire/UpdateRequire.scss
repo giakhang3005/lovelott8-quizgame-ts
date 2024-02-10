@@ -1,0 +1,57 @@
+/** @format */
+
+@use "../../App.scss";
+
+.updaterequire {
+  button {
+    margin: 22px 0 0 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: App.$perfect-pink;
+    color: white;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    transition: all 0.12s linear;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: App.$perfect-pink-hover;
+  }
+
+  .loader2 {
+    display: block;
+    position: absolute;
+    margin: 10px 0 0 0;
+    height: 17px;
+    bottom: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background-color: App.$unselected-answer;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .loader2:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: App.$lovely-pink;
+    animation: 3s updating ease-in forwards;
+  }
+}
+
+@keyframes updating {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
