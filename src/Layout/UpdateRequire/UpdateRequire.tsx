@@ -20,8 +20,12 @@ const UpdateRequire = (props: Props) => {
                 <li>Thời gian cập nhật ước tính: <b>5 giây</b></li>
                 <li><b>Dữ liệu</b> của bạn <b>sẽ được giữ nguyên</b> sau khi cập nhật</li>
             </ol>
-            <button onClick={handleUpdate}>CẬP NHẬT</button>
-            {showProg && <div className="loader2"></div>}
+
+            {
+                showProg ?
+                    <div className="loader2"></div> :
+                    <button onClick={handleUpdate}>CẬP NHẬT</button>
+            }
         </div>
     )
 }

@@ -3,6 +3,7 @@
 @use "../../App.scss";
 
 .updaterequire {
+    min-height: 215px;
   button {
     margin: 22px 0 0 0;
     width: 100%;
@@ -26,13 +27,13 @@
     display: block;
     position: absolute;
     margin: 10px 0 0 0;
-    height: 17px;
-    bottom: 65px;
+    height: 38px;
+    bottom: 23px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
     background-color: App.$unselected-answer;
-    border-radius: 5px;
+    border-radius: 12px;
     overflow: hidden;
   }
   .loader2:after {
@@ -42,7 +43,7 @@
     top: 0;
     height: 100%;
     width: 0;
-    background: App.$lovely-pink;
+    background: App.$perfect-pink;
     animation: 3s updating ease-in forwards;
   }
 }

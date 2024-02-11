@@ -18,5 +18,5 @@ export const checkingVersion = (setCorrectVersion: (value: boolean) => void) => 
             // console.log(res.data[0].version === currentVersion)
             setCorrectVersion(res.data[0].version === currentVersion) 
         })
-        .catch()
+        .catch((err) => console.log(err))
 }
