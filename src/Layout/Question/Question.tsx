@@ -22,8 +22,6 @@ const Question = (props: Props) => {
     const [currentAnswer, setCurrentAnswer] = useState<IAnswers | null>(null)
     // State control
     const [modalState, setModalState] = useState<boolean>(false)
-    //Random Num
-    const [randomNumber, setRandomNumber] = useState<number>(1)
 
     // Set the first question onload & remove instructions when reload
     useEffect(() => {
@@ -40,9 +38,6 @@ const Question = (props: Props) => {
             return
         }
         if (currentAnswer) {
-            // Random Background
-            setRandomNumber(Math.round(Math.random() * 7) + 1)
-
             const savedUserAnswer = {
                 qId: currentQuestion?.id,
                 answer: currentAnswer,
@@ -66,7 +61,7 @@ const Question = (props: Props) => {
             <Modal title="Mirror mirror on the wall, Who Am I?" closeIcon={false} footer={null} open={modalState}>
                 <RuleModal setModalState={setModalState} />
             </Modal>
-            <img src={`./Assets/Images/CCF/${randomNumber}.png`} className='ccfImg' />
+            <img src={`./Assets/Images/CCF/${currentQuestion?.id}.png`} className='ccfImg' />
             <motion.div className="question">
                 {/* question title */}
                 <div className="progressBar">
