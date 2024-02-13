@@ -49,18 +49,18 @@ const useInteractedData = () => {
 
     //!Validate
     const validateInformations = () => {
-        var firstLetter="[A-EGHIK-VXYÂĐỔÔÚỨa-eghik-vxyàáâãèéêìíòóôõùúýỳỹỷỵựửữừứưụủũợởỡờớơộổỗồốọỏịỉĩệểễềếẹẻẽặẳẵằắăậẩẫầấạảđ₫]".normalize("NFC"),
-        otherLetters="[a-eghik-vxyàáâãèéêìíòóôõùúýỳỹỷỵựửữừứưụủũợởỡờớơộổỗồốọỏịỉĩệểễềếẹẻẽặẳẵằắăậẩẫầấạảđ₫]".normalize("NFC"),
-        regexString="^"
-                   +firstLetter+otherLetters+"+\\s"
-                   +"("+firstLetter+otherLetters+"+\\s)*"
-                   +firstLetter+otherLetters+"+$",
-        regexPattern=RegExp(regexString);
+        // var firstLetter="[A-EGHIK-VXYÂĐỔÔÚỨa-eghik-vxyàáâãèéêìíòóôõùúýỳỹỷỵựửữừứưụủũợởỡờớơộổỗồốọỏịỉĩệểễềếẹẻẽặẳẵằắăậẩẫầấạảđ₫]".normalize("NFC"),
+        // otherLetters="[a-eghik-vxyàáâãèéêìíòóôõùúýỳỹỷỵựửữừứưụủũợởỡờớơộổỗồốọỏịỉĩệểễềếẹẻẽặẳẵằắăậẩẫầấạảđ₫]".normalize("NFC"),
+        // regexString="^"
+        //            +firstLetter+otherLetters+"+\\s"
+        //            +"("+firstLetter+otherLetters+"+\\s)*"
+        //            +firstLetter+otherLetters+"+$",
+        // regexPattern=RegExp(regexString);
 
 
-        let nameMatchesPattern = interactedData.name && regexPattern.test(interactedData.name)
+        // let nameMatchesPattern = interactedData.name && regexPattern.test(interactedData.name)
         
-        let nameErr = !interactedData.name || interactedData.name.trim().length < 7 || /[!@#$%^&*(),.?":{}|<>]/.test(interactedData.name) || !nameMatchesPattern
+        let nameErr = !interactedData.name || interactedData.name.trim().length < 7 || /[!@#$%^&*(),.?":{}|<>]/.test(interactedData.name)
         let mssvErr = !interactedData.mssv || interactedData.mssv.trim().length < 7 || /[!@#$%^&*(),.?":{}|<>]/.test(interactedData.mssv)
 
         return {
