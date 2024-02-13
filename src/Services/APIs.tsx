@@ -4,7 +4,7 @@ import axios from "axios"
 const endPointSheet = "https://sheet.best/api/sheets/4406b309-7096-4130-b302-f10f79917678"
 
 // Version
-const currentVersion = 1.2
+const currentVersion = 1.3
 const endPointVer = "https://657dba623e3f5b1894630954.mockapi.io/lovelottCheckVer"
 
 // Send a post request to sheet endpoint to save data

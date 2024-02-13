@@ -61,7 +61,7 @@ const useInteractedData = () => {
         let nameMatchesPattern = interactedData.name && regexPattern.test(interactedData.name)
         
         let nameErr = !interactedData.name || interactedData.name.trim().length < 7 || /[!@#$%^&*(),.?":{}|<>]/.test(interactedData.name) || !nameMatchesPattern
-        let mssvErr = !interactedData.mssv || interactedData.mssv.trim().length < 7 || /[!@#$%^&*(),.?":{}|<>]/.test(interactedData.mssv) || !/\d{5}/.test(interactedData.mssv);
+        let mssvErr = !interactedData.mssv || interactedData.mssv.trim().length < 7 || /[!@#$%^&*(),.?":{}|<>]/.test(interactedData.mssv)
 
         return {
             nameErr: nameErr,
