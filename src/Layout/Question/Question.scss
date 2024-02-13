@@ -181,6 +181,8 @@
     position: absolute;
     bottom: 3px;
     left: 50%;
+    width: 100%;
+    text-align: center;
     transform: translateX(-50%);
     opacity: 1;
     color: App.$unselected-answer;
