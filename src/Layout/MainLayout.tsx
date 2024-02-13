@@ -10,9 +10,9 @@ import Feedback from './Feedback/Feedback';
 import { useStorage } from '../Services/CustomHooks/useStorage';
 import BlockedScreen from './BlockedScreen/BlockedScreen';
 import { useCheck } from '../Services/CustomHooks/useCheck';
-import { motion } from 'framer-motion'
 import { checkingVersion } from '../Services/APIs';
 import UpdateRequire from './UpdateRequire/UpdateRequire';
+import LogoContainer from './Background/LogoContainer';
 
 //Context to send Data through app
 export interface IContext {
@@ -86,34 +86,25 @@ const MainLayout = () => {
 
   // Array of Quiz Screens
   const quizScreenArr = [<StartScreen />, <Information />, <Question />, <Feedback />, <Result />]
+  
   return (
     <Data.Provider value={{ interactedData, setInteractedData, currentStep, setCurrentStep }}>
+      
       {/* Club & Event logo */}
-      <div className='logoContainer'>
-        <img src="./Assets/Logo/logowhite.png" />
-        {currentStep > 1 && <motion.img
-          initial={{ transform: 'translate(18vw, 13vh)', opacity: 1, height: '50px' }}
-          animate={{ transform: 'translate(0, 0)', opacity: 1, height: '37px' }}
-          transition={{ duration: 0.5 }}
-          src="./Assets/Logo/L8veLott.png" />}
-      </div>
+      <LogoContainer currentStep={currentStep} />
 
       {/* Wrong Version Noti -> Call user to reload page */}
       <Modal title="Yêu cầu cập nhật phiên bản" open={!correctVersion} footer={null} closable={false}>
         <UpdateRequire />
       </Modal>
       {
-        // Block user interact when using mobile device in landscape mode
         landscapePhone ?
-
-          // Block Screen
+          // Show block screen on landscape mobile devices
           <AnimatePresence>
             <BlockedScreen />
           </AnimatePresence>
           :
-          // Quiz Screen
           <Row>
-            {/* Not use section, show on desktop */}
             <Col className='unuseZone' xs={0} md={6}></Col>
 
             {/* Quiz part, return correct component for each part */}
@@ -123,7 +114,6 @@ const MainLayout = () => {
               </AnimatePresence>
             </Col>
 
-            {/* Not use section, show on desktop */}
             <Col className='unuseZone' xs={0} md={6}></Col>
           </Row>
       }
