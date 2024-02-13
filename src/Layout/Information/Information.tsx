@@ -62,7 +62,7 @@ const Information = (props: Props) => {
                 {/* MSSV */}
                 <div className="inputBox">
                     <label>MSSV
-                        <i className="note">Nếu bạn không học FPT, bạn vui lòng điền tên trường</i>
+                        <i className="note">Nếu bạn không học FPT, bạn vui lòng điền tên trường & MSSV</i>
                     </label>
 
                     <input type="text" placeholder="SE190000"
