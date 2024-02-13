@@ -27,6 +27,13 @@ const Result = (props: Props) => {
   function setHeight() {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    // If error, this will fix the height error
+    const timeout = setTimeout((): void => {
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+      clearTimeout(timeout)
+    }, 1500)
   }
   setHeight()
 
