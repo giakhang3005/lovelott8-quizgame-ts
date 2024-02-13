@@ -54,7 +54,7 @@ export const useCheck = () => {
             }
 
              //User are holding Cmd on Mac or Ctrl on Window or any combination
-            if (e.metaKey || (e.altKey || e.shiftKey)) {
+            if (e.metaKey || e.altKey) {
                 // Check if the key pressed is 'u'
                 if (e.key === 'u' || e.code === 'KeyU') {
                     preventDevTool(e)
